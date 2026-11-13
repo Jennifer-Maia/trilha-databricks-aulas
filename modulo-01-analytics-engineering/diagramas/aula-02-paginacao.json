@@ -1,0 +1,22 @@
+{
+  "titulo": "Aula 2 · Paginação: 1.500 pedidos, no máximo 100 por chamada",
+  "linhas": [
+    [
+      {"id": "fonte", "texto": "API da loja\n1.500 pedidos\nmáx. 100 por vez", "cor": "azul"},
+      {"id": "p0", "texto": "página 0\noffset=0\nlinhas 0–99", "cor": "laranja"},
+      {"id": "p1", "texto": "página 1\noffset=100\nlinhas 100–199", "cor": "laranja"},
+      {"id": "p14", "texto": "… página 14\noffset=1400\nlinhas 1400–1499", "cor": "laranja"}
+    ],
+    [
+      {"id": "erro", "texto": "Sem paginação:\nHTTP 200, mas só\n100 de 1.500", "cor": "vermelho"},
+      {"id": "ok", "texto": "15 páginas somam\n1.500 linhas\n= num_rows_total ✓", "cor": "verde"}
+    ]
+  ],
+  "setas": [
+    ["fonte", "p0"],
+    ["p0", "p1", "+100"],
+    ["p1", "p14", "+100…"],
+    ["fonte", "erro", "1 chamada só"],
+    ["p14", "ok", "soma bateu?"]
+  ]
+}

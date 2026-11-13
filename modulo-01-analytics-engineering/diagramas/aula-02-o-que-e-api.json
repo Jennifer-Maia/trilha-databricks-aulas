@@ -1,0 +1,22 @@
+{
+  "titulo": "Aula 2 · O que é uma API? O garçom entre você e a cozinha",
+  "linhas": [
+    [
+      {"id": "voce", "texto": "Você\n(seu código\nno notebook)", "cor": "cinza"},
+      {"id": "api", "texto": "API\no garçom:\nanota e leva o pedido", "cor": "azul"},
+      {"id": "cozinha", "texto": "Sistema da loja\na cozinha:\nbanco, regras", "cor": "azul"}
+    ],
+    [
+      {"id": "json", "texto": "Resposta em JSON\no prato pronto", "cor": "laranja"},
+      {"id": "cardapio", "texto": "Documentação\no cardápio: o que\ndá para pedir", "cor": "amarelo"}
+    ]
+  ],
+  "setas": [
+    ["voce", "api", "pedido (GET)"],
+    ["api", "cozinha", "busca"],
+    ["api", "json", "devolve"]
+  ],
+  "notas": [
+    {"texto": "Você nunca entra na cozinha", "linha": 0, "coluna": 2}
+  ]
+}

@@ -1,0 +1,500 @@
+{"customer_id": 1, "nome": "Diego Silva", "email": "diego.silva.1@exemplo.com.br", "telefone": "(39) 93286-2679", "cidade": "Fortaleza", "uf": "CE", "cadastrado_em": "2024-09-07T00:00:00"}
+{"customer_id": 2, "nome": "Thiago Santos", "email": "thiago.santos.2@exemplo.com.br", "telefone": "(14) 92535-4582", "cidade": "Florianópolis", "uf": "SC", "cadastrado_em": "2025-12-05T00:00:00"}
+{"customer_id": 3, "nome": "Sofia Nascimento", "email": "sofia.nascimento.3@exemplo.com.br", "telefone": "(94) 99928-7873", "cidade": "Campinas", "uf": "SP", "cadastrado_em": "2025-12-18T00:00:00"}
+{"customer_id": 4, "nome": "Paula Nascimento", "email": "paula.nascimento.4@exemplo.com.br", "telefone": "(31) 97924-6574", "cidade": "São Paulo", "uf": "SP", "cadastrado_em": "2025-10-20T00:00:00"}
+{"customer_id": 5, "nome": "Eduarda Souza", "email": "eduarda.souza.5@exemplo.com.br", "telefone": "(24) 92519-7224", "cidade": "Capital", "uf": "TO", "cadastrado_em": "2026-04-23T00:00:00"}
+{"customer_id": 6, "nome": "Marcos Martins", "email": "marcos.martins.6@exemplo.com.br", "telefone": "(16) 98527-9785", "cidade": "Niterói", "uf": "RJ", "cadastrado_em": "2026-03-26T00:00:00"}
+{"customer_id": 7, "nome": "Natália Santos", "email": "natalia.santos.7@exemplo.com.br", "telefone": "(84) 94150-2139", "cidade": "Caxias do Sul", "uf": "RS", "cadastrado_em": "2026-06-15T00:00:00"}
+{"customer_id": 8, "nome": "Henrique Gomes", "email": "henrique.gomes.8@exemplo.com.br", "telefone": "(40) 92654-7227", "cidade": "Rio de Janeiro", "uf": "RJ", "cadastrado_em": "2025-10-20T00:00:00"}
+{"customer_id": 9, "nome": "Paula Carvalho", "email": "paula.carvalho.9@exemplo.com.br", "telefone": "(58) 96820-4432", "cidade": "Vitória", "uf": "ES", "cadastrado_em": "2024-09-13T00:00:00"}
+{"customer_id": 10, "nome": "Isabela Ribeiro", "email": "isabela.ribeiro.10@exemplo.com.br", "telefone": "(88) 93803-9751", "cidade": "Capital", "uf": "MT", "cadastrado_em": "2024-07-15T00:00:00"}
+{"customer_id": 11, "nome": "Henrique Oliveira", "email": "henrique.oliveira.11@exemplo.com.br", "telefone": "(92) 94598-6313", "cidade": "Uberlândia", "uf": "MG", "cadastrado_em": "2024-03-20T00:00:00"}
+{"customer_id": 12, "nome": "Bruno Souza", "email": "bruno.souza.12@exemplo.com.br", "telefone": "(62) 95386-2084", "cidade": "Vitória", "uf": "ES", "cadastrado_em": "2025-12-27T00:00:00"}
+{"customer_id": 13, "nome": "Vanessa Araújo", "email": "vanessa.araujo.13@exemplo.com.br", "telefone": "(94) 99179-7482", "cidade": "Recife", "uf": "PE", "cadastrado_em": "2024-10-11T00:00:00"}
+{"customer_id": 14, "nome": "Paula Oliveira", "email": "paula.oliveira.14@exemplo.com.br", "telefone": "(82) 99830-5304", "cidade": "Campinas", "uf": "SP", "cadastrado_em": "2024-06-27T00:00:00"}
+{"customer_id": 15, "nome": "Vanessa Costa", "email": "vanessa.costa.15@exemplo.com.br", "telefone": "(57) 94593-3266", "cidade": "Capital", "uf": "RN", "cadastrado_em": "2025-02-25T00:00:00"}
+{"customer_id": 16, "nome": "Rafael Santos", "email": "rafael.santos.16@exemplo.com.br", "telefone": "(30) 93621-7916", "cidade": "Fortaleza", "uf": "CE", "cadastrado_em": "2024-11-28T00:00:00"}
+{"customer_id": 17, "nome": "Carla Costa", "email": "carla.costa.17@exemplo.com.br", "telefone": "(78) 95119-1188", "cidade": "Uberlândia", "uf": "MG", "cadastrado_em": "2024-09-03T00:00:00"}
+{"customer_id": 18, "nome": "Diego Carvalho", "email": "diego.carvalho.18@exemplo.com.br", "telefone": "(93) 96573-2827", "cidade": "Capital", "uf": "MA", "cadastrado_em": "2025-10-04T00:00:00"}
+{"customer_id": 19, "nome": "Otávio Oliveira", "email": "otavio.oliveira.19@exemplo.com.br", "telefone": "(75) 93927-9317", "cidade": "Uberlândia", "uf": "MG", "cadastrado_em": "2026-04-14T00:00:00"}
+{"customer_id": 20, "nome": "João Martins", "email": "joao.martins.20@exemplo.com.br", "telefone": "(30) 97126-3646", "cidade": "Salvador", "uf": "BA", "cadastrado_em": "2025-01-25T00:00:00"}
+{"customer_id": 21, "nome": "Sofia Araújo", "email": "sofia.araujo.21@exemplo.com.br", "telefone": "(73) 91319-2832", "cidade": "Santos", "uf": "SP", "cadastrado_em": "2025-07-25T00:00:00"}
+{"customer_id": 22, "nome": "João Souza", "email": "joao.souza.22@exemplo.com.br", "telefone": "(21) 98962-2133", "cidade": "São Paulo", "uf": "SP", "cadastrado_em": "2024-06-13T00:00:00"}
+{"customer_id": 23, "nome": "Thiago Gomes", "email": "thiago.gomes.23@exemplo.com.br", "telefone": "(81) 93705-5342", "cidade": "Ribeirão Preto", "uf": "SP", "cadastrado_em": "2025-02-06T00:00:00"}
+{"customer_id": 24, "nome": "Yuri Costa", "email": "yuri.costa.24@exemplo.com.br", "telefone": "(50) 97537-7118", "cidade": "Capital", "uf": "RO", "cadastrado_em": "2025-05-09T00:00:00"}
+{"customer_id": 25, "nome": "Sofia Rodrigues", "email": "sofia.rodrigues.25@exemplo.com.br", "telefone": "(19) 96539-1344", "cidade": "Campinas", "uf": "SP", "cadastrado_em": "2024-12-06T00:00:00"}
+{"customer_id": 26, "nome": "Thiago Souza", "email": "thiago.souza.26@exemplo.com.br", "telefone": "(20) 91964-4750", "cidade": "Florianópolis", "uf": "SC", "cadastrado_em": "2026-05-23T00:00:00"}
+{"customer_id": 27, "nome": "Bruno Martins", "email": "bruno.martins.27@exemplo.com.br", "telefone": "(46) 98953-4510", "cidade": "Rio de Janeiro", "uf": "RJ", "cadastrado_em": "2025-01-25T00:00:00"}
+{"customer_id": 28, "nome": "Eduarda Ribeiro", "email": "eduarda.ribeiro.28@exemplo.com.br", "telefone": "(42) 98749-7669", "cidade": "Capital", "uf": "MT", "cadastrado_em": "2026-01-18T00:00:00"}
+{"customer_id": 29, "nome": "Diego Santos", "email": "diego.santos.29@exemplo.com.br", "telefone": "(65) 97735-8651", "cidade": "Feira de Santana", "uf": "BA", "cadastrado_em": "2024-02-28T00:00:00"}
+{"customer_id": 30, "nome": "Bruno Carvalho", "email": "bruno.carvalho.30@exemplo.com.br", "telefone": "(18) 97596-6559", "cidade": "Salvador", "uf": "BA", "cadastrado_em": "2024-05-03T00:00:00"}
+{"customer_id": 31, "nome": "Diego Souza", "email": "diego.souza.31@exemplo.com.br", "telefone": "(28) 97912-4006", "cidade": "Ribeirão Preto", "uf": "SP", "cadastrado_em": "2025-10-19T00:00:00"}
+{"customer_id": 32, "nome": "Paula Souza", "email": "paula.souza.32@exemplo.com.br", "telefone": "(67) 92604-1828", "cidade": "Manaus", "uf": "AM", "cadastrado_em": "2024-10-02T00:00:00"}
+{"customer_id": 33, "nome": "Thiago Martins", "email": "thiago.martins.33@exemplo.com.br", "telefone": "(41) 93724-7658", "cidade": "São Paulo", "uf": "SP", "cadastrado_em": "2025-03-21T00:00:00"}
+{"customer_id": 34, "nome": "Rafael Souza", "email": "rafael.souza.34@exemplo.com.br", "telefone": "(32) 97209-1035", "cidade": "Manaus", "uf": "AM", "cadastrado_em": "2025-06-27T00:00:00"}
+{"customer_id": 35, "nome": "Isabela Araújo", "email": "isabela.araujo.35@exemplo.com.br", "telefone": "(47) 97930-8973", "cidade": "Goiânia", "uf": "GO", "cadastrado_em": "2026-02-23T00:00:00"}
+{"customer_id": 36, "nome": "Gabriela Lima", "email": "gabriela.lima.36@exemplo.com.br", "telefone": "(85) 99883-1998", "cidade": "São Paulo", "uf": "SP", "cadastrado_em": "2024-06-26T00:00:00"}
+{"customer_id": 37, "nome": "Larissa Silva", "email": "larissa.silva.37@exemplo.com.br", "telefone": "(75) 99701-3579", "cidade": "Ribeirão Preto", "uf": "SP", "cadastrado_em": "2026-06-03T00:00:00"}
+{"customer_id": 38, "nome": "Sofia Santos", "email": "sofia.santos.38@exemplo.com.br", "telefone": "(87) 92113-4853", "cidade": "Belém", "uf": "PA", "cadastrado_em": "2025-06-13T00:00:00"}
+{"customer_id": 39, "nome": "Diego Araújo", "email": "diego.araujo.39@exemplo.com.br", "telefone": "(90) 92343-7868", "cidade": "Porto Alegre", "uf": "RS", "cadastrado_em": "2024-09-26T00:00:00"}
+{"customer_id": 40, "nome": "Vanessa Nascimento", "email": "vanessa.nascimento.40@exemplo.com.br", "telefone": "(37) 96147-4910", "cidade": "Londrina", "uf": "PR", "cadastrado_em": "2025-11-02T00:00:00"}
+{"customer_id": 41, "nome": "Natália Oliveira", "email": "natalia.oliveira.41@exemplo.com.br", "telefone": "(69) 96180-2188", "cidade": "Feira de Santana", "uf": "BA", "cadastrado_em": "2026-07-22T00:00:00"}
+{"customer_id": 42, "nome": "Paula Nascimento", "email": "paula.nascimento.42@exemplo.com.br", "telefone": "(20) 99808-4492", "cidade": "Capital", "uf": "RR", "cadastrado_em": "2025-02-28T00:00:00"}
+{"customer_id": 43, "nome": "Isabela Oliveira", "email": "isabela.oliveira.43@exemplo.com.br", "telefone": "(42) 97054-5669", "cidade": "Capital", "uf": "SE", "cadastrado_em": "2026-02-20T00:00:00"}
+{"customer_id": 44, "nome": "Paula Martins", "email": "paula.martins.44@exemplo.com.br", "telefone": "(89) 99666-1128", "cidade": "Caxias do Sul", "uf": "RS", "cadastrado_em": "2024-09-16T00:00:00"}
+{"customer_id": 45, "nome": "Thiago Lima", "email": "thiago.lima.45@exemplo.com.br", "telefone": "(28) 95333-2891", "cidade": "Capital", "uf": "SE", "cadastrado_em": "2026-04-13T00:00:00"}
+{"customer_id": 46, "nome": "Thiago Oliveira", "email": "thiago.oliveira.46@exemplo.com.br", "telefone": "(54) 94335-5325", "cidade": "Campinas", "uf": "SP", "cadastrado_em": "2025-03-01T00:00:00"}
+{"customer_id": 47, "nome": "Rafael Lima", "email": "rafael.lima.47@exemplo.com.br", "telefone": "(22) 97939-5533", "cidade": "Capital", "uf": "RN", "cadastrado_em": "2026-06-16T00:00:00"}
+{"customer_id": 48, "nome": "Ana Pereira", "email": "ana.pereira.48@exemplo.com.br", "telefone": "(31) 98239-8007", "cidade": "Goiânia", "uf": "GO", "cadastrado_em": "2025-01-03T00:00:00"}
+{"customer_id": 49, "nome": "Ana Santos", "email": "ana.santos.49@exemplo.com.br", "telefone": "(80) 91590-7049", "cidade": "Campinas", "uf": "SP", "cadastrado_em": "2024-12-12T00:00:00"}
+{"customer_id": 50, "nome": "Thiago Oliveira", "email": "thiago.oliveira.50@exemplo.com.br", "telefone": "(50) 96974-1653", "cidade": "Belo Horizonte", "uf": "MG", "cadastrado_em": "2025-07-30T00:00:00"}
+{"customer_id": 51, "nome": "Gabriela Carvalho", "email": "gabriela.carvalho.51@exemplo.com.br", "telefone": "(56) 97658-3532", "cidade": "São Paulo", "uf": "SP", "cadastrado_em": "2025-12-01T00:00:00"}
+{"customer_id": 52, "nome": "Felipe Gomes", "email": "felipe.gomes.52@exemplo.com.br", "telefone": "(14) 93938-6442", "cidade": "Brasília", "uf": "DF", "cadastrado_em": "2024-05-21T00:00:00"}
+{"customer_id": 53, "nome": "Otávio Gomes", "email": "otavio.gomes.53@exemplo.com.br", "telefone": "(45) 93608-2771", "cidade": "Salvador", "uf": "BA", "cadastrado_em": "2025-07-05T00:00:00"}
+{"customer_id": 54, "nome": "Bruno Martins", "email": "bruno.martins.54@exemplo.com.br", "telefone": "(69) 96728-6000", "cidade": "Belo Horizonte", "uf": "MG", "cadastrado_em": "2024-04-12T00:00:00"}
+{"customer_id": 55, "nome": "Henrique Souza", "email": "henrique.souza.55@exemplo.com.br", "telefone": "(62) 96378-5564", "cidade": "Campinas", "uf": "SP", "cadastrado_em": "2024-02-27T00:00:00"}
+{"customer_id": 56, "nome": "Carla Gomes", "email": "carla.gomes.56@exemplo.com.br", "telefone": "(97) 99785-6425", "cidade": "Ribeirão Preto", "uf": "SP", "cadastrado_em": "2026-07-03T00:00:00"}
+{"customer_id": 57, "nome": "Diego Araújo", "email": "diego.araujo.57@exemplo.com.br", "telefone": "(85) 95349-1626", "cidade": "Capital", "uf": "RO", "cadastrado_em": "2026-04-11T00:00:00"}
+{"customer_id": 58, "nome": "Yuri Costa", "email": "yuri.costa.58@exemplo.com.br", "telefone": "(66) 99379-2894", "cidade": "Niterói", "uf": "RJ", "cadastrado_em": "2025-07-02T00:00:00"}
+{"customer_id": 59, "nome": "Vanessa Souza", "email": "vanessa.souza.59@exemplo.com.br", "telefone": "(11) 99518-9821", "cidade": "Ribeirão Preto", "uf": "SP", "cadastrado_em": "2024-08-27T00:00:00"}
+{"customer_id": 60, "nome": "Gabriela Pereira", "email": "gabriela.pereira.60@exemplo.com.br", "telefone": "(90) 96143-3041", "cidade": "Uberlândia", "uf": "MG", "cadastrado_em": "2024-07-24T00:00:00"}
+{"customer_id": 61, "nome": "João Almeida", "email": "joao.almeida.61@exemplo.com.br", "telefone": "(52) 97592-5844", "cidade": "Niterói", "uf": "RJ", "cadastrado_em": "2025-01-10T00:00:00"}
+{"customer_id": 62, "nome": "Eduarda Souza", "email": "eduarda.souza.62@exemplo.com.br", "telefone": "(97) 93851-5930", "cidade": "Uberlândia", "uf": "MG", "cadastrado_em": "2025-06-11T00:00:00"}
+{"customer_id": 63, "nome": "Thiago Martins", "email": "thiago.martins.63@exemplo.com.br", "telefone": "(37) 98043-6279", "cidade": "Santos", "uf": "SP", "cadastrado_em": "2025-04-11T00:00:00"}
+{"customer_id": 64, "nome": "Paula Rodrigues", "email": "paula.rodrigues.64@exemplo.com.br", "telefone": "(32) 92389-5649", "cidade": "Feira de Santana", "uf": "BA", "cadastrado_em": "2025-02-19T00:00:00"}
+{"customer_id": 65, "nome": "Yuri Pereira", "email": "yuri.pereira.65@exemplo.com.br", "telefone": "(97) 96085-4680", "cidade": "Campinas", "uf": "SP", "cadastrado_em": "2024-04-27T00:00:00"}
+{"customer_id": 66, "nome": "Gabriela Oliveira", "email": "gabriela.oliveira.66@exemplo.com.br", "telefone": "(71) 92193-8461", "cidade": "Campinas", "uf": "SP", "cadastrado_em": "2025-06-02T00:00:00"}
+{"customer_id": 67, "nome": "Vanessa Souza", "email": "vanessa.souza.67@exemplo.com.br", "telefone": "(74) 97547-4997", "cidade": "Recife", "uf": "PE", "cadastrado_em": "2026-03-02T00:00:00"}
+{"customer_id": 68, "nome": "Ana Araújo", "email": "ana.araujo.68@exemplo.com.br", "telefone": "(65) 94585-3881", "cidade": "Fortaleza", "uf": "CE", "cadastrado_em": "2024-04-29T00:00:00"}
+{"customer_id": 69, "nome": "Sofia Rodrigues", "email": "sofia.rodrigues.69@exemplo.com.br", "telefone": "(26) 98478-3184", "cidade": "Campinas", "uf": "SP", "cadastrado_em": "2024-05-02T00:00:00"}
+{"customer_id": 70, "nome": "Paula Carvalho", "email": "paula.carvalho.70@exemplo.com.br", "telefone": "(67) 99270-7991", "cidade": "Caxias do Sul", "uf": "RS", "cadastrado_em": "2024-04-02T00:00:00"}
+{"customer_id": 71, "nome": "Thiago Rodrigues", "email": "thiago.rodrigues.71@exemplo.com.br", "telefone": "(68) 95246-5050", "cidade": "Capital", "uf": "RN", "cadastrado_em": "2024-03-23T00:00:00"}
+{"customer_id": 72, "nome": "Isabela Gomes", "email": "isabela.gomes.72@exemplo.com.br", "telefone": "(91) 94919-5499", "cidade": "Goiânia", "uf": "GO", "cadastrado_em": "2025-05-07T00:00:00"}
+{"customer_id": 73, "nome": "Carla Ribeiro", "email": "carla.ribeiro.73@exemplo.com.br", "telefone": "(53) 96238-9849", "cidade": "Niterói", "uf": "RJ", "cadastrado_em": "2026-05-10T00:00:00"}
+{"customer_id": 74, "nome": "Eduarda Oliveira", "email": "eduarda.oliveira.74@exemplo.com.br", "telefone": "(38) 92052-7797", "cidade": "Campinas", "uf": "SP", "cadastrado_em": "2025-06-09T00:00:00"}
+{"customer_id": 75, "nome": "Larissa Almeida", "email": "larissa.almeida.75@exemplo.com.br", "telefone": "(37) 97883-7381", "cidade": "Belo Horizonte", "uf": "MG", "cadastrado_em": "2024-06-03T00:00:00"}
+{"customer_id": 76, "nome": "Vanessa Ribeiro", "email": "vanessa.ribeiro.76@exemplo.com.br", "telefone": "(72) 91096-6763", "cidade": "Ribeirão Preto", "uf": "SP", "cadastrado_em": "2025-09-29T00:00:00"}
+{"customer_id": 77, "nome": "Natália Martins", "email": "natalia.martins.77@exemplo.com.br", "telefone": "(79) 99947-4613", "cidade": "Capital", "uf": "PB", "cadastrado_em": "2025-03-19T00:00:00"}
+{"customer_id": 78, "nome": "Henrique Lima", "email": "henrique.lima.78@exemplo.com.br", "telefone": "(60) 96507-7624", "cidade": "Belo Horizonte", "uf": "MG", "cadastrado_em": "2024-07-20T00:00:00"}
+{"customer_id": 79, "nome": "Felipe Martins", "email": "felipe.martins.79@exemplo.com.br", "telefone": "(90) 99751-1441", "cidade": "Belo Horizonte", "uf": "MG", "cadastrado_em": "2025-06-23T00:00:00"}
+{"customer_id": 80, "nome": "Vanessa Nascimento", "email": "vanessa.nascimento.80@exemplo.com.br", "telefone": "(93) 98022-3223", "cidade": "Salvador", "uf": "BA", "cadastrado_em": "2024-02-25T00:00:00"}
+{"customer_id": 81, "nome": "Paula Oliveira", "email": "paula.oliveira.81@exemplo.com.br", "telefone": "(52) 94467-8449", "cidade": "Ribeirão Preto", "uf": "SP", "cadastrado_em": "2025-08-31T00:00:00"}
+{"customer_id": 82, "nome": "Larissa Gomes", "email": "larissa.gomes.82@exemplo.com.br", "telefone": "(64) 95133-2341", "cidade": "Capital", "uf": "MA", "cadastrado_em": "2025-04-06T00:00:00"}
+{"customer_id": 83, "nome": "Ana Ribeiro", "email": "ana.ribeiro.83@exemplo.com.br", "telefone": "(39) 92124-1659", "cidade": "Caxias do Sul", "uf": "RS", "cadastrado_em": "2024-06-19T00:00:00"}
+{"customer_id": 84, "nome": "Ana Souza", "email": "ana.souza.84@exemplo.com.br", "telefone": "(90) 93496-4908", "cidade": "São Paulo", "uf": "SP", "cadastrado_em": "2026-03-24T00:00:00"}
+{"customer_id": 85, "nome": "Rafael Carvalho", "email": "rafael.carvalho.85@exemplo.com.br", "telefone": "(70) 95198-7043", "cidade": "Campinas", "uf": "SP", "cadastrado_em": "2026-02-10T00:00:00"}
+{"customer_id": 86, "nome": "Yuri Nascimento", "email": "yuri.nascimento.86@exemplo.com.br", "telefone": "(31) 96096-2771", "cidade": "Capital", "uf": "RO", "cadastrado_em": "2024-12-16T00:00:00"}
+{"customer_id": 87, "nome": "Ana Araújo", "email": "ana.araujo.87@exemplo.com.br", "telefone": "(61) 94249-2245", "cidade": "Niterói", "uf": "RJ", "cadastrado_em": "2024-12-02T00:00:00"}
+{"customer_id": 88, "nome": "Henrique Santos", "email": "henrique.santos.88@exemplo.com.br", "telefone": "(98) 92983-1672", "cidade": "Recife", "uf": "PE", "cadastrado_em": "2025-08-10T00:00:00"}
+{"customer_id": 89, "nome": "Thiago Costa", "email": "thiago.costa.89@exemplo.com.br", "telefone": "(75) 96590-1207", "cidade": "Salvador", "uf": "BA", "cadastrado_em": "2024-03-14T00:00:00"}
+{"customer_id": 90, "nome": "Otávio Martins", "email": "otavio.martins.90@exemplo.com.br", "telefone": "(57) 98532-3506", "cidade": "Londrina", "uf": "PR", "cadastrado_em": "2025-05-12T00:00:00"}
+{"customer_id": 91, "nome": "Felipe Ribeiro", "email": "felipe.ribeiro.91@exemplo.com.br", "telefone": "(89) 99817-8921", "cidade": "Londrina", "uf": "PR", "cadastrado_em": "2025-04-11T00:00:00"}
+{"customer_id": 92, "nome": "Otávio Martins", "email": "otavio.martins.92@exemplo.com.br", "telefone": "(52) 95022-2419", "cidade": "Fortaleza", "uf": "CE", "cadastrado_em": "2025-10-19T00:00:00"}
+{"customer_id": 93, "nome": "Paula Souza", "email": "paula.souza.93@exemplo.com.br", "telefone": "(54) 91470-9098", "cidade": "Fortaleza", "uf": "CE", "cadastrado_em": "2024-03-12T00:00:00"}
+{"customer_id": 94, "nome": "Larissa Oliveira", "email": "larissa.oliveira.94@exemplo.com.br", "telefone": "(44) 96576-5581", "cidade": "Londrina", "uf": "PR", "cadastrado_em": "2024-11-28T00:00:00"}
+{"customer_id": 95, "nome": "Isabela Almeida", "email": "isabela.almeida.95@exemplo.com.br", "telefone": "(21) 94954-7658", "cidade": "Campinas", "uf": "SP", "cadastrado_em": "2025-03-18T00:00:00"}
+{"customer_id": 96, "nome": "Thiago Gomes", "email": "thiago.gomes.96@exemplo.com.br", "telefone": "(93) 99041-8342", "cidade": "Ribeirão Preto", "uf": "SP", "cadastrado_em": "2024-05-11T00:00:00"}
+{"customer_id": 97, "nome": "Ana Santos", "email": "ana.santos.97@exemplo.com.br", "telefone": "(99) 94986-6016", "cidade": "Niterói", "uf": "RJ", "cadastrado_em": "2024-09-20T00:00:00"}
+{"customer_id": 98, "nome": "Vanessa Pereira", "email": "vanessa.pereira.98@exemplo.com.br", "telefone": "(65) 96419-6764", "cidade": "Londrina", "uf": "PR", "cadastrado_em": "2024-08-11T00:00:00"}
+{"customer_id": 99, "nome": "Paula Lima", "email": "paula.lima.99@exemplo.com.br", "telefone": "(26) 94155-6169", "cidade": "Rio de Janeiro", "uf": "RJ", "cadastrado_em": "2026-03-31T00:00:00"}
+{"customer_id": 100, "nome": "Thiago Gomes", "email": "thiago.gomes.100@exemplo.com.br", "telefone": "(38) 98933-5530", "cidade": "Recife", "uf": "PE", "cadastrado_em": "2024-07-20T00:00:00"}
+{"customer_id": 101, "nome": "Vanessa Gomes", "email": "vanessa.gomes.101@exemplo.com.br", "telefone": "(23) 94180-5853", "cidade": "Londrina", "uf": "PR", "cadastrado_em": "2025-12-11T00:00:00"}
+{"customer_id": 102, "nome": "Marcos Oliveira", "email": "marcos.oliveira.102@exemplo.com.br", "telefone": "(46) 91745-1893", "cidade": "Rio de Janeiro", "uf": "RJ", "cadastrado_em": "2025-01-11T00:00:00"}
+{"customer_id": 103, "nome": "João Ribeiro", "email": "joao.ribeiro.103@exemplo.com.br", "telefone": "(24) 91200-5658", "cidade": "Capital", "uf": "MS", "cadastrado_em": "2025-04-07T00:00:00"}
+{"customer_id": 104, "nome": "Rafael Rodrigues", "email": "rafael.rodrigues.104@exemplo.com.br", "telefone": "(43) 98827-2869", "cidade": "Rio de Janeiro", "uf": "RJ", "cadastrado_em": "2024-04-11T00:00:00"}
+{"customer_id": 105, "nome": "Carla Costa", "email": "carla.costa.105@exemplo.com.br", "telefone": "(30) 93444-5978", "cidade": "Curitiba", "uf": "PR", "cadastrado_em": "2026-05-05T00:00:00"}
+{"customer_id": 106, "nome": "Henrique Santos", "email": "henrique.santos.106@exemplo.com.br", "telefone": "(88) 94697-9561", "cidade": "Caxias do Sul", "uf": "RS", "cadastrado_em": "2025-07-07T00:00:00"}
+{"customer_id": 107, "nome": "Paula Araújo", "email": "paula.araujo.107@exemplo.com.br", "telefone": "(50) 91986-2625", "cidade": "Uberlândia", "uf": "MG", "cadastrado_em": "2024-06-10T00:00:00"}
+{"customer_id": 108, "nome": "Gabriela Carvalho", "email": "gabriela.carvalho.108@exemplo.com.br", "telefone": "(31) 94929-3847", "cidade": "São Paulo", "uf": "SP", "cadastrado_em": "2025-01-12T00:00:00"}
+{"customer_id": 109, "nome": "Carla Oliveira", "email": "carla.oliveira.109@exemplo.com.br", "telefone": "(99) 98699-5771", "cidade": "Ribeirão Preto", "uf": "SP", "cadastrado_em": "2026-06-28T00:00:00"}
+{"customer_id": 110, "nome": "Henrique Lima", "email": "henrique.lima.110@exemplo.com.br", "telefone": "(20) 94824-5334", "cidade": "Recife", "uf": "PE", "cadastrado_em": "2024-05-16T00:00:00"}
+{"customer_id": 111, "nome": "Vanessa Carvalho", "email": "vanessa.carvalho.111@exemplo.com.br", "telefone": "(65) 92880-9922", "cidade": "Brasília", "uf": "DF", "cadastrado_em": "2025-12-13T00:00:00"}
+{"customer_id": 112, "nome": "Eduarda Araújo", "email": "eduarda.araujo.112@exemplo.com.br", "telefone": "(20) 91977-3718", "cidade": "Campinas", "uf": "sp", "cadastrado_em": "2024-05-11T00:00:00"}
+{"customer_id": 113, "nome": "João Nascimento", "email": "joao.nascimento.113@exemplo.com.br", "telefone": "(67) 93037-8679", "cidade": "Fortaleza", "uf": "CE", "cadastrado_em": "2024-08-25T00:00:00"}
+{"customer_id": 114, "nome": "João Ribeiro", "email": "joao.ribeiro.114@exemplo.com.br", "telefone": "(75) 99847-9090", "cidade": "Uberlândia", "uf": "MG", "cadastrado_em": "2025-05-09T00:00:00"}
+{"customer_id": 115, "nome": "Carla Nascimento", "email": "carla.nascimento.115@exemplo.com.br", "telefone": "(52) 95102-1423", "cidade": "Ribeirão Preto", "uf": "SP", "cadastrado_em": "2026-04-29T00:00:00"}
+{"customer_id": 116, "nome": "Henrique Carvalho", "email": "henrique.carvalho.116@exemplo.com.br", "telefone": "(97) 95415-1659", "cidade": "Vitória", "uf": "ES", "cadastrado_em": "2024-06-10T00:00:00"}
+{"customer_id": 117, "nome": "Felipe Rodrigues", "email": "felipe.rodrigues.117@exemplo.com.br", "telefone": "(46) 93973-8141", "cidade": "Londrina", "uf": "PR", "cadastrado_em": "2024-10-19T00:00:00"}
+{"customer_id": 118, "nome": "Rafael Santos", "email": "rafael.santos.118@exemplo.com.br", "telefone": "(53) 96260-2713", "cidade": "Uberlândia", "uf": "MG", "cadastrado_em": "2024-03-05T00:00:00"}
+{"customer_id": 119, "nome": "Felipe Pereira", "email": "felipe.pereira.119@exemplo.com.br", "telefone": "(47) 97561-1601", "cidade": "Uberlândia", "uf": "MG", "cadastrado_em": "2025-04-22T00:00:00"}
+{"customer_id": 120, "nome": "Carla Pereira", "email": "carla.pereira.120@exemplo.com.br", "telefone": "(62) 99431-1018", "cidade": "São Paulo", "uf": "SP", "cadastrado_em": "2024-09-26T00:00:00"}
+{"customer_id": 121, "nome": "Thiago Rodrigues", "email": "thiago.rodrigues.121@exemplo.com.br", "telefone": "(77) 96927-9167", "cidade": "Belo Horizonte", "uf": "MG", "cadastrado_em": "2024-10-29T00:00:00"}
+{"customer_id": 122, "nome": "Paula Gomes", "email": "paula.gomes.122@exemplo.com.br", "telefone": "(81) 93146-5719", "cidade": "Santos", "uf": "SP", "cadastrado_em": "2025-05-09T00:00:00"}
+{"customer_id": 123, "nome": "Rafael Santos", "email": "rafael.santos.123@exemplo.com.br", "telefone": "(31) 96091-1224", "cidade": "Campinas", "uf": "SP", "cadastrado_em": "2025-01-12T00:00:00"}
+{"customer_id": 124, "nome": "Otávio Santos", "email": "otavio.santos.124@exemplo.com.br", "telefone": "(70) 92924-3522", "cidade": "São Paulo", "uf": "SP", "cadastrado_em": "2025-03-08T00:00:00"}
+{"customer_id": 125, "nome": "João Almeida", "email": "joao.almeida.125@exemplo.com.br", "telefone": "(72) 98736-4993", "cidade": "Recife", "uf": "PE", "cadastrado_em": "2025-04-20T00:00:00"}
+{"customer_id": 126, "nome": "Thiago Oliveira", "email": "thiago.oliveira.126@exemplo.com.br", "telefone": "(19) 95526-7798", "cidade": "Belo Horizonte", "uf": "MG", "cadastrado_em": "2025-08-17T00:00:00"}
+{"customer_id": 127, "nome": "Sofia Lima", "email": "sofia.lima.127@exemplo.com.br", "telefone": "(49) 99022-3434", "cidade": "Brasília", "uf": "DF", "cadastrado_em": "2025-04-30T00:00:00"}
+{"customer_id": 128, "nome": "Thiago Rodrigues", "email": "thiago.rodrigues.128@exemplo.com.br", "telefone": "(69) 96272-4090", "cidade": "Niterói", "uf": "RJ", "cadastrado_em": "2024-08-16T00:00:00"}
+{"customer_id": 129, "nome": "Henrique Nascimento", "email": "henrique.nascimento.129@exemplo.com.br", "telefone": "(16) 96213-8749", "cidade": "Uberlândia", "uf": "MG", "cadastrado_em": "2024-08-08T00:00:00"}
+{"customer_id": 130, "nome": "Natália Costa", "email": "natalia.costa.130@exemplo.com.br", "telefone": "(74) 91606-3068", "cidade": "Capital", "uf": "ap", "cadastrado_em": "2025-03-04T00:00:00"}
+{"customer_id": 131, "nome": "Vanessa Pereira", "email": "vanessa.pereira.131@exemplo.com.br", "telefone": "(23) 99617-8486", "cidade": "Manaus", "uf": "AM", "cadastrado_em": "2026-07-16T00:00:00"}
+{"customer_id": 132, "nome": "Eduarda Costa", "email": "eduarda.costa.132@exemplo.com.br", "telefone": "(20) 98692-5342", "cidade": "Manaus", "uf": "AM", "cadastrado_em": "2025-08-19T00:00:00"}
+{"customer_id": 133, "nome": "Yuri Ribeiro", "email": "yuri.ribeiro.133@exemplo.com.br", "telefone": "(53) 99742-7226", "cidade": "Belo Horizonte", "uf": "MG", "cadastrado_em": "2025-09-10T00:00:00"}
+{"customer_id": 134, "nome": "Rafael Martins", "email": "rafael.martins.134@exemplo.com.br", "telefone": "(41) 95708-4727", "cidade": "Porto Alegre", "uf": "RS", "cadastrado_em": "2024-06-27T00:00:00"}
+{"customer_id": 135, "nome": "Carla Costa", "email": "carla.costa.135@exemplo.com.br", "telefone": "(67) 93725-5906", "cidade": "Capital", "uf": "AC", "cadastrado_em": "2026-07-02T00:00:00"}
+{"customer_id": 136, "nome": "Bruno Pereira", "email": "bruno.pereira.136@exemplo.com.br", "telefone": "(56) 97141-8056", "cidade": "Brasília", "uf": "DF", "cadastrado_em": "2026-03-04T00:00:00"}
+{"customer_id": 137, "nome": "Henrique Almeida", "email": "henrique.almeida.137@exemplo.com.br", "telefone": "(32) 93868-2293", "cidade": "Belo Horizonte", "uf": "MG", "cadastrado_em": "2024-11-14T00:00:00"}
+{"customer_id": 138, "nome": "Natália Nascimento", "email": "natalia.nascimento.138@exemplo.com.br", "telefone": "(85) 93344-4804", "cidade": "Feira de Santana", "uf": "BA", "cadastrado_em": "2025-04-15T00:00:00"}
+{"customer_id": 139, "nome": "Isabela Rodrigues", "email": "isabela.rodrigues.139@exemplo.com.br", "telefone": "(70) 95712-9955", "cidade": "São Paulo", "uf": "SP", "cadastrado_em": "2026-02-20T00:00:00"}
+{"customer_id": 140, "nome": "Carla Rodrigues", "email": "carla.rodrigues.140@exemplo.com.br", "telefone": "(92) 97951-5097", "cidade": "Capital", "uf": "MS", "cadastrado_em": "2025-04-20T00:00:00"}
+{"customer_id": 141, "nome": "João Souza", "email": "joao.souza.141@exemplo.com.br", "telefone": "(24) 94886-7248", "cidade": "Capital", "uf": "RR", "cadastrado_em": "2024-12-23T00:00:00"}
+{"customer_id": 142, "nome": "Marcos Nascimento", "email": "marcos.nascimento.142@exemplo.com.br", "telefone": "(13) 97484-5497", "cidade": "Niterói", "uf": "RJ", "cadastrado_em": "2026-07-23T00:00:00"}
+{"customer_id": 143, "nome": "Vanessa Martins", "email": "vanessa.martins.143@exemplo.com.br", "telefone": "(88) 99138-5689", "cidade": "Salvador", "uf": "BA", "cadastrado_em": "2024-05-28T00:00:00"}
+{"customer_id": 144, "nome": "Henrique Nascimento", "email": "henrique.nascimento.144@exemplo.com.br", "telefone": "(92) 94115-5106", "cidade": "Brasília", "uf": "DF", "cadastrado_em": "2024-09-05T00:00:00"}
+{"customer_id": 145, "nome": "Eduarda Carvalho", "email": "eduarda.carvalho.145@exemplo.com.br", "telefone": "(50) 98222-1546", "cidade": "São Paulo", "uf": "SP", "cadastrado_em": "2024-12-15T00:00:00"}
+{"customer_id": 146, "nome": "Marcos Ribeiro", "email": "marcos.ribeiro.146@exemplo.com.br", "telefone": "(52) 97807-3877", "cidade": "Santos", "uf": "SP", "cadastrado_em": "2026-01-07T00:00:00"}
+{"customer_id": 147, "nome": "Eduarda Gomes", "email": "eduarda.gomes.147@exemplo.com.br", "telefone": "(78) 99221-5465", "cidade": "Caxias do Sul", "uf": "RS", "cadastrado_em": "2024-04-02T00:00:00"}
+{"customer_id": 148, "nome": "Felipe Lima", "email": "felipe.lima.148@exemplo.com.br", "telefone": "(48) 96549-2886", "cidade": "Capital", "uf": "AL", "cadastrado_em": "2025-04-08T00:00:00"}
+{"customer_id": 149, "nome": "Carla Oliveira", "email": "carla.oliveira.149@exemplo.com.br", "telefone": "(97) 97511-6992", "cidade": "Fortaleza", "uf": "CE", "cadastrado_em": "2026-04-30T00:00:00"}
+{"customer_id": 150, "nome": "Natália Silva", "email": "natalia.silva.150@exemplo.com.br", "telefone": "(69) 97038-5295", "cidade": "São Paulo", "uf": "SP", "cadastrado_em": "2024-12-10T00:00:00"}
+{"customer_id": 151, "nome": "Natália Martins", "email": "natalia.martins.151@exemplo.com.br", "telefone": "(24) 94830-8724", "cidade": "Feira de Santana", "uf": "BA", "cadastrado_em": "2026-07-06T00:00:00"}
+{"customer_id": 152, "nome": "Yuri Araújo", "email": "yuri.araujo.152@exemplo.com.br", "telefone": "(89) 94626-2035", "cidade": "Capital", "uf": "MT", "cadastrado_em": "2024-10-19T00:00:00"}
+{"customer_id": 153, "nome": "Paula Araújo", "email": "paula.araujo.153@exemplo.com.br", "telefone": "(25) 93290-1742", "cidade": "Recife", "uf": "PE", "cadastrado_em": "2026-06-23T00:00:00"}
+{"customer_id": 154, "nome": "João Rodrigues", "email": "joao.rodrigues.154@exemplo.com.br", "telefone": "(79) 93222-7367", "cidade": "Campinas", "uf": "SP", "cadastrado_em": "2025-04-23T00:00:00"}
+{"customer_id": 155, "nome": "Marcos Carvalho", "email": "marcos.carvalho.155@exemplo.com.br", "telefone": "(86) 93531-7797", "cidade": "Capital", "uf": "ms", "cadastrado_em": "2024-09-29T00:00:00"}
+{"customer_id": 156, "nome": "Diego Martins", "email": "diego.martins.156@exemplo.com.br", "telefone": "(46) 91536-7070", "cidade": "Londrina", "uf": "PR", "cadastrado_em": "2025-12-21T00:00:00"}
+{"customer_id": 157, "nome": "Paula Rodrigues", "email": "paula.rodrigues.157@exemplo.com.br", "telefone": "(23) 97018-9920", "cidade": "Capital", "uf": "MS", "cadastrado_em": "2024-10-09T00:00:00"}
+{"customer_id": 158, "nome": "Marcos Silva", "email": "marcos.silva.158@exemplo.com.br", "telefone": "(26) 98450-2501", "cidade": "Belo Horizonte", "uf": "MG", "cadastrado_em": "2024-09-21T00:00:00"}
+{"customer_id": 159, "nome": "Gabriela Carvalho", "email": "gabriela.carvalho.159@exemplo.com.br", "telefone": "(17) 96464-4990", "cidade": "Salvador", "uf": "BA", "cadastrado_em": "2026-03-25T00:00:00"}
+{"customer_id": 160, "nome": "Vanessa Souza", "email": "vanessa.souza.160@exemplo.com.br", "telefone": "(86) 94538-4817", "cidade": "Campinas", "uf": "SP", "cadastrado_em": "2025-08-29T00:00:00"}
+{"customer_id": 161, "nome": "Eduarda Gomes", "email": "eduarda.gomes.161@exemplo.com.br", "telefone": "(46) 93370-3129", "cidade": "Capital", "uf": "RN", "cadastrado_em": "2025-01-24T00:00:00"}
+{"customer_id": 162, "nome": "Isabela Gomes", "email": "isabela.gomes.162@exemplo.com.br", "telefone": "(27) 91243-6869", "cidade": "São Paulo", "uf": "SP", "cadastrado_em": "2024-05-14T00:00:00"}
+{"customer_id": 163, "nome": "Henrique Nascimento", "email": "henrique.nascimento.163@exemplo.com.br", "telefone": "(44) 91858-3076", "cidade": "Rio de Janeiro", "uf": "RJ", "cadastrado_em": "2024-07-02T00:00:00"}
+{"customer_id": 164, "nome": "Otávio Almeida", "email": "otavio.almeida.164@exemplo.com.br", "telefone": "(71) 98344-6931", "cidade": "São Paulo", "uf": "SP", "cadastrado_em": "2025-02-21T00:00:00"}
+{"customer_id": 165, "nome": "Vanessa Santos", "email": "vanessa.santos.165@exemplo.com.br", "telefone": "(89) 91710-9543", "cidade": "Belo Horizonte", "uf": "MG", "cadastrado_em": "2025-09-26T00:00:00"}
+{"customer_id": 166, "nome": "Paula Carvalho", "email": "paula.carvalho.166@exemplo.com.br", "telefone": "(72) 97580-7984", "cidade": "Capital", "uf": "RO", "cadastrado_em": "2024-08-28T00:00:00"}
+{"customer_id": 167, "nome": "Diego Rodrigues", "email": "diego.rodrigues.167@exemplo.com.br", "telefone": "(20) 92323-6277", "cidade": "Recife", "uf": "PE", "cadastrado_em": "2024-11-16T00:00:00"}
+{"customer_id": 168, "nome": "Eduarda Santos", "email": "eduarda.santos.168@exemplo.com.br", "telefone": "(59) 99692-5831", "cidade": "Santos", "uf": "SP", "cadastrado_em": "2025-04-23T00:00:00"}
+{"customer_id": 169, "nome": "Sofia Nascimento", "email": "sofia.nascimento.169@exemplo.com.br", "telefone": "(94) 94522-8046", "cidade": "Belo Horizonte", "uf": "MG", "cadastrado_em": "2025-04-25T00:00:00"}
+{"customer_id": 170, "nome": "Henrique Costa", "email": "henrique.costa.170@exemplo.com.br", "telefone": "(62) 97815-2557", "cidade": "Niterói", "uf": "RJ", "cadastrado_em": "2025-09-14T00:00:00"}
+{"customer_id": 171, "nome": "Otávio Pereira", "email": "otavio.pereira.171@exemplo.com.br", "telefone": "(30) 98770-2099", "cidade": "Feira de Santana", "uf": "BA", "cadastrado_em": "2026-04-29T00:00:00"}
+{"customer_id": 172, "nome": "Carla Santos", "email": "carla.santos.172@exemplo.com.br", "telefone": "(27) 91982-6400", "cidade": "Uberlândia", "uf": "MG", "cadastrado_em": "2024-09-13T00:00:00"}
+{"customer_id": 173, "nome": "Diego Costa", "email": "diego.costa.173@exemplo.com.br", "telefone": "(17) 95712-6119", "cidade": "Niterói", "uf": "RJ", "cadastrado_em": "2025-08-05T00:00:00"}
+{"customer_id": 174, "nome": "Diego Nascimento", "email": "diego.nascimento.174@exemplo.com.br", "telefone": "(95) 98900-4674", "cidade": "Curitiba", "uf": "PR", "cadastrado_em": "2024-03-16T00:00:00"}
+{"customer_id": 175, "nome": "Diego Pereira", "email": "diego.pereira.175@exemplo.com.br", "telefone": "(25) 95564-4705", "cidade": "Belém", "uf": "PA", "cadastrado_em": "2024-04-26T00:00:00"}
+{"customer_id": 176, "nome": "Otávio Martins", "email": "otavio.martins.176@exemplo.com.br", "telefone": "(88) 95381-1474", "cidade": "Porto Alegre", "uf": "RS", "cadastrado_em": "2026-01-28T00:00:00"}
+{"customer_id": 177, "nome": "Isabela Ribeiro", "email": "isabela.ribeiro.177@exemplo.com.br", "telefone": "(55) 91100-3972", "cidade": "Fortaleza", "uf": "CE", "cadastrado_em": "2024-02-22T00:00:00"}
+{"customer_id": 178, "nome": "Eduarda Nascimento", "email": "eduarda.nascimento.178@exemplo.com.br", "telefone": "(29) 91502-2503", "cidade": "Salvador", "uf": "BA", "cadastrado_em": "2024-06-27T00:00:00"}
+{"customer_id": 179, "nome": "Sofia Souza", "email": "sofia.souza.179@exemplo.com.br", "telefone": "(54) 93578-7062", "cidade": "Niterói", "uf": "rj", "cadastrado_em": "2025-09-15T00:00:00"}
+{"customer_id": 180, "nome": "Larissa Gomes", "email": "larissa.gomes.180@exemplo.com.br", "telefone": "(17) 93549-3579", "cidade": "Capital", "uf": "MT", "cadastrado_em": "2024-06-19T00:00:00"}
+{"customer_id": 181, "nome": "Yuri Silva", "email": "yuri.silva.181@exemplo.com.br", "telefone": "(67) 97947-8957", "cidade": "Feira de Santana", "uf": "BA", "cadastrado_em": "2024-11-17T00:00:00"}
+{"customer_id": 182, "nome": "Paula Costa", "email": "paula.costa.182@exemplo.com.br", "telefone": "(55) 98043-2816", "cidade": "São Paulo", "uf": "SP", "cadastrado_em": "2025-10-14T00:00:00"}
+{"customer_id": 183, "nome": "Vanessa Rodrigues", "email": "vanessa.rodrigues.183@exemplo.com.br", "telefone": "(16) 94612-7475", "cidade": "Londrina", "uf": "PR", "cadastrado_em": "2024-11-25T00:00:00"}
+{"customer_id": 184, "nome": "Bruno Silva", "email": "bruno.silva.184@exemplo.com.br", "telefone": "(28) 95186-5742", "cidade": "Campinas", "uf": "SP", "cadastrado_em": "2025-08-30T00:00:00"}
+{"customer_id": 185, "nome": "Diego Silva", "email": "diego.silva.185@exemplo.com.br", "telefone": "(33) 93116-7229", "cidade": "Londrina", "uf": "PR", "cadastrado_em": "2025-02-01T00:00:00"}
+{"customer_id": 186, "nome": "Henrique Almeida", "email": "henrique.almeida.186@exemplo.com.br", "telefone": "(20) 97505-1693", "cidade": "Caxias do Sul", "uf": "RS", "cadastrado_em": "2025-05-11T00:00:00"}
+{"customer_id": 187, "nome": "Ana Rodrigues", "email": "ana.rodrigues.187@exemplo.com.br", "telefone": "(84) 98033-7626", "cidade": "Capital", "uf": "PI", "cadastrado_em": "2024-08-04T00:00:00"}
+{"customer_id": 188, "nome": "Otávio Lima", "email": "otavio.lima.188@exemplo.com.br", "telefone": "(52) 93815-8538", "cidade": "São Paulo", "uf": "SP", "cadastrado_em": "2024-04-01T00:00:00"}
+{"customer_id": 189, "nome": "Marcos Santos", "email": "marcos.santos.189@exemplo.com.br", "telefone": "(42) 98138-7560", "cidade": "Belo Horizonte", "uf": "MG", "cadastrado_em": "2025-02-10T00:00:00"}
+{"customer_id": 190, "nome": "Carla Costa", "email": "carla.costa.190@exemplo.com.br", "telefone": "(39) 96456-3754", "cidade": "Manaus", "uf": "AM", "cadastrado_em": "2026-05-14T00:00:00"}
+{"customer_id": 191, "nome": "Sofia Carvalho", "email": "sofia.carvalho.191@exemplo.com.br", "telefone": "(55) 96752-3419", "cidade": "Campinas", "uf": "SP", "cadastrado_em": "2025-12-02T00:00:00"}
+{"customer_id": 192, "nome": "Diego Oliveira", "email": "diego.oliveira.192@exemplo.com.br", "telefone": "(88) 93504-2234", "cidade": "Campinas", "uf": "SP", "cadastrado_em": "2026-01-31T00:00:00"}
+{"customer_id": 193, "nome": "Rafael Rodrigues", "email": "rafael.rodrigues.193@exemplo.com.br", "telefone": "(98) 96295-6179", "cidade": "Fortaleza", "uf": "CE", "cadastrado_em": "2026-02-27T00:00:00"}
+{"customer_id": 194, "nome": "Paula Santos", "email": "paula.santos.194@exemplo.com.br", "telefone": "(46) 91920-6766", "cidade": "Uberlândia", "uf": "MG", "cadastrado_em": "2025-02-27T00:00:00"}
+{"customer_id": 195, "nome": "Carla Lima", "email": "carla.lima.195@exemplo.com.br", "telefone": "(18) 97041-5703", "cidade": "Belo Horizonte", "uf": "MG", "cadastrado_em": "2026-05-14T00:00:00"}
+{"customer_id": 196, "nome": "Carla Nascimento", "email": "carla.nascimento.196@exemplo.com.br", "telefone": "(70) 91672-8368", "cidade": "Joinville", "uf": "SC", "cadastrado_em": "2024-04-23T00:00:00"}
+{"customer_id": 197, "nome": "Vanessa Carvalho", "email": "vanessa.carvalho.197@exemplo.com.br", "telefone": "(75) 93471-2013", "cidade": "Ribeirão Preto", "uf": "SP", "cadastrado_em": "2025-04-26T00:00:00"}
+{"customer_id": 198, "nome": "Diego Gomes", "email": "diego.gomes.198@exemplo.com.br", "telefone": "(21) 99266-3827", "cidade": "Capital", "uf": "RN", "cadastrado_em": "2026-06-21T00:00:00"}
+{"customer_id": 199, "nome": "Henrique Ribeiro", "email": "henrique.ribeiro.199@exemplo.com.br", "telefone": "(78) 99564-3600", "cidade": "Uberlândia", "uf": "MG", "cadastrado_em": "2025-07-24T00:00:00"}
+{"customer_id": 200, "nome": "Marcos Araújo", "email": "marcos.araujo.200@exemplo.com.br", "telefone": "(54) 91857-6482", "cidade": "Ribeirão Preto", "uf": "SP", "cadastrado_em": "2026-05-25T00:00:00"}
+{"customer_id": 201, "nome": "Larissa Santos", "email": "larissa.santos.201@exemplo.com.br", "telefone": "(47) 95128-3463", "cidade": "Caxias do Sul", "uf": "RS", "cadastrado_em": "2025-08-24T00:00:00"}
+{"customer_id": 202, "nome": "Carla Nascimento", "email": "carla.nascimento.202@exemplo.com.br", "telefone": "(50) 97421-3112", "cidade": "Feira de Santana", "uf": "BA", "cadastrado_em": "2024-11-29T00:00:00"}
+{"customer_id": 203, "nome": "Carla Lima", "email": "carla.lima.203@exemplo.com.br", "telefone": "(27) 99624-2531", "cidade": "Caxias do Sul", "uf": "RS", "cadastrado_em": "2024-10-08T00:00:00"}
+{"customer_id": 204, "nome": "Otávio Almeida", "email": "otavio.almeida.204@exemplo.com.br", "telefone": "(50) 93953-4509", "cidade": "Niterói", "uf": "RJ", "cadastrado_em": "2025-08-16T00:00:00"}
+{"customer_id": 205, "nome": "Rafael Souza", "email": "rafael.souza.205@exemplo.com.br", "telefone": "(30) 92264-5846", "cidade": "Campinas", "uf": "SP", "cadastrado_em": "2024-03-19T00:00:00"}
+{"customer_id": 206, "nome": "Diego Almeida", "email": "diego.almeida.206@exemplo.com.br", "telefone": "(95) 96517-3147", "cidade": "Goiânia", "uf": "GO", "cadastrado_em": "2024-11-27T00:00:00"}
+{"customer_id": 207, "nome": "Natália Oliveira", "email": "natalia.oliveira.207@exemplo.com.br", "telefone": "(67) 91715-7731", "cidade": "Campinas", "uf": "SP", "cadastrado_em": "2025-07-23T00:00:00"}
+{"customer_id": 208, "nome": "Henrique Rodrigues", "email": "henrique.rodrigues.208@exemplo.com.br", "telefone": "(40) 99749-4918", "cidade": "Joinville", "uf": "SC", "cadastrado_em": "2025-09-18T00:00:00"}
+{"customer_id": 209, "nome": "Rafael Araújo", "email": "rafael.araujo.209@exemplo.com.br", "telefone": "(97) 98218-8564", "cidade": "Vitória", "uf": "ES", "cadastrado_em": "2024-06-04T00:00:00"}
+{"customer_id": 210, "nome": "João Gomes", "email": "joao.gomes.210@exemplo.com.br", "telefone": "(31) 94271-3267", "cidade": "Uberlândia", "uf": "MG", "cadastrado_em": "2024-02-19T00:00:00"}
+{"customer_id": 211, "nome": "Isabela Silva", "email": "isabela.silva.211@exemplo.com.br", "telefone": "(81) 92680-9452", "cidade": "Feira de Santana", "uf": "BA", "cadastrado_em": "2024-03-12T00:00:00"}
+{"customer_id": 212, "nome": "Diego Lima", "email": "diego.lima.212@exemplo.com.br", "telefone": "(45) 98361-9410", "cidade": "Campinas", "uf": "SP", "cadastrado_em": "2026-03-03T00:00:00"}
+{"customer_id": 213, "nome": "Otávio Santos", "email": "otavio.santos.213@exemplo.com.br", "telefone": "(68) 96727-1436", "cidade": "Capital", "uf": "MS", "cadastrado_em": "2025-06-02T00:00:00"}
+{"customer_id": 214, "nome": "Bruno Costa", "email": "bruno.costa.214@exemplo.com.br", "telefone": "(60) 92337-7142", "cidade": "Curitiba", "uf": "PR", "cadastrado_em": "2025-12-14T00:00:00"}
+{"customer_id": 215, "nome": "Ana Pereira", "email": "ana.pereira.215@exemplo.com.br", "telefone": "(29) 93254-1627", "cidade": "Capital", "uf": "SE", "cadastrado_em": "2025-10-11T00:00:00"}
+{"customer_id": 216, "nome": "Rafael Ribeiro", "email": "rafael.ribeiro.216@exemplo.com.br", "telefone": "(68) 91086-2298", "cidade": "Vitória", "uf": "ES", "cadastrado_em": "2026-07-12T00:00:00"}
+{"customer_id": 217, "nome": "Isabela Souza", "email": "isabela.souza.217@exemplo.com.br", "telefone": "(25) 95720-4893", "cidade": "Vitória", "uf": "ES", "cadastrado_em": "2025-09-26T00:00:00"}
+{"customer_id": 218, "nome": "Diego Silva", "email": "diego.silva.218@exemplo.com.br", "telefone": "(19) 92816-9189", "cidade": "Ribeirão Preto", "uf": "SP", "cadastrado_em": "2024-11-27T00:00:00"}
+{"customer_id": 219, "nome": "Thiago Silva", "email": "thiago.silva.219@exemplo.com.br", "telefone": "(29) 95772-8032", "cidade": "Florianópolis", "uf": "SC", "cadastrado_em": "2026-07-30T00:00:00"}
+{"customer_id": 220, "nome": "Yuri Pereira", "email": "yuri.pereira.220@exemplo.com.br", "telefone": "(34) 92402-9576", "cidade": "Ribeirão Preto", "uf": "SP", "cadastrado_em": "2025-07-27T00:00:00"}
+{"customer_id": 221, "nome": "Carla Almeida", "email": "carla.almeida.221@exemplo.com.br", "telefone": "(60) 98702-1713", "cidade": "Porto Alegre", "uf": "RS", "cadastrado_em": "2024-10-19T00:00:00"}
+{"customer_id": 222, "nome": "Natália Pereira", "email": "natalia.pereira.222@exemplo.com.br", "telefone": "(56) 92106-6649", "cidade": "São Paulo", "uf": "SP", "cadastrado_em": "2025-11-27T00:00:00"}
+{"customer_id": 223, "nome": "Diego Gomes", "email": "diego.gomes.223@exemplo.com.br", "telefone": "(28) 91726-6772", "cidade": "Caxias do Sul", "uf": "RS", "cadastrado_em": "2025-01-18T00:00:00"}
+{"customer_id": 224, "nome": "Larissa Martins", "email": "larissa.martins.224@exemplo.com.br", "telefone": "(72) 93986-3209", "cidade": "Feira de Santana", "uf": "BA", "cadastrado_em": "2026-05-28T00:00:00"}
+{"customer_id": 225, "nome": "Paula Silva", "email": "paula.silva.225@exemplo.com.br", "telefone": "(36) 91686-6170", "cidade": "Rio de Janeiro", "uf": "RJ", "cadastrado_em": "2025-09-17T00:00:00"}
+{"customer_id": 226, "nome": "Sofia Costa", "email": "sofia.costa.226@exemplo.com.br", "telefone": "(43) 91599-4131", "cidade": "Capital", "uf": "AP", "cadastrado_em": "2025-10-12T00:00:00"}
+{"customer_id": 227, "nome": "Marcos Martins", "email": "marcos.martins.227@exemplo.com.br", "telefone": "(45) 93039-7029", "cidade": "Goiânia", "uf": "GO", "cadastrado_em": "2025-05-10T00:00:00"}
+{"customer_id": 228, "nome": "Natália Ribeiro", "email": "natalia.ribeiro.228@exemplo.com.br", "telefone": "(54) 94060-9129", "cidade": "Uberlândia", "uf": "MG", "cadastrado_em": "2024-08-22T00:00:00"}
+{"customer_id": 229, "nome": "Rafael Pereira", "email": "rafael.pereira.229@exemplo.com.br", "telefone": "(21) 97955-2293", "cidade": "Capital", "uf": "PI", "cadastrado_em": "2025-05-17T00:00:00"}
+{"customer_id": 230, "nome": "Yuri Martins", "email": "yuri.martins.230@exemplo.com.br", "telefone": "(52) 92680-2311", "cidade": "Santos", "uf": "SP", "cadastrado_em": "2025-08-30T00:00:00"}
+{"customer_id": 231, "nome": "João Lima", "email": "joao.lima.231@exemplo.com.br", "telefone": "(32) 98272-6759", "cidade": "Uberlândia", "uf": "MG", "cadastrado_em": "2025-04-30T00:00:00"}
+{"customer_id": 232, "nome": "Bruno Ribeiro", "email": "bruno.ribeiro.232@exemplo.com.br", "telefone": "(89) 98126-5498", "cidade": "Manaus", "uf": "AM", "cadastrado_em": "2024-10-15T00:00:00"}
+{"customer_id": 233, "nome": "Bruno Santos", "email": "bruno.santos.233@exemplo.com.br", "telefone": "(57) 99406-3621", "cidade": "Feira de Santana", "uf": "BA", "cadastrado_em": "2026-06-30T00:00:00"}
+{"customer_id": 234, "nome": "Eduarda Martins", "email": "eduarda.martins.234@exemplo.com.br", "telefone": "(15) 93068-2101", "cidade": "Joinville", "uf": "SC", "cadastrado_em": "2025-12-02T00:00:00"}
+{"customer_id": 235, "nome": "Marcos Pereira", "email": "marcos.pereira.235@exemplo.com.br", "telefone": "(88) 93513-8371", "cidade": "Belo Horizonte", "uf": "MG", "cadastrado_em": "2025-07-17T00:00:00"}
+{"customer_id": 236, "nome": "Marcos Rodrigues", "email": "marcos.rodrigues.236@exemplo.com.br", "telefone": "(78) 97012-7521", "cidade": "Fortaleza", "uf": "ce", "cadastrado_em": "2025-09-13T00:00:00"}
+{"customer_id": 237, "nome": "Isabela Souza", "email": "isabela.souza.237@exemplo.com.br", "telefone": "(34) 99176-9482", "cidade": "Capital", "uf": "TO", "cadastrado_em": "2025-06-30T00:00:00"}
+{"customer_id": 238, "nome": "Thiago Santos", "email": "thiago.santos.238@exemplo.com.br", "telefone": "(68) 94515-5678", "cidade": "Santos", "uf": "SP", "cadastrado_em": "2024-08-20T00:00:00"}
+{"customer_id": 239, "nome": "Rafael Souza", "email": "rafael.souza.239@exemplo.com.br", "telefone": "(68) 93828-8292", "cidade": "São Paulo", "uf": "sp", "cadastrado_em": "2026-05-03T00:00:00"}
+{"customer_id": 240, "nome": "Larissa Carvalho", "email": "larissa.carvalho.240@exemplo.com.br", "telefone": "(81) 99882-5757", "cidade": "Rio de Janeiro", "uf": "RJ", "cadastrado_em": "2025-09-27T00:00:00"}
+{"customer_id": 241, "nome": "Felipe Ribeiro", "email": "felipe.ribeiro.241@exemplo.com.br", "telefone": "(57) 99335-4673", "cidade": "Recife", "uf": "PE", "cadastrado_em": "2026-03-29T00:00:00"}
+{"customer_id": 242, "nome": "Gabriela Gomes", "email": "gabriela.gomes.242@exemplo.com.br", "telefone": "(14) 96912-7044", "cidade": "Ribeirão Preto", "uf": "SP", "cadastrado_em": "2025-04-09T00:00:00"}
+{"customer_id": 243, "nome": "Thiago Oliveira", "email": "thiago.oliveira.243@exemplo.com.br", "telefone": "(19) 96067-7523", "cidade": "Florianópolis", "uf": "SC", "cadastrado_em": "2024-07-27T00:00:00"}
+{"customer_id": 244, "nome": "Rafael Almeida", "email": "rafael.almeida.244@exemplo.com.br", "telefone": "(84) 92208-3053", "cidade": "Uberlândia", "uf": "MG", "cadastrado_em": "2025-09-10T00:00:00"}
+{"customer_id": 245, "nome": "Carla Rodrigues", "email": "carla.rodrigues.245@exemplo.com.br", "telefone": "(27) 93981-3114", "cidade": "Uberlândia", "uf": "MG", "cadastrado_em": "2025-05-14T00:00:00"}
+{"customer_id": 246, "nome": "Sofia Araújo", "email": "sofia.araujo.246@exemplo.com.br", "telefone": "(77) 93507-5982", "cidade": "Manaus", "uf": "AM", "cadastrado_em": "2026-02-13T00:00:00"}
+{"customer_id": 247, "nome": "Felipe Pereira", "email": "felipe.pereira.247@exemplo.com.br", "telefone": "(55) 99501-5653", "cidade": "Capital", "uf": "MT", "cadastrado_em": "2024-03-17T00:00:00"}
+{"customer_id": 248, "nome": "Carla Lima", "email": "carla.lima.248@exemplo.com.br", "telefone": "(27) 95961-9740", "cidade": "Santos", "uf": "SP", "cadastrado_em": "2026-04-27T00:00:00"}
+{"customer_id": 249, "nome": "Sofia Carvalho", "email": "sofia.carvalho.249@exemplo.com.br", "telefone": "(32) 96531-1674", "cidade": "Campinas", "uf": "SP", "cadastrado_em": "2024-04-07T00:00:00"}
+{"customer_id": 250, "nome": "Ana Santos", "email": "ana.santos.250@exemplo.com.br", "telefone": "(94) 94453-7825", "cidade": "Santos", "uf": "SP", "cadastrado_em": "2024-11-06T00:00:00"}
+{"customer_id": 251, "nome": "Ana Rodrigues", "email": "ana.rodrigues.251@exemplo.com.br", "telefone": "(93) 95949-8912", "cidade": "Capital", "uf": "PB", "cadastrado_em": "2025-11-23T00:00:00"}
+{"customer_id": 252, "nome": "Natália Lima", "email": "natalia.lima.252@exemplo.com.br", "telefone": "(31) 98202-7809", "cidade": "Belo Horizonte", "uf": "MG", "cadastrado_em": "2025-03-23T00:00:00"}
+{"customer_id": 253, "nome": "Paula Souza", "email": "paula.souza.253@exemplo.com.br", "telefone": "(51) 96231-6658", "cidade": "Rio de Janeiro", "uf": "RJ", "cadastrado_em": "2025-06-18T00:00:00"}
+{"customer_id": 254, "nome": "Eduarda Gomes", "email": "eduarda.gomes.254@exemplo.com.br", "telefone": "(51) 94960-8642", "cidade": "Rio de Janeiro", "uf": "RJ", "cadastrado_em": "2026-03-28T00:00:00"}
+{"customer_id": 255, "nome": "Isabela Rodrigues", "email": "isabela.rodrigues.255@exemplo.com.br", "telefone": "(17) 95754-7293", "cidade": "São Paulo", "uf": "SP", "cadastrado_em": "2024-02-28T00:00:00"}
+{"customer_id": 256, "nome": "Yuri Costa", "email": "yuri.costa.256@exemplo.com.br", "telefone": "(52) 96123-4110", "cidade": "Campinas", "uf": "SP", "cadastrado_em": "2024-06-10T00:00:00"}
+{"customer_id": 257, "nome": "Felipe Rodrigues", "email": "felipe.rodrigues.257@exemplo.com.br", "telefone": "(74) 96055-9148", "cidade": "Capital", "uf": "RR", "cadastrado_em": "2026-07-08T00:00:00"}
+{"customer_id": 258, "nome": "Carla Costa", "email": "carla.costa.258@exemplo.com.br", "telefone": "(38) 96781-1797", "cidade": "Curitiba", "uf": "PR", "cadastrado_em": "2026-06-10T00:00:00"}
+{"customer_id": 259, "nome": "João Rodrigues", "email": "joao.rodrigues.259@exemplo.com.br", "telefone": "(47) 99793-1133", "cidade": "Joinville", "uf": "SC", "cadastrado_em": "2024-03-16T00:00:00"}
+{"customer_id": 260, "nome": "Diego Costa", "email": "diego.costa.260@exemplo.com.br", "telefone": "(57) 97606-6995", "cidade": "Santos", "uf": "SP", "cadastrado_em": "2026-06-15T00:00:00"}
+{"customer_id": 261, "nome": "Natália Silva", "email": "natalia.silva.261@exemplo.com.br", "telefone": "(57) 95728-2204", "cidade": "Porto Alegre", "uf": "RS", "cadastrado_em": "2025-07-01T00:00:00"}
+{"customer_id": 262, "nome": "Sofia Rodrigues", "email": "sofia.rodrigues.262@exemplo.com.br", "telefone": "(90) 92946-3108", "cidade": "Goiânia", "uf": "GO", "cadastrado_em": "2026-04-23T00:00:00"}
+{"customer_id": 263, "nome": "Natália Pereira", "email": "natalia.pereira.263@exemplo.com.br", "telefone": "(82) 96990-3363", "cidade": "Brasília", "uf": "DF", "cadastrado_em": "2026-01-09T00:00:00"}
+{"customer_id": 264, "nome": "Yuri Almeida", "email": "yuri.almeida.264@exemplo.com.br", "telefone": "(16) 91637-3245", "cidade": "Belo Horizonte", "uf": "MG", "cadastrado_em": "2024-07-31T00:00:00"}
+{"customer_id": 265, "nome": "Larissa Gomes", "email": "larissa.gomes.265@exemplo.com.br", "telefone": "(30) 99446-3290", "cidade": "Londrina", "uf": "PR", "cadastrado_em": "2025-08-30T00:00:00"}
+{"customer_id": 266, "nome": "Yuri Pereira", "email": "yuri.pereira.266@exemplo.com.br", "telefone": "(86) 96511-9311", "cidade": "Santos", "uf": "SP", "cadastrado_em": "2024-04-04T00:00:00"}
+{"customer_id": 267, "nome": "Sofia Almeida", "email": "sofia.almeida.267@exemplo.com.br", "telefone": "(71) 91272-7035", "cidade": "Londrina", "uf": null, "cadastrado_em": "2025-08-26T00:00:00"}
+{"customer_id": 268, "nome": "Diego Costa", "email": "diego.costa.268@exemplo.com.br", "telefone": "(87) 98775-5350", "cidade": "Porto Alegre", "uf": "RS", "cadastrado_em": "2024-09-28T00:00:00"}
+{"customer_id": 269, "nome": "Vanessa Nascimento", "email": "vanessa.nascimento.269@exemplo.com.br", "telefone": "(85) 98871-3793", "cidade": "São Paulo", "uf": "SP", "cadastrado_em": "2025-02-10T00:00:00"}
+{"customer_id": 270, "nome": "Yuri Gomes", "email": "yuri.gomes.270@exemplo.com.br", "telefone": "(98) 94968-1517", "cidade": "Belém", "uf": "PA", "cadastrado_em": "2024-12-22T00:00:00"}
+{"customer_id": 271, "nome": "Diego Souza", "email": "diego.souza.271@exemplo.com.br", "telefone": "(64) 93481-7765", "cidade": "Santos", "uf": "SP", "cadastrado_em": "2024-08-23T00:00:00"}
+{"customer_id": 272, "nome": "Gabriela Costa", "email": "gabriela.costa.272@exemplo.com.br", "telefone": "(18) 93262-9498", "cidade": "Londrina", "uf": "PR", "cadastrado_em": "2025-12-31T00:00:00"}
+{"customer_id": 273, "nome": "Thiago Pereira", "email": "thiago.pereira.273@exemplo.com.br", "telefone": "(78) 97173-6140", "cidade": "Capital", "uf": "RR", "cadastrado_em": "2026-02-04T00:00:00"}
+{"customer_id": 274, "nome": "Paula Araújo", "email": "paula.araujo.274@exemplo.com.br", "telefone": "(97) 95331-8932", "cidade": "Caxias do Sul", "uf": "RS", "cadastrado_em": "2026-01-16T00:00:00"}
+{"customer_id": 275, "nome": "Henrique Lima", "email": "henrique.lima.275@exemplo.com.br", "telefone": "(49) 95735-4396", "cidade": "Porto Alegre", "uf": "RS", "cadastrado_em": "2024-08-24T00:00:00"}
+{"customer_id": 276, "nome": "Rafael Pereira", "email": "rafael.pereira.276@exemplo.com.br", "telefone": "(47) 92996-9899", "cidade": "Londrina", "uf": "PR", "cadastrado_em": "2025-07-08T00:00:00"}
+{"customer_id": 277, "nome": "Natália Martins", "email": "natalia.martins.277@exemplo.com.br", "telefone": "(48) 91689-5712", "cidade": "Rio de Janeiro", "uf": "RJ", "cadastrado_em": "2024-07-30T00:00:00"}
+{"customer_id": 278, "nome": "Carla Pereira", "email": "carla.pereira.278@exemplo.com.br", "telefone": "(72) 94505-4310", "cidade": "Capital", "uf": "PI", "cadastrado_em": "2024-04-05T00:00:00"}
+{"customer_id": 279, "nome": "Thiago Lima", "email": "thiago.lima.279@exemplo.com.br", "telefone": "(28) 92789-4920", "cidade": "Capital", "uf": "SE", "cadastrado_em": "2025-11-25T00:00:00"}
+{"customer_id": 280, "nome": "Bruno Carvalho", "email": "bruno.carvalho.280@exemplo.com.br", "telefone": "(92) 94814-1860", "cidade": "Capital", "uf": "RN", "cadastrado_em": "2026-04-20T00:00:00"}
+{"customer_id": 281, "nome": "Otávio Pereira", "email": "otavio.pereira.281@exemplo.com.br", "telefone": "(98) 93252-1084", "cidade": "Recife", "uf": "PE", "cadastrado_em": "2025-01-14T00:00:00"}
+{"customer_id": 282, "nome": "Felipe Costa", "email": "felipe.costa.282@exemplo.com.br", "telefone": "(72) 94267-5706", "cidade": "Feira de Santana", "uf": "BA", "cadastrado_em": "2025-09-06T00:00:00"}
+{"customer_id": 283, "nome": "João Carvalho", "email": "joao.carvalho.283@exemplo.com.br", "telefone": "(94) 94804-9767", "cidade": "São Paulo", "uf": "SP", "cadastrado_em": "2024-07-05T00:00:00"}
+{"customer_id": 284, "nome": "Bruno Araújo", "email": "bruno.araujo.284@exemplo.com.br", "telefone": "(33) 91595-7504", "cidade": "Capital", "uf": "PI", "cadastrado_em": "2024-05-16T00:00:00"}
+{"customer_id": 285, "nome": "Rafael Oliveira", "email": "rafael.oliveira.285@exemplo.com.br", "telefone": "(15) 91151-5888", "cidade": "Capital", "uf": "MT", "cadastrado_em": "2024-12-27T00:00:00"}
+{"customer_id": 286, "nome": "Yuri Santos", "email": "yuri.santos.286@exemplo.com.br", "telefone": "(47) 98444-9901", "cidade": "Capital", "uf": "SE", "cadastrado_em": "2025-02-10T00:00:00"}
+{"customer_id": 287, "nome": "Rafael Araújo", "email": "rafael.araujo.287@exemplo.com.br", "telefone": "(45) 94159-2845", "cidade": "Capital", "uf": "MT", "cadastrado_em": "2025-08-27T00:00:00"}
+{"customer_id": 288, "nome": "Felipe Ribeiro", "email": "felipe.ribeiro.288@exemplo.com.br", "telefone": "(34) 91230-6523", "cidade": "Uberlândia", "uf": "MG", "cadastrado_em": "2024-05-13T00:00:00"}
+{"customer_id": 289, "nome": "João Nascimento", "email": "joao.nascimento.289@exemplo.com.br", "telefone": "(33) 97643-8007", "cidade": "Salvador", "uf": "BA", "cadastrado_em": "2025-02-19T00:00:00"}
+{"customer_id": 290, "nome": "Larissa Santos", "email": "larissa.santos.290@exemplo.com.br", "telefone": "(34) 93303-8822", "cidade": "Belo Horizonte", "uf": "MG", "cadastrado_em": "2025-09-03T00:00:00"}
+{"customer_id": 291, "nome": "Henrique Silva", "email": "henrique.silva.291@exemplo.com.br", "telefone": "(68) 95374-6400", "cidade": "Campinas", "uf": "SP", "cadastrado_em": "2025-09-25T00:00:00"}
+{"customer_id": 292, "nome": "Vanessa Ribeiro", "email": "vanessa.ribeiro.292@exemplo.com.br", "telefone": "(94) 96890-4871", "cidade": "Caxias do Sul", "uf": "RS", "cadastrado_em": "2026-05-29T00:00:00"}
+{"customer_id": 293, "nome": "Diego Rodrigues", "email": "diego.rodrigues.293@exemplo.com.br", "telefone": "(98) 99233-6095", "cidade": "Niterói", "uf": "RJ", "cadastrado_em": "2024-08-24T00:00:00"}
+{"customer_id": 294, "nome": "Diego Carvalho", "email": "diego.carvalho.294@exemplo.com.br", "telefone": "(58) 94618-4590", "cidade": "Capital", "uf": "PI", "cadastrado_em": "2026-03-17T00:00:00"}
+{"customer_id": 295, "nome": "Rafael Oliveira", "email": "rafael.oliveira.295@exemplo.com.br", "telefone": "(64) 99998-8714", "cidade": "Uberlândia", "uf": "MG", "cadastrado_em": "2024-06-16T00:00:00"}
+{"customer_id": 296, "nome": "Thiago Gomes", "email": "thiago.gomes.296@exemplo.com.br", "telefone": "(42) 92341-9609", "cidade": "Salvador", "uf": "BA", "cadastrado_em": "2025-04-30T00:00:00"}
+{"customer_id": 297, "nome": "Sofia Ribeiro", "email": "sofia.ribeiro.297@exemplo.com.br", "telefone": "(18) 99972-9281", "cidade": "Rio de Janeiro", "uf": "RJ", "cadastrado_em": "2026-01-05T00:00:00"}
+{"customer_id": 298, "nome": "Vanessa Almeida", "email": "vanessa.almeida.298@exemplo.com.br", "telefone": "(77) 98239-2904", "cidade": "Santos", "uf": "SP", "cadastrado_em": "2024-09-03T00:00:00"}
+{"customer_id": 299, "nome": "Gabriela Ribeiro", "email": "gabriela.ribeiro.299@exemplo.com.br", "telefone": "(76) 98298-1911", "cidade": "Porto Alegre", "uf": "RS", "cadastrado_em": "2025-04-23T00:00:00"}
+{"customer_id": 300, "nome": "Eduarda Almeida", "email": "eduarda.almeida.300@exemplo.com.br", "telefone": "(82) 98575-6049", "cidade": "Belo Horizonte", "uf": "MG", "cadastrado_em": "2024-07-21T00:00:00"}
+{"customer_id": 301, "nome": "Ana Costa", "email": "ana.costa.301@exemplo.com.br", "telefone": "(38) 92196-1742", "cidade": "São Paulo", "uf": "SP", "cadastrado_em": "2025-05-24T00:00:00"}
+{"customer_id": 302, "nome": "Marcos Ribeiro", "email": "marcos.ribeiro.302@exemplo.com.br", "telefone": "(19) 98734-1519", "cidade": "São Paulo", "uf": "SP", "cadastrado_em": "2025-10-11T00:00:00"}
+{"customer_id": 303, "nome": "Otávio Oliveira", "email": "otavio.oliveira.303@exemplo.com.br", "telefone": "(58) 97266-8348", "cidade": "Goiânia", "uf": "GO", "cadastrado_em": "2024-02-22T00:00:00"}
+{"customer_id": 304, "nome": "Natália Costa", "email": "natalia.costa.304@exemplo.com.br", "telefone": "(94) 96697-2943", "cidade": "Campinas", "uf": "SP", "cadastrado_em": "2026-01-30T00:00:00"}
+{"customer_id": 305, "nome": "Thiago Costa", "email": "thiago.costa.305@exemplo.com.br", "telefone": "(11) 91372-5888", "cidade": "Porto Alegre", "uf": "RS", "cadastrado_em": "2025-04-13T00:00:00"}
+{"customer_id": 306, "nome": "Thiago Costa", "email": "thiago.costa.306@exemplo.com.br", "telefone": "(42) 98546-6671", "cidade": "Porto Alegre", "uf": "RS", "cadastrado_em": "2026-02-23T00:00:00"}
+{"customer_id": 307, "nome": "Isabela Souza", "email": "isabela.souza.307@exemplo.com.br", "telefone": "(15) 97868-1256", "cidade": "Capital", "uf": "MT", "cadastrado_em": "2025-11-27T00:00:00"}
+{"customer_id": 308, "nome": "Gabriela Santos", "email": "gabriela.santos.308@exemplo.com.br", "telefone": "(68) 91797-5009", "cidade": "São Paulo", "uf": "SP", "cadastrado_em": "2024-07-03T00:00:00"}
+{"customer_id": 309, "nome": "Bruno Costa", "email": "bruno.costa.309@exemplo.com.br", "telefone": "(18) 93295-9255", "cidade": "Belo Horizonte", "uf": "MG", "cadastrado_em": "2025-10-08T00:00:00"}
+{"customer_id": 310, "nome": "Henrique Martins", "email": "henrique.martins.310@exemplo.com.br", "telefone": "(84) 96253-4881", "cidade": "Capital", "uf": "PI", "cadastrado_em": "2025-09-25T00:00:00"}
+{"customer_id": 311, "nome": "Eduarda Carvalho", "email": "eduarda.carvalho.311@exemplo.com.br", "telefone": "(49) 95508-1998", "cidade": "Londrina", "uf": "PR", "cadastrado_em": "2025-01-07T00:00:00"}
+{"customer_id": 312, "nome": "Vanessa Araújo", "email": "vanessa.araujo.312@exemplo.com.br", "telefone": "(91) 97999-9120", "cidade": "Fortaleza", "uf": "CE", "cadastrado_em": "2026-06-13T00:00:00"}
+{"customer_id": 313, "nome": "Marcos Carvalho", "email": "marcos.carvalho.313@exemplo.com.br", "telefone": "(64) 97688-3444", "cidade": "Feira de Santana", "uf": "BA", "cadastrado_em": "2025-09-27T00:00:00"}
+{"customer_id": 314, "nome": "Natália Oliveira", "email": "natalia.oliveira.314@exemplo.com.br", "telefone": "(41) 94692-5927", "cidade": "Fortaleza", "uf": "CE", "cadastrado_em": "2024-03-05T00:00:00"}
+{"customer_id": 315, "nome": "Eduarda Gomes", "email": "eduarda.gomes.315@exemplo.com.br", "telefone": "(82) 97761-7824", "cidade": "Belo Horizonte", "uf": "MG", "cadastrado_em": "2025-01-07T00:00:00"}
+{"customer_id": 316, "nome": "Sofia Oliveira", "email": "sofia.oliveira.316@exemplo.com.br", "telefone": "(37) 96411-2295", "cidade": "Uberlândia", "uf": "MG", "cadastrado_em": "2025-04-27T00:00:00"}
+{"customer_id": 317, "nome": "Marcos Santos", "email": "marcos.santos.317@exemplo.com.br", "telefone": "(17) 95398-7179", "cidade": "Porto Alegre", "uf": "RS", "cadastrado_em": "2024-09-10T00:00:00"}
+{"customer_id": 318, "nome": "Yuri Nascimento", "email": "yuri.nascimento.318@exemplo.com.br", "telefone": "(35) 94555-8854", "cidade": "São Paulo", "uf": "SP", "cadastrado_em": "2025-12-30T00:00:00"}
+{"customer_id": 319, "nome": "Larissa Lima", "email": "larissa.lima.319@exemplo.com.br", "telefone": "(38) 94113-2922", "cidade": "Capital", "uf": "TO", "cadastrado_em": "2024-06-27T00:00:00"}
+{"customer_id": 320, "nome": "Rafael Araújo", "email": "rafael.araujo.320@exemplo.com.br", "telefone": "(61) 94921-6269", "cidade": "Campinas", "uf": null, "cadastrado_em": "2024-05-28T00:00:00"}
+{"customer_id": 321, "nome": "João Costa", "email": "joao.costa.321@exemplo.com.br", "telefone": "(50) 95285-6892", "cidade": "Uberlândia", "uf": "MG", "cadastrado_em": "2025-02-21T00:00:00"}
+{"customer_id": 322, "nome": "Rafael Rodrigues", "email": "rafael.rodrigues.322@exemplo.com.br", "telefone": "(51) 94328-7073", "cidade": "Ribeirão Preto", "uf": "SP", "cadastrado_em": "2025-09-14T00:00:00"}
+{"customer_id": 323, "nome": "Otávio Silva", "email": "otavio.silva.323@exemplo.com.br", "telefone": "(29) 91265-5272", "cidade": "Porto Alegre", "uf": "RS", "cadastrado_em": "2025-01-11T00:00:00"}
+{"customer_id": 324, "nome": "Vanessa Nascimento", "email": "vanessa.nascimento.324@exemplo.com.br", "telefone": "(30) 94214-6404", "cidade": "Recife", "uf": "PE", "cadastrado_em": "2025-12-08T00:00:00"}
+{"customer_id": 325, "nome": "Natália Nascimento", "email": "natalia.nascimento.325@exemplo.com.br", "telefone": "(81) 96530-5216", "cidade": "Vitória", "uf": "ES", "cadastrado_em": "2024-06-10T00:00:00"}
+{"customer_id": 326, "nome": "Rafael Ribeiro", "email": "rafael.ribeiro.326@exemplo.com.br", "telefone": "(69) 93756-6770", "cidade": "Feira de Santana", "uf": "BA", "cadastrado_em": "2026-02-08T00:00:00"}
+{"customer_id": 327, "nome": "Eduarda Ribeiro", "email": "eduarda.ribeiro.327@exemplo.com.br", "telefone": "(80) 91962-9584", "cidade": "Porto Alegre", "uf": "RS", "cadastrado_em": "2026-06-27T00:00:00"}
+{"customer_id": 328, "nome": "Carla Martins", "email": "carla.martins.328@exemplo.com.br", "telefone": "(63) 93252-4791", "cidade": "Salvador", "uf": "BA", "cadastrado_em": "2026-05-23T00:00:00"}
+{"customer_id": 329, "nome": "Eduarda Silva", "email": "eduarda.silva.329@exemplo.com.br", "telefone": "(58) 91990-8916", "cidade": "Ribeirão Preto", "uf": "SP", "cadastrado_em": "2024-09-24T00:00:00"}
+{"customer_id": 330, "nome": "Rafael Silva", "email": "rafael.silva.330@exemplo.com.br", "telefone": "(12) 91274-9673", "cidade": "Ribeirão Preto", "uf": "SP", "cadastrado_em": "2024-07-22T00:00:00"}
+{"customer_id": 331, "nome": "Isabela Almeida", "email": "isabela.almeida.331@exemplo.com.br", "telefone": "(75) 98054-3937", "cidade": "Capital", "uf": "AC", "cadastrado_em": "2026-04-13T00:00:00"}
+{"customer_id": 332, "nome": "Diego Almeida", "email": "diego.almeida.332@exemplo.com.br", "telefone": "(90) 99625-5135", "cidade": "Campinas", "uf": "SP", "cadastrado_em": "2024-04-18T00:00:00"}
+{"customer_id": 333, "nome": "Marcos Lima", "email": "marcos.lima.333@exemplo.com.br", "telefone": "(58) 97652-8520", "cidade": "Brasília", "uf": "DF", "cadastrado_em": "2024-12-30T00:00:00"}
+{"customer_id": 334, "nome": "Henrique Ribeiro", "email": "henrique.ribeiro.334@exemplo.com.br", "telefone": "(94) 91519-2531", "cidade": "São Paulo", "uf": "SP", "cadastrado_em": "2025-06-11T00:00:00"}
+{"customer_id": 335, "nome": "Natália Costa", "email": "natalia.costa.335@exemplo.com.br", "telefone": "(92) 91154-3807", "cidade": "Porto Alegre", "uf": "RS", "cadastrado_em": "2026-05-08T00:00:00"}
+{"customer_id": 336, "nome": "Rafael Martins", "email": "rafael.martins.336@exemplo.com.br", "telefone": "(83) 92562-9653", "cidade": "Uberlândia", "uf": "MG", "cadastrado_em": "2026-06-18T00:00:00"}
+{"customer_id": 337, "nome": "Henrique Souza", "email": "henrique.souza.337@exemplo.com.br", "telefone": "(45) 91762-2218", "cidade": "Capital", "uf": "RN", "cadastrado_em": "2024-08-30T00:00:00"}
+{"customer_id": 338, "nome": "Isabela Araújo", "email": "isabela.araujo.338@exemplo.com.br", "telefone": "(33) 96152-1256", "cidade": "Porto Alegre", "uf": "RS", "cadastrado_em": "2025-12-31T00:00:00"}
+{"customer_id": 339, "nome": "Vanessa Oliveira", "email": "vanessa.oliveira.339@exemplo.com.br", "telefone": "(20) 95903-3661", "cidade": "Fortaleza", "uf": "CE", "cadastrado_em": "2024-12-31T00:00:00"}
+{"customer_id": 340, "nome": "Henrique Nascimento", "email": "henrique.nascimento.340@exemplo.com.br", "telefone": "(97) 99856-6435", "cidade": "Vitória", "uf": "ES", "cadastrado_em": "2025-07-03T00:00:00"}
+{"customer_id": 341, "nome": "Eduarda Gomes", "email": "eduarda.gomes.341@exemplo.com.br", "telefone": "(75) 96666-1879", "cidade": "Capital", "uf": "AP", "cadastrado_em": "2026-04-22T00:00:00"}
+{"customer_id": 342, "nome": "Otávio Souza", "email": "otavio.souza.342@exemplo.com.br", "telefone": "(88) 97499-6347", "cidade": "Vitória", "uf": "ES", "cadastrado_em": "2026-07-01T00:00:00"}
+{"customer_id": 343, "nome": "Isabela Gomes", "email": "isabela.gomes.343@exemplo.com.br", "telefone": "(40) 96829-7150", "cidade": "Capital", "uf": "RR", "cadastrado_em": "2025-05-15T00:00:00"}
+{"customer_id": 344, "nome": "Felipe Carvalho", "email": "felipe.carvalho.344@exemplo.com.br", "telefone": "(21) 95839-5037", "cidade": "Joinville", "uf": "SC", "cadastrado_em": "2024-07-31T00:00:00"}
+{"customer_id": 345, "nome": "Carla Santos", "email": "carla.santos.345@exemplo.com.br", "telefone": "(92) 93527-7383", "cidade": "Ribeirão Preto", "uf": "SP", "cadastrado_em": "2025-09-10T00:00:00"}
+{"customer_id": 346, "nome": "Marcos Santos", "email": "marcos.santos.346@exemplo.com.br", "telefone": "(67) 96896-5419", "cidade": "Santos", "uf": "SP", "cadastrado_em": "2026-04-18T00:00:00"}
+{"customer_id": 347, "nome": "Eduarda Santos", "email": "eduarda.santos.347@exemplo.com.br", "telefone": "(82) 99395-7685", "cidade": "Ribeirão Preto", "uf": "sp", "cadastrado_em": "2026-04-17T00:00:00"}
+{"customer_id": 348, "nome": "Ana Santos", "email": "ana.santos.348@exemplo.com.br", "telefone": "(87) 96315-7311", "cidade": "Rio de Janeiro", "uf": "RJ", "cadastrado_em": "2026-07-19T00:00:00"}
+{"customer_id": 349, "nome": "João Costa", "email": "joao.costa.349@exemplo.com.br", "telefone": "(82) 94977-9537", "cidade": "Belo Horizonte", "uf": "MG", "cadastrado_em": "2026-02-08T00:00:00"}
+{"customer_id": 350, "nome": "Natália Oliveira", "email": "natalia.oliveira.350@exemplo.com.br", "telefone": "(45) 99079-3390", "cidade": "Santos", "uf": "SP", "cadastrado_em": "2026-05-28T00:00:00"}
+{"customer_id": 351, "nome": "Felipe Costa", "email": "felipe.costa.351@exemplo.com.br", "telefone": "(72) 92260-6916", "cidade": "Santos", "uf": "SP", "cadastrado_em": "2025-11-16T00:00:00"}
+{"customer_id": 352, "nome": "Henrique Ribeiro", "email": "henrique.ribeiro.352@exemplo.com.br", "telefone": "(69) 92752-3219", "cidade": "Florianópolis", "uf": "SC", "cadastrado_em": "2025-09-23T00:00:00"}
+{"customer_id": 353, "nome": "Ana Costa", "email": "ana.costa.353@exemplo.com.br", "telefone": "(53) 98212-6484", "cidade": "Niterói", "uf": "RJ", "cadastrado_em": "2025-05-17T00:00:00"}
+{"customer_id": 354, "nome": "Yuri Oliveira", "email": "yuri.oliveira.354@exemplo.com.br", "telefone": "(72) 96147-3910", "cidade": "Rio de Janeiro", "uf": "RJ", "cadastrado_em": "2025-06-19T00:00:00"}
+{"customer_id": 355, "nome": "Larissa Lima", "email": "larissa.lima.355@exemplo.com.br", "telefone": "(84) 94971-6339", "cidade": "Fortaleza", "uf": "CE", "cadastrado_em": "2025-07-11T00:00:00"}
+{"customer_id": 356, "nome": "Isabela Martins", "email": "isabela.martins.356@exemplo.com.br", "telefone": "(25) 94273-9939", "cidade": "Goiânia", "uf": "GO", "cadastrado_em": "2026-01-28T00:00:00"}
+{"customer_id": 357, "nome": "Thiago Silva", "email": "thiago.silva.357@exemplo.com.br", "telefone": "(37) 98183-5773", "cidade": "Capital", "uf": "TO", "cadastrado_em": "2024-04-01T00:00:00"}
+{"customer_id": 358, "nome": "Carla Martins", "email": "carla.martins.358@exemplo.com.br", "telefone": "(97) 99180-3280", "cidade": "Belém", "uf": "PA", "cadastrado_em": "2024-10-21T00:00:00"}
+{"customer_id": 359, "nome": "João Souza", "email": "joao.souza.359@exemplo.com.br", "telefone": "(65) 97176-2211", "cidade": "Campinas", "uf": "SP", "cadastrado_em": "2025-04-28T00:00:00"}
+{"customer_id": 360, "nome": "Yuri Rodrigues", "email": "yuri.rodrigues.360@exemplo.com.br", "telefone": "(80) 91602-6890", "cidade": "Caxias do Sul", "uf": "RS", "cadastrado_em": "2024-08-12T00:00:00"}
+{"customer_id": 361, "nome": "Thiago Nascimento", "email": "thiago.nascimento.361@exemplo.com.br", "telefone": "(24) 95067-6816", "cidade": "Salvador", "uf": "BA", "cadastrado_em": "2026-02-11T00:00:00"}
+{"customer_id": 362, "nome": "Yuri Silva", "email": "yuri.silva.362@exemplo.com.br", "telefone": "(53) 98052-2735", "cidade": "Caxias do Sul", "uf": "RS", "cadastrado_em": "2026-07-21T00:00:00"}
+{"customer_id": 363, "nome": "Diego Lima", "email": "diego.lima.363@exemplo.com.br", "telefone": "(68) 97129-7408", "cidade": "Campinas", "uf": "SP", "cadastrado_em": "2025-04-13T00:00:00"}
+{"customer_id": 364, "nome": "Vanessa Ribeiro", "email": "vanessa.ribeiro.364@exemplo.com.br", "telefone": "(14) 98909-2712", "cidade": "Londrina", "uf": "PR", "cadastrado_em": "2025-10-02T00:00:00"}
+{"customer_id": 365, "nome": "Otávio Araújo", "email": "otavio.araujo.365@exemplo.com.br", "telefone": "(29) 96707-6110", "cidade": "Capital", "uf": "TO", "cadastrado_em": "2025-08-14T00:00:00"}
+{"customer_id": 366, "nome": "Paula Gomes", "email": "paula.gomes.366@exemplo.com.br", "telefone": "(55) 98801-2599", "cidade": "Ribeirão Preto", "uf": "SP", "cadastrado_em": "2025-05-09T00:00:00"}
+{"customer_id": 367, "nome": "Paula Pereira", "email": "paula.pereira.367@exemplo.com.br", "telefone": "(25) 91370-6620", "cidade": "São Paulo", "uf": "SP", "cadastrado_em": "2024-10-06T00:00:00"}
+{"customer_id": 368, "nome": "Diego Carvalho", "email": "diego.carvalho.368@exemplo.com.br", "telefone": "(77) 93858-3623", "cidade": "Brasília", "uf": "DF", "cadastrado_em": "2025-08-27T00:00:00"}
+{"customer_id": 369, "nome": "Thiago Costa", "email": "thiago.costa.369@exemplo.com.br", "telefone": "(62) 94022-4053", "cidade": "Capital", "uf": "TO", "cadastrado_em": "2024-10-14T00:00:00"}
+{"customer_id": 370, "nome": "Otávio Costa", "email": "otavio.costa.370@exemplo.com.br", "telefone": "(68) 98037-7370", "cidade": "Campinas", "uf": "SP", "cadastrado_em": "2026-07-27T00:00:00"}
+{"customer_id": 371, "nome": "Gabriela Souza", "email": "gabriela.souza.371@exemplo.com.br", "telefone": "(84) 92667-9796", "cidade": "São Paulo", "uf": "SP", "cadastrado_em": "2026-01-21T00:00:00"}
+{"customer_id": 372, "nome": "Marcos Pereira", "email": "marcos.pereira.372@exemplo.com.br", "telefone": "(44) 99019-9646", "cidade": "São Paulo", "uf": "SP", "cadastrado_em": "2024-10-15T00:00:00"}
+{"customer_id": 373, "nome": "Larissa Nascimento", "email": "larissa.nascimento.373@exemplo.com.br", "telefone": "(86) 92871-6700", "cidade": "Uberlândia", "uf": "MG", "cadastrado_em": "2025-08-05T00:00:00"}
+{"customer_id": 374, "nome": "Paula Nascimento", "email": "paula.nascimento.374@exemplo.com.br", "telefone": "(89) 92388-3194", "cidade": "Santos", "uf": "SP", "cadastrado_em": "2025-09-14T00:00:00"}
+{"customer_id": 375, "nome": "Diego Souza", "email": "diego.souza.375@exemplo.com.br", "telefone": "(58) 93316-9369", "cidade": "Rio de Janeiro", "uf": "RJ", "cadastrado_em": "2025-06-29T00:00:00"}
+{"customer_id": 376, "nome": "Otávio Nascimento", "email": "otavio.nascimento.376@exemplo.com.br", "telefone": "(65) 94043-8973", "cidade": "Ribeirão Preto", "uf": "SP", "cadastrado_em": "2024-10-19T00:00:00"}
+{"customer_id": 377, "nome": "Thiago Ribeiro", "email": "thiago.ribeiro.377@exemplo.com.br", "telefone": "(82) 93733-9022", "cidade": "Capital", "uf": "PI", "cadastrado_em": "2025-10-09T00:00:00"}
+{"customer_id": 378, "nome": "Eduarda Oliveira", "email": "eduarda.oliveira.378@exemplo.com.br", "telefone": "(90) 91878-6882", "cidade": "Niterói", "uf": "RJ", "cadastrado_em": "2026-07-22T00:00:00"}
+{"customer_id": 379, "nome": "Rafael Oliveira", "email": "rafael.oliveira.379@exemplo.com.br", "telefone": "(82) 99281-9109", "cidade": "Ribeirão Preto", "uf": "SP", "cadastrado_em": "2025-06-08T00:00:00"}
+{"customer_id": 380, "nome": "Rafael Costa", "email": "rafael.costa.380@exemplo.com.br", "telefone": "(73) 93740-2354", "cidade": "Recife", "uf": "PE", "cadastrado_em": "2024-12-30T00:00:00"}
+{"customer_id": 381, "nome": "Ana Gomes", "email": "ana.gomes.381@exemplo.com.br", "telefone": "(15) 95503-4683", "cidade": "Fortaleza", "uf": "CE", "cadastrado_em": "2025-01-27T00:00:00"}
+{"customer_id": 382, "nome": "João Oliveira", "email": "joao.oliveira.382@exemplo.com.br", "telefone": "(81) 99369-2854", "cidade": "Goiânia", "uf": "GO", "cadastrado_em": "2024-12-22T00:00:00"}
+{"customer_id": 383, "nome": "Diego Lima", "email": "diego.lima.383@exemplo.com.br", "telefone": "(80) 91681-8231", "cidade": "Goiânia", "uf": "GO", "cadastrado_em": "2025-01-18T00:00:00"}
+{"customer_id": 384, "nome": "Gabriela Costa", "email": "gabriela.costa.384@exemplo.com.br", "telefone": "(49) 91528-8368", "cidade": "Campinas", "uf": "SP", "cadastrado_em": "2025-11-04T00:00:00"}
+{"customer_id": 385, "nome": "Marcos Martins", "email": "marcos.martins.385@exemplo.com.br", "telefone": "(26) 94882-4438", "cidade": "Brasília", "uf": "DF", "cadastrado_em": "2024-04-22T00:00:00"}
+{"customer_id": 386, "nome": "Vanessa Ribeiro", "email": "vanessa.ribeiro.386@exemplo.com.br", "telefone": "(32) 93281-4385", "cidade": "Niterói", "uf": "RJ", "cadastrado_em": "2024-04-19T00:00:00"}
+{"customer_id": 387, "nome": "Gabriela Gomes", "email": "gabriela.gomes.387@exemplo.com.br", "telefone": "(79) 95605-9827", "cidade": "Santos", "uf": "SP", "cadastrado_em": "2026-02-09T00:00:00"}
+{"customer_id": 388, "nome": "Larissa Ribeiro", "email": "larissa.ribeiro.388@exemplo.com.br", "telefone": "(76) 92560-3221", "cidade": "Niterói", "uf": "RJ", "cadastrado_em": "2024-06-23T00:00:00"}
+{"customer_id": 389, "nome": "Otávio Araújo", "email": "otavio.araujo.389@exemplo.com.br", "telefone": "(94) 93078-3174", "cidade": "Santos", "uf": "SP", "cadastrado_em": "2025-11-18T00:00:00"}
+{"customer_id": 390, "nome": "Eduarda Ribeiro", "email": "eduarda.ribeiro.390@exemplo.com.br", "telefone": "(97) 97434-9019", "cidade": "Rio de Janeiro", "uf": "RJ", "cadastrado_em": "2026-03-08T00:00:00"}
+{"customer_id": 391, "nome": "Vanessa Carvalho", "email": "vanessa.carvalho.391@exemplo.com.br", "telefone": "(59) 98405-2237", "cidade": "Ribeirão Preto", "uf": "SP", "cadastrado_em": "2024-10-21T00:00:00"}
+{"customer_id": 392, "nome": "Carla Costa", "email": "carla.costa.392@exemplo.com.br", "telefone": "(99) 97046-8449", "cidade": "Londrina", "uf": "PR", "cadastrado_em": "2025-03-19T00:00:00"}
+{"customer_id": 393, "nome": "Larissa Nascimento", "email": "larissa.nascimento.393@exemplo.com.br", "telefone": "(69) 96869-2037", "cidade": "São Paulo", "uf": "SP", "cadastrado_em": "2024-05-08T00:00:00"}
+{"customer_id": 394, "nome": "Thiago Costa", "email": "thiago.costa.394@exemplo.com.br", "telefone": "(38) 99105-5399", "cidade": "Ribeirão Preto", "uf": "SP", "cadastrado_em": "2025-09-04T00:00:00"}
+{"customer_id": 395, "nome": "João Pereira", "email": "joao.pereira.395@exemplo.com.br", "telefone": "(83) 98951-6631", "cidade": "Porto Alegre", "uf": "RS", "cadastrado_em": "2024-09-01T00:00:00"}
+{"customer_id": 396, "nome": "Bruno Silva", "email": "bruno.silva.396@exemplo.com.br", "telefone": "(13) 93035-3588", "cidade": "Ribeirão Preto", "uf": "SP", "cadastrado_em": "2025-05-06T00:00:00"}
+{"customer_id": 397, "nome": "Paula Silva", "email": "paula.silva.397@exemplo.com.br", "telefone": "(36) 93161-5945", "cidade": "Capital", "uf": "RR", "cadastrado_em": "2026-02-19T00:00:00"}
+{"customer_id": 398, "nome": "Isabela Santos", "email": "isabela.santos.398@exemplo.com.br", "telefone": "(21) 97092-3711", "cidade": "Feira de Santana", "uf": "BA", "cadastrado_em": "2026-06-08T00:00:00"}
+{"customer_id": 399, "nome": "Natália Carvalho", "email": "natalia.carvalho.399@exemplo.com.br", "telefone": "(65) 92494-2559", "cidade": "Rio de Janeiro", "uf": "RJ", "cadastrado_em": "2026-07-30T00:00:00"}
+{"customer_id": 400, "nome": "Gabriela Rodrigues", "email": "gabriela.rodrigues.400@exemplo.com.br", "telefone": "(77) 98291-1152", "cidade": "Campinas", "uf": "SP", "cadastrado_em": "2026-07-23T00:00:00"}
+{"customer_id": 401, "nome": "Larissa Martins", "email": "larissa.martins.401@exemplo.com.br", "telefone": "(99) 93165-8826", "cidade": "Ribeirão Preto", "uf": "SP", "cadastrado_em": "2026-05-20T00:00:00"}
+{"customer_id": 402, "nome": "Henrique Costa", "email": "henrique.costa.402@exemplo.com.br", "telefone": "(24) 96133-7022", "cidade": "São Paulo", "uf": "SP", "cadastrado_em": "2025-09-28T00:00:00"}
+{"customer_id": 403, "nome": "Eduarda Costa", "email": "eduarda.costa.403@exemplo.com.br", "telefone": "(93) 93340-2120", "cidade": "Goiânia", "uf": "GO", "cadastrado_em": "2025-02-03T00:00:00"}
+{"customer_id": 404, "nome": "Vanessa Silva", "email": "vanessa.silva.404@exemplo.com.br", "telefone": "(67) 96753-4490", "cidade": "Florianópolis", "uf": "SC", "cadastrado_em": "2024-10-26T00:00:00"}
+{"customer_id": 405, "nome": "Eduarda Araújo", "email": "eduarda.araujo.405@exemplo.com.br", "telefone": "(38) 92420-2646", "cidade": "Uberlândia", "uf": "MG", "cadastrado_em": "2026-03-10T00:00:00"}
+{"customer_id": 406, "nome": "Diego Nascimento", "email": "diego.nascimento.406@exemplo.com.br", "telefone": "(65) 96152-3290", "cidade": "Fortaleza", "uf": "CE", "cadastrado_em": "2025-11-20T00:00:00"}
+{"customer_id": 407, "nome": "Isabela Carvalho", "email": "isabela.carvalho.407@exemplo.com.br", "telefone": "(99) 91439-5942", "cidade": "Santos", "uf": "SP", "cadastrado_em": "2026-01-02T00:00:00"}
+{"customer_id": 408, "nome": "Sofia Nascimento", "email": "sofia.nascimento.408@exemplo.com.br", "telefone": "(48) 91894-4921", "cidade": "Londrina", "uf": "PR", "cadastrado_em": "2025-03-12T00:00:00"}
+{"customer_id": 409, "nome": "Natália Santos", "email": "natalia.santos.409@exemplo.com.br", "telefone": "(78) 91197-6916", "cidade": "São Paulo", "uf": "SP", "cadastrado_em": "2025-09-10T00:00:00"}
+{"customer_id": 410, "nome": "Eduarda Costa", "email": "eduarda.costa.410@exemplo.com.br", "telefone": "(57) 99951-3830", "cidade": "Manaus", "uf": "AM", "cadastrado_em": "2024-06-10T00:00:00"}
+{"customer_id": 411, "nome": "Rafael Gomes", "email": "rafael.gomes.411@exemplo.com.br", "telefone": "(12) 95295-4534", "cidade": "São Paulo", "uf": "SP", "cadastrado_em": "2026-06-21T00:00:00"}
+{"customer_id": 412, "nome": "Bruno Gomes", "email": "bruno.gomes.412@exemplo.com.br", "telefone": "(91) 99209-7806", "cidade": "Uberlândia", "uf": "MG", "cadastrado_em": "2025-05-24T00:00:00"}
+{"customer_id": 413, "nome": "Natália Santos", "email": "natalia.santos.413@exemplo.com.br", "telefone": "(46) 92369-6077", "cidade": "Salvador", "uf": "BA", "cadastrado_em": "2026-05-12T00:00:00"}
+{"customer_id": 414, "nome": "Sofia Araújo", "email": "sofia.araujo.414@exemplo.com.br", "telefone": "(79) 96353-7401", "cidade": "Campinas", "uf": "SP", "cadastrado_em": "2024-12-08T00:00:00"}
+{"customer_id": 415, "nome": "Carla Lima", "email": "carla.lima.415@exemplo.com.br", "telefone": "(18) 95005-2412", "cidade": "Recife", "uf": "PE", "cadastrado_em": "2025-05-13T00:00:00"}
+{"customer_id": 416, "nome": "Diego Rodrigues", "email": "diego.rodrigues.416@exemplo.com.br", "telefone": "(50) 93877-2956", "cidade": "Florianópolis", "uf": "SC", "cadastrado_em": "2026-07-19T00:00:00"}
+{"customer_id": 417, "nome": "Eduarda Ribeiro", "email": "eduarda.ribeiro.417@exemplo.com.br", "telefone": "(55) 99568-9474", "cidade": "Ribeirão Preto", "uf": "SP", "cadastrado_em": "2024-05-21T00:00:00"}
+{"customer_id": 418, "nome": "Isabela Oliveira", "email": "isabela.oliveira.418@exemplo.com.br", "telefone": "(26) 91480-6488", "cidade": "Niterói", "uf": "RJ", "cadastrado_em": "2024-04-26T00:00:00"}
+{"customer_id": 419, "nome": "Otávio Lima", "email": "otavio.lima.419@exemplo.com.br", "telefone": "(84) 92262-9128", "cidade": "Londrina", "uf": "PR", "cadastrado_em": "2025-04-21T00:00:00"}
+{"customer_id": 420, "nome": "Sofia Pereira", "email": "sofia.pereira.420@exemplo.com.br", "telefone": "(58) 93577-5179", "cidade": "Campinas", "uf": "SP", "cadastrado_em": "2024-05-31T00:00:00"}
+{"customer_id": 421, "nome": "Diego Araújo", "email": "diego.araujo.421@exemplo.com.br", "telefone": "(40) 99336-1042", "cidade": "Porto Alegre", "uf": "RS", "cadastrado_em": "2026-06-16T00:00:00"}
+{"customer_id": 422, "nome": "Ana Souza", "email": "ana.souza.422@exemplo.com.br", "telefone": "(60) 93458-3932", "cidade": "Santos", "uf": "SP", "cadastrado_em": "2024-03-05T00:00:00"}
+{"customer_id": 423, "nome": "Bruno Almeida", "email": "bruno.almeida.423@exemplo.com.br", "telefone": "(39) 96272-5067", "cidade": "Brasília", "uf": null, "cadastrado_em": "2025-05-31T00:00:00"}
+{"customer_id": 424, "nome": "Larissa Lima", "email": "larissa.lima.424@exemplo.com.br", "telefone": "(26) 99225-1862", "cidade": "Vitória", "uf": "ES", "cadastrado_em": "2026-01-29T00:00:00"}
+{"customer_id": 425, "nome": "Henrique Gomes", "email": "henrique.gomes.425@exemplo.com.br", "telefone": "(62) 92129-8620", "cidade": "Curitiba", "uf": "PR", "cadastrado_em": "2024-02-26T00:00:00"}
+{"customer_id": 426, "nome": "João Gomes", "email": "joao.gomes.426@exemplo.com.br", "telefone": "(22) 98483-1130", "cidade": "Belém", "uf": "PA", "cadastrado_em": "2025-07-19T00:00:00"}
+{"customer_id": 427, "nome": "Gabriela Lima", "email": "gabriela.lima.427@exemplo.com.br", "telefone": "(90) 94974-8600", "cidade": "Caxias do Sul", "uf": "RS", "cadastrado_em": "2025-07-19T00:00:00"}
+{"customer_id": 428, "nome": "Vanessa Rodrigues", "email": "vanessa.rodrigues.428@exemplo.com.br", "telefone": "(80) 95016-3466", "cidade": "Capital", "uf": "RR", "cadastrado_em": "2026-07-25T00:00:00"}
+{"customer_id": 429, "nome": "Otávio Silva", "email": "otavio.silva.429@exemplo.com.br", "telefone": "(92) 91157-6488", "cidade": "Santos", "uf": "SP", "cadastrado_em": "2026-07-30T00:00:00"}
+{"customer_id": 430, "nome": "Natália Martins", "email": "natalia.martins.430@exemplo.com.br", "telefone": "(24) 94361-9680", "cidade": "Fortaleza", "uf": "CE", "cadastrado_em": "2025-11-30T00:00:00"}
+{"customer_id": 431, "nome": "Otávio Rodrigues", "email": "otavio.rodrigues.431@exemplo.com.br", "telefone": "(46) 92524-1719", "cidade": "Capital", "uf": "TO", "cadastrado_em": "2025-12-06T00:00:00"}
+{"customer_id": 432, "nome": "Sofia Costa", "email": "sofia.costa.432@exemplo.com.br", "telefone": "(69) 92391-2565", "cidade": "Recife", "uf": "PE", "cadastrado_em": "2025-03-01T00:00:00"}
+{"customer_id": 433, "nome": "Eduarda Carvalho", "email": "eduarda.carvalho.433@exemplo.com.br", "telefone": "(86) 92020-8126", "cidade": "Brasília", "uf": "DF", "cadastrado_em": "2024-09-21T00:00:00"}
+{"customer_id": 434, "nome": "Eduarda Souza", "email": "eduarda.souza.434@exemplo.com.br", "telefone": "(61) 96345-6211", "cidade": "Niterói", "uf": "RJ", "cadastrado_em": "2025-04-24T00:00:00"}
+{"customer_id": 435, "nome": "Isabela Souza", "email": "isabela.souza.435@exemplo.com.br", "telefone": "(28) 92785-3546", "cidade": "Campinas", "uf": "SP", "cadastrado_em": "2026-04-14T00:00:00"}
+{"customer_id": 436, "nome": "Felipe Rodrigues", "email": "felipe.rodrigues.436@exemplo.com.br", "telefone": "(26) 99780-6870", "cidade": "Uberlândia", "uf": "MG", "cadastrado_em": "2024-06-03T00:00:00"}
+{"customer_id": 437, "nome": "Gabriela Rodrigues", "email": "gabriela.rodrigues.437@exemplo.com.br", "telefone": "(26) 92481-3582", "cidade": "Niterói", "uf": "rj", "cadastrado_em": "2024-04-26T00:00:00"}
+{"customer_id": 438, "nome": "João Martins", "email": "joao.martins.438@exemplo.com.br", "telefone": "(38) 96370-3430", "cidade": "Recife", "uf": "PE", "cadastrado_em": "2026-04-29T00:00:00"}
+{"customer_id": 439, "nome": "Henrique Pereira", "email": "henrique.pereira.439@exemplo.com.br", "telefone": "(97) 95896-5262", "cidade": "Belo Horizonte", "uf": "MG", "cadastrado_em": "2024-04-13T00:00:00"}
+{"customer_id": 440, "nome": "Felipe Silva", "email": "felipe.silva.440@exemplo.com.br", "telefone": "(82) 95093-2551", "cidade": "Capital", "uf": "MS", "cadastrado_em": "2025-04-14T00:00:00"}
+{"customer_id": 441, "nome": "Diego Gomes", "email": "diego.gomes.441@exemplo.com.br", "telefone": "(12) 92010-4641", "cidade": "Brasília", "uf": "DF", "cadastrado_em": "2026-03-20T00:00:00"}
+{"customer_id": 442, "nome": "Gabriela Martins", "email": "gabriela.martins.442@exemplo.com.br", "telefone": "(85) 95240-2228", "cidade": "Belo Horizonte", "uf": "MG", "cadastrado_em": "2026-07-09T00:00:00"}
+{"customer_id": 443, "nome": "Carla Souza", "email": "carla.souza.443@exemplo.com.br", "telefone": "(27) 92506-6432", "cidade": "Capital", "uf": "RN", "cadastrado_em": "2026-03-28T00:00:00"}
+{"customer_id": 444, "nome": "Bruno Rodrigues", "email": "bruno.rodrigues.444@exemplo.com.br", "telefone": "(61) 99128-1483", "cidade": "Ribeirão Preto", "uf": "SP", "cadastrado_em": "2025-07-05T00:00:00"}
+{"customer_id": 445, "nome": "Otávio Oliveira", "email": "otavio.oliveira.445@exemplo.com.br", "telefone": "(46) 95585-8307", "cidade": "Rio de Janeiro", "uf": "RJ", "cadastrado_em": "2026-03-01T00:00:00"}
+{"customer_id": 446, "nome": "Bruno Nascimento", "email": "bruno.nascimento.446@exemplo.com.br", "telefone": "(93) 95835-9173", "cidade": "Florianópolis", "uf": "SC", "cadastrado_em": "2025-06-05T00:00:00"}
+{"customer_id": 447, "nome": "Thiago Rodrigues", "email": "thiago.rodrigues.447@exemplo.com.br", "telefone": "(60) 93248-7868", "cidade": "Santos", "uf": "SP", "cadastrado_em": "2026-01-08T00:00:00"}
+{"customer_id": 448, "nome": "Sofia Souza", "email": "sofia.souza.448@exemplo.com.br", "telefone": "(59) 96883-8859", "cidade": "Florianópolis", "uf": "SC", "cadastrado_em": "2025-01-20T00:00:00"}
+{"customer_id": 449, "nome": "Rafael Pereira", "email": "rafael.pereira.449@exemplo.com.br", "telefone": "(60) 95430-3946", "cidade": "Capital", "uf": "AL", "cadastrado_em": "2026-07-05T00:00:00"}
+{"customer_id": 450, "nome": "Larissa Nascimento", "email": "larissa.nascimento.450@exemplo.com.br", "telefone": "(18) 98728-9674", "cidade": "Santos", "uf": "SP", "cadastrado_em": "2025-07-30T00:00:00"}
+{"customer_id": 451, "nome": "Vanessa Souza", "email": "vanessa.souza.451@exemplo.com.br", "telefone": "(42) 94951-5366", "cidade": "Capital", "uf": "AC", "cadastrado_em": "2025-01-31T00:00:00"}
+{"customer_id": 452, "nome": "Bruno Gomes", "email": "bruno.gomes.452@exemplo.com.br", "telefone": "(84) 97363-6813", "cidade": "Capital", "uf": "RR", "cadastrado_em": "2024-03-24T00:00:00"}
+{"customer_id": 453, "nome": "Felipe Oliveira", "email": "felipe.oliveira.453@exemplo.com.br", "telefone": "(56) 91462-6761", "cidade": "Santos", "uf": "SP", "cadastrado_em": "2024-12-27T00:00:00"}
+{"customer_id": 454, "nome": "Vanessa Oliveira", "email": "vanessa.oliveira.454@exemplo.com.br", "telefone": "(74) 99882-6063", "cidade": "Porto Alegre", "uf": "RS", "cadastrado_em": "2026-02-02T00:00:00"}
+{"customer_id": 455, "nome": "Rafael Silva", "email": "rafael.silva.455@exemplo.com.br", "telefone": "(88) 94584-1326", "cidade": "Campinas", "uf": "SP", "cadastrado_em": "2025-02-07T00:00:00"}
+{"customer_id": 456, "nome": "Rafael Silva", "email": "rafael.silva.456@exemplo.com.br", "telefone": "(27) 96582-3907", "cidade": "Rio de Janeiro", "uf": "RJ", "cadastrado_em": "2024-05-01T00:00:00"}
+{"customer_id": 457, "nome": "Larissa Silva", "email": "larissa.silva.457@exemplo.com.br", "telefone": "(25) 99622-6978", "cidade": "Campinas", "uf": "SP", "cadastrado_em": "2026-05-18T00:00:00"}
+{"customer_id": 458, "nome": "Marcos Ribeiro", "email": "marcos.ribeiro.458@exemplo.com.br", "telefone": "(86) 92655-6514", "cidade": "Capital", "uf": "MT", "cadastrado_em": "2025-09-25T00:00:00"}
+{"customer_id": 459, "nome": "Larissa Oliveira", "email": "larissa.oliveira.459@exemplo.com.br", "telefone": "(92) 98982-6198", "cidade": "Capital", "uf": "AC", "cadastrado_em": "2026-02-03T00:00:00"}
+{"customer_id": 460, "nome": "Thiago Ribeiro", "email": "thiago.ribeiro.460@exemplo.com.br", "telefone": "(39) 93872-7199", "cidade": "Capital", "uf": "PB", "cadastrado_em": "2025-09-20T00:00:00"}
+{"customer_id": 461, "nome": "João Oliveira", "email": "joao.oliveira.461@exemplo.com.br", "telefone": "(84) 97415-1530", "cidade": "São Paulo", "uf": "SP", "cadastrado_em": "2026-01-26T00:00:00"}
+{"customer_id": 462, "nome": "Yuri Pereira", "email": "yuri.pereira.462@exemplo.com.br", "telefone": "(92) 92705-9129", "cidade": "Capital", "uf": "PI", "cadastrado_em": "2026-03-09T00:00:00"}
+{"customer_id": 463, "nome": "Larissa Ribeiro", "email": "larissa.ribeiro.463@exemplo.com.br", "telefone": "(51) 93750-2453", "cidade": "Santos", "uf": "SP", "cadastrado_em": "2024-04-11T00:00:00"}
+{"customer_id": 464, "nome": "Larissa Rodrigues", "email": "larissa.rodrigues.464@exemplo.com.br", "telefone": "(42) 92110-6742", "cidade": "Campinas", "uf": "SP", "cadastrado_em": "2025-11-11T00:00:00"}
+{"customer_id": 465, "nome": "Diego Ribeiro", "email": "diego.ribeiro.465@exemplo.com.br", "telefone": "(67) 97875-3725", "cidade": "Ribeirão Preto", "uf": "SP", "cadastrado_em": "2025-06-03T00:00:00"}
+{"customer_id": 466, "nome": "Rafael Araújo", "email": "rafael.araujo.466@exemplo.com.br", "telefone": "(23) 98855-4695", "cidade": "Uberlândia", "uf": "MG", "cadastrado_em": "2026-02-15T00:00:00"}
+{"customer_id": 467, "nome": "Paula Santos", "email": "paula.santos.467@exemplo.com.br", "telefone": "(48) 91328-6221", "cidade": "Brasília", "uf": "DF", "cadastrado_em": "2025-11-06T00:00:00"}
+{"customer_id": 468, "nome": "Diego Santos", "email": "diego.santos.468@exemplo.com.br", "telefone": "(31) 92228-9962", "cidade": "Niterói", "uf": "RJ", "cadastrado_em": "2026-04-27T00:00:00"}
+{"customer_id": 469, "nome": "Larissa Nascimento", "email": "larissa.nascimento.469@exemplo.com.br", "telefone": "(14) 98066-3703", "cidade": "Capital", "uf": "AP", "cadastrado_em": "2024-11-17T00:00:00"}
+{"customer_id": 470, "nome": "Otávio Oliveira", "email": "otavio.oliveira.470@exemplo.com.br", "telefone": "(37) 94112-7705", "cidade": "Santos", "uf": "SP", "cadastrado_em": "2024-08-17T00:00:00"}
+{"customer_id": 471, "nome": "Thiago Ribeiro", "email": "thiago.ribeiro.471@exemplo.com.br", "telefone": "(95) 95612-5872", "cidade": "Capital", "uf": "SE", "cadastrado_em": "2025-11-30T00:00:00"}
+{"customer_id": 472, "nome": "Diego Silva", "email": "diego.silva.472@exemplo.com.br", "telefone": "(30) 91893-6911", "cidade": "Uberlândia", "uf": "MG", "cadastrado_em": "2026-07-28T00:00:00"}
+{"customer_id": 473, "nome": "Otávio Santos", "email": "otavio.santos.473@exemplo.com.br", "telefone": "(36) 92589-1421", "cidade": "Niterói", "uf": "RJ", "cadastrado_em": "2026-01-01T00:00:00"}
+{"customer_id": 474, "nome": "Felipe Carvalho", "email": "felipe.carvalho.474@exemplo.com.br", "telefone": "(71) 92892-6052", "cidade": "Rio de Janeiro", "uf": "RJ", "cadastrado_em": "2024-05-19T00:00:00"}
+{"customer_id": 475, "nome": "Natália Rodrigues", "email": "natalia.rodrigues.475@exemplo.com.br", "telefone": "(22) 99914-7349", "cidade": "Londrina", "uf": "PR", "cadastrado_em": "2026-01-23T00:00:00"}
+{"customer_id": 476, "nome": "Marcos Araújo", "email": "marcos.araujo.476@exemplo.com.br", "telefone": "(68) 91731-5313", "cidade": "Belo Horizonte", "uf": "MG", "cadastrado_em": "2025-05-07T00:00:00"}
+{"customer_id": 477, "nome": "Paula Lima", "email": "paula.lima.477@exemplo.com.br", "telefone": "(83) 92009-3476", "cidade": "Santos", "uf": "SP", "cadastrado_em": "2024-06-21T00:00:00"}
+{"customer_id": 478, "nome": "Diego Santos", "email": "diego.santos.478@exemplo.com.br", "telefone": "(86) 94727-1999", "cidade": "Feira de Santana", "uf": "BA", "cadastrado_em": "2024-03-23T00:00:00"}
+{"customer_id": 479, "nome": "Natália Martins", "email": "natalia.martins.479@exemplo.com.br", "telefone": "(84) 94860-8803", "cidade": "Londrina", "uf": "PR", "cadastrado_em": "2025-09-28T00:00:00"}
+{"customer_id": 480, "nome": "Carla Costa", "email": "carla.costa.480@exemplo.com.br", "telefone": "(75) 99467-3415", "cidade": "Capital", "uf": "RN", "cadastrado_em": "2026-03-30T00:00:00"}
+{"customer_id": 481, "nome": "Paula Oliveira", "email": "paula.oliveira.481@exemplo.com.br", "telefone": "(38) 94157-3067", "cidade": "Capital", "uf": "MS", "cadastrado_em": "2026-06-18T00:00:00"}
+{"customer_id": 482, "nome": "Otávio Santos", "email": "otavio.santos.482@exemplo.com.br", "telefone": "(36) 93422-5225", "cidade": "Capital", "uf": "AP", "cadastrado_em": "2025-09-07T00:00:00"}
+{"customer_id": 483, "nome": "Carla Santos", "email": "carla.santos.483@exemplo.com.br", "telefone": "(81) 96343-5525", "cidade": "Uberlândia", "uf": "MG", "cadastrado_em": "2025-02-14T00:00:00"}
+{"customer_id": 484, "nome": "Paula Araújo", "email": "paula.araujo.484@exemplo.com.br", "telefone": "(25) 97790-3451", "cidade": "Manaus", "uf": "AM", "cadastrado_em": "2026-03-02T00:00:00"}
+{"customer_id": 485, "nome": "Vanessa Nascimento", "email": "vanessa.nascimento.485@exemplo.com.br", "telefone": "(24) 92654-5687", "cidade": "Porto Alegre", "uf": "RS", "cadastrado_em": "2024-02-24T00:00:00"}
+{"customer_id": 486, "nome": "Thiago Araújo", "email": "thiago.araujo.486@exemplo.com.br", "telefone": "(44) 97275-8955", "cidade": "Niterói", "uf": "RJ", "cadastrado_em": "2024-12-23T00:00:00"}
+{"customer_id": 487, "nome": "Yuri Rodrigues", "email": "yuri.rodrigues.487@exemplo.com.br", "telefone": "(62) 93356-7581", "cidade": "Santos", "uf": "SP", "cadastrado_em": "2026-06-22T00:00:00"}
+{"customer_id": 488, "nome": "Natália Araújo", "email": "natalia.araujo.488@exemplo.com.br", "telefone": "(17) 98785-5400", "cidade": "Capital", "uf": "MA", "cadastrado_em": "2025-07-15T00:00:00"}
+{"customer_id": 489, "nome": "Ana Pereira", "email": "ana.pereira.489@exemplo.com.br", "telefone": "(50) 95593-9054", "cidade": "Brasília", "uf": "DF", "cadastrado_em": "2024-03-05T00:00:00"}
+{"customer_id": 490, "nome": "Diego Martins", "email": "diego.martins.490@exemplo.com.br", "telefone": "(67) 96257-5414", "cidade": "Santos", "uf": "SP", "cadastrado_em": "2024-07-15T00:00:00"}
+{"customer_id": 491, "nome": "Otávio Nascimento", "email": "otavio.nascimento.491@exemplo.com.br", "telefone": "(67) 94463-7671", "cidade": "Salvador", "uf": "BA", "cadastrado_em": "2024-07-03T00:00:00"}
+{"customer_id": 492, "nome": "Rafael Gomes", "email": "rafael.gomes.492@exemplo.com.br", "telefone": "(18) 99442-3604", "cidade": "Londrina", "uf": "PR", "cadastrado_em": "2026-05-25T00:00:00"}
+{"customer_id": 493, "nome": "João Ribeiro", "email": "joao.ribeiro.493@exemplo.com.br", "telefone": "(78) 91474-3846", "cidade": "Curitiba", "uf": "PR", "cadastrado_em": "2026-01-15T00:00:00"}
+{"customer_id": 494, "nome": "Gabriela Martins", "email": "gabriela.martins.494@exemplo.com.br", "telefone": "(69) 91828-6904", "cidade": "São Paulo", "uf": "SP", "cadastrado_em": "2024-08-09T00:00:00"}
+{"customer_id": 495, "nome": "Gabriela Lima", "email": "gabriela.lima.495@exemplo.com.br", "telefone": "(75) 97503-3029", "cidade": "Niterói", "uf": "RJ", "cadastrado_em": "2024-09-02T00:00:00"}
+{"customer_id": 496, "nome": "Ana Souza", "email": "ana.souza.496@exemplo.com.br", "telefone": "(33) 98775-6730", "cidade": "Niterói", "uf": "RJ", "cadastrado_em": "2025-08-13T00:00:00"}
+{"customer_id": 497, "nome": "Felipe Martins", "email": "felipe.martins.497@exemplo.com.br", "telefone": "(47) 91449-7333", "cidade": "Capital", "uf": "PB", "cadastrado_em": "2026-06-11T00:00:00"}
+{"customer_id": 498, "nome": "Felipe Martins", "email": "felipe.martins.498@exemplo.com.br", "telefone": "(39) 94688-4387", "cidade": "Porto Alegre", "uf": "RS", "cadastrado_em": "2025-10-29T00:00:00"}
+{"customer_id": 499, "nome": "Otávio Almeida", "email": "otavio.almeida.499@exemplo.com.br", "telefone": "(71) 93167-3837", "cidade": "São Paulo", "uf": "SP", "cadastrado_em": "2024-11-23T00:00:00"}
+{"customer_id": 500, "nome": "Ana Souza", "email": "ana.souza.500@exemplo.com.br", "telefone": "(93) 95511-7943", "cidade": "Santos", "uf": "SP", "cadastrado_em": "2025-07-11T00:00:00"}

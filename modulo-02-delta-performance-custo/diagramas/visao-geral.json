@@ -1,0 +1,28 @@
+{
+  "titulo": "Módulo 02 · Por que minha tabela ficou lenta e cara? Delta Lake por dentro",
+  "linhas": [
+    [
+      {"id": "tabela", "texto": "Tabela Delta\n(arquivos Parquet)", "cor": "azul"},
+      {"id": "log", "texto": "_delta_log\nhistórico de versões", "cor": "azul"},
+      {"id": "time", "texto": "Time Travel\nRESTORE · VACUUM", "cor": "azul"}
+    ],
+    [
+      {"id": "lenta", "texto": "Pipeline lento\n(arquivos pequenos)", "cor": "vermelho"},
+      {"id": "profile", "texto": "Query Profile\ndiagnóstico", "cor": "amarelo"},
+      {"id": "otimiza", "texto": "OPTIMIZE ·\nLiquid Clustering", "cor": "verde"}
+    ],
+    [
+      {"id": "cdf", "texto": "Change Data Feed\nsó o que mudou", "cor": "roxo"},
+      {"id": "custo", "texto": "System tables\nquanto custou?", "cor": "laranja"},
+      {"id": "alerta", "texto": "Alertas + runbook\nquando falhar", "cor": "laranja"}
+    ]
+  ],
+  "setas": [
+    ["tabela", "log", "toda escrita"],
+    ["log", "time"],
+    ["lenta", "profile", "medir"],
+    ["profile", "otimiza", "corrigir"],
+    ["cdf", "custo"],
+    ["custo", "alerta"]
+  ]
+}

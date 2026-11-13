@@ -1,0 +1,24 @@
+{
+  "titulo": "Aula 2 · A landing: cada carga ganha uma pasta e um recibo",
+  "linhas": [
+    [
+      {"id": "api", "texto": "API da loja", "cor": "azul"},
+      {"id": "pasta", "texto": "landing/pedidos/\ncarga_20261110_175501/", "cor": "laranja"},
+      {"id": "paginas", "texto": "pagina_0000.json\n…\npagina_0014.json\n(resposta crua)", "cor": "laranja"},
+      {"id": "manifesto", "texto": "_manifesto.json\n15 páginas · 1.500 linhas\nstatus: completa", "cor": "verde"}
+    ],
+    [
+      {"id": "incompleta", "texto": "carga_…_174341/\nsem manifesto =\ncarga incompleta", "cor": "vermelho"},
+      {"id": "leitor", "texto": "Teste e aula 3\nleem só cargas\ncom manifesto", "cor": "roxo"}
+    ]
+  ],
+  "setas": [
+    ["api", "pasta", "pasta nova"],
+    ["pasta", "paginas"],
+    ["paginas", "manifesto", "total bateu"],
+    ["leitor", "incompleta", "ignora"]
+  ],
+  "notas": [
+    {"texto": "Nunca sobrescreve: dá para refazer e auditar", "linha": 0, "coluna": 1}
+  ]
+}

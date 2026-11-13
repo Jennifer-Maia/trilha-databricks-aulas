@@ -1,0 +1,20 @@
+{
+  "titulo": "Aula 1 · Mesmo chamado, três pessoas, três números",
+  "linhas": [
+    [
+      {"id": "vazio1", "texto": "Chamado #482\n\"quantos pedidos\nforam concluídos?\"", "cor": "amarelo"}
+    ],
+    [
+      {"id": "a", "texto": "Pessoa A\nlinhas com\nstatus = 'entregue'", "cor": "cinza"},
+      {"id": "b", "texto": "Pessoa B\nignora maiúsc.,\nconta duplicados", "cor": "cinza"},
+      {"id": "c", "texto": "Pessoa C\núltimo status,\nsem duplicata", "cor": "cinza"}
+    ],
+    [
+      {"id": "ra", "texto": "946", "cor": "vermelho", "forma": "ellipse"},
+      {"id": "rb", "texto": "1.060", "cor": "vermelho", "forma": "ellipse"},
+      {"id": "rc", "texto": "1.052", "cor": "verde", "forma": "ellipse"}
+    ]
+  ],
+  "setas": [["vazio1","a"],["vazio1","b"],["vazio1","c"],["a","ra"],["b","rb"],["c","rc"]],
+  "notas": [{"texto": "Ninguém errou o código. Erraram ao não perguntar.", "linha": 2, "coluna": 1}]
+}

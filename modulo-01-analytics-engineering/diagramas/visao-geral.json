@@ -1,0 +1,30 @@
+{
+  "titulo": "Módulo 01 · Do dado à confiança: o caminho do pedido do negócio até o consumo seguro",
+  "linhas": [
+    [
+      {"id": "pedido", "texto": "Pedido do negócio\n(chamado #482)", "cor": "amarelo"},
+      {"id": "contrato", "texto": "Contrato de dados\nregras + premissas", "cor": "amarelo"},
+      {"id": "api", "texto": "API da loja\n(Hugging Face,\npaginação)", "cor": "azul"},
+      {"id": "bruto", "texto": "Volume: JSON bruto\n+ metadados de carga", "cor": "laranja"}
+    ],
+    [
+      {"id": "consumo", "texto": "Consumo por perfil\nvendas × financeiro", "cor": "roxo"},
+      {"id": "governanca", "texto": "Governança\ncomentários, grants,\nfiltro de linha, máscara", "cor": "roxo"},
+      {"id": "testes", "texto": "Testes de qualidade\nque provam a regra", "cor": "vermelho"},
+      {"id": "gold", "texto": "Tabela analítica\n(regras aplicadas)", "cor": "verde"}
+    ]
+  ],
+  "setas": [
+    ["pedido", "contrato", "perguntas"],
+    ["contrato", "api"],
+    ["api", "bruto", "Python"],
+    ["bruto", "gold", "SQL"],
+    ["gold", "testes"],
+    ["testes", "governanca", "passou?"],
+    ["governanca", "consumo"]
+  ],
+  "notas": [
+    {"texto": "Aula 1: nenhuma linha de código ainda", "linha": 0, "coluna": 1},
+    {"texto": "Diferença: esconder ≠ proteger", "linha": 1, "coluna": 1}
+  ]
+}

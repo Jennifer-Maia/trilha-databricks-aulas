@@ -1,0 +1,25 @@
+{
+  "titulo": "Aula 1 · Do pedido ao contrato: nenhuma linha de código antes disso",
+  "linhas": [
+    [
+      {"id": "email", "texto": "Chamado #482\n\"vendas por região,\nsó concluídos\"", "cor": "amarelo"},
+      {"id": "ambiguo", "texto": "Palavras ambíguas\nconcluído? região?\nduplicado? vendas?", "cor": "vermelho"},
+      {"id": "perguntas", "texto": "10 perguntas\npara o negócio", "cor": "amarelo"}
+    ],
+    [
+      {"id": "contrato", "texto": "Contrato de dados\nfontes · regras ·\nsaída esperada", "cor": "verde"},
+      {"id": "regras", "texto": "Regras numeradas\nRN-01 … RN-09", "cor": "verde"},
+      {"id": "premissas", "texto": "Respostas\nou PREMISSAS\n(escritas!)", "cor": "amarelo"}
+    ]
+  ],
+  "setas": [
+    ["email", "ambiguo", "grifar"],
+    ["ambiguo", "perguntas"],
+    ["perguntas", "premissas"],
+    ["premissas", "regras"],
+    ["regras", "contrato"]
+  ],
+  "notas": [
+    {"texto": "Cada RN vira código (aula 3) e teste (aula 4)", "linha": 1, "coluna": 1}
+  ]
+}

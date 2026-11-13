@@ -1,0 +1,18 @@
+{
+  "titulo": "Aula 1 · De onde vem o dado? Uma API, duas partes que precisam conversar",
+  "linhas": [
+    [
+      {"id": "api", "texto": "API · pedidos\n+ clientes\n(sem status)", "cor": "azul"},
+      {"id": "join", "texto": "order_id\n=\norder_id", "cor": "cinza", "forma": "diamond"},
+      {"id": "sistema", "texto": "API · eventos\nde status\n(status + data)", "cor": "azul"}
+    ],
+    [
+      {"id": "x", "texto": "Pedido completo:\nvalor + cliente +\nstatus + data", "cor": "verde"}
+    ]
+  ],
+  "setas": [
+    ["api", "join"],
+    ["sistema", "join"],
+    ["join", "x"]
+  ]
+}

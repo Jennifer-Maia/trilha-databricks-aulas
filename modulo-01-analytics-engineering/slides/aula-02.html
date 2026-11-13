@@ -1,0 +1,667 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aula 2 · Ingerindo uma API</title>
+<script>
+try { var t = localStorage.getItem('jd-theme'); if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Um slide por tela. → / espaço / clique: próximo passo. ←: volta. F: tela cheia. T: tema.
+   Elementos com data-step="n" aparecem no passo n do slide. Mesma identidade da apresentação de 07/11. */
+:root {
+  --surface-100: #0c0c0e; --surface-200: #15151a; --surface-300: #1d1d24;
+  --ink: #f4efe6; --ink-muted: #a3a3ad;
+  --accent: #ff5b1f; --accent-soft: rgba(255,91,31,0.16); --accent-ink: #0c0c0e;
+  --line: rgba(244,239,230,0.14);
+  --blue: #4dabf7; --blue-soft: rgba(77,171,247,0.14);
+  --green: #51cf66; --green-soft: rgba(81,207,102,0.14);
+  --red: #ff6b6b; --red-soft: rgba(255,107,107,0.14);
+  --yellow: #fcc419; --yellow-soft: rgba(252,196,25,0.14);
+  --purple: #b197fc; --purple-soft: rgba(177,151,252,0.14);
+  --f-display: "Archivo Black", "Arial Black", sans-serif;
+  --f-sans: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+  --f-mono: "JetBrains Mono", Consolas, monospace;
+  --ease: cubic-bezier(.2,.7,.2,1);
+  color-scheme: dark;
+}
+:root[data-theme="light"] {
+  --surface-100: #f4efe6; --surface-200: #ffffff; --surface-300: #ece5d8;
+  --ink: #15151a; --ink-muted: #55555f;
+  --accent: #e04a14; --accent-soft: rgba(224,74,20,0.12);
+  --line: rgba(21,21,26,0.14);
+  --blue: #1971c2; --blue-soft: rgba(25,113,194,0.10);
+  --green: #2f9e44; --green-soft: rgba(47,158,68,0.10);
+  --red: #e03131; --red-soft: rgba(224,49,49,0.10);
+  --yellow: #e67700; --yellow-soft: rgba(230,119,0,0.10);
+  --purple: #6741d9; --purple-soft: rgba(103,65,217,0.10);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --surface-100: #f4efe6; --surface-200: #ffffff; --surface-300: #ece5d8;
+    --ink: #15151a; --ink-muted: #55555f;
+    --accent: #e04a14; --accent-soft: rgba(224,74,20,0.12);
+    --line: rgba(21,21,26,0.14);
+    --blue: #1971c2; --blue-soft: rgba(25,113,194,0.10);
+    --green: #2f9e44; --green-soft: rgba(47,158,68,0.10);
+    --red: #e03131; --red-soft: rgba(224,49,49,0.10);
+    --yellow: #e67700; --yellow-soft: rgba(230,119,0,0.10);
+    --purple: #6741d9; --purple-soft: rgba(103,65,217,0.10);
+    color-scheme: light;
+  }
+}
+*, *::before, *::after { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0; background: var(--surface-100); color: var(--ink);
+  font-family: var(--f-sans); font-size: clamp(16px, 1.45vw, 24px); line-height: 1.45;
+  overflow: hidden; transition: background .3s, color .3s;
+}
+h1, h2, h3 { margin: 0; text-wrap: balance; }
+p { margin: 0; text-wrap: pretty; }
+
+/* ---------- Palco ---------- */
+.slide {
+  position: fixed; inset: 0; display: grid; align-content: center; justify-items: start;
+  padding: 5vh max(16px, 6vw) 9vh; gap: 2.2vh; overflow-y: auto;
+  opacity: 0; visibility: hidden; transform: translateX(40px);
+  transition: opacity .5s var(--ease), transform .5s var(--ease), visibility 0s .5s;
+}
+.slide.active { opacity: 1; visibility: visible; transform: none; transition: opacity .5s var(--ease), transform .5s var(--ease); }
+.slide.past { transform: translateX(-40px); }
+.slide > * { max-width: 1280px; width: 100%; }
+.center { justify-items: center; text-align: center; }
+
+.kicker { font-family: var(--f-mono); font-size: .72em; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--accent); }
+.title-xl { font-family: var(--f-display); font-size: clamp(36px, 6.4vw, 104px); line-height: .98; letter-spacing: -.01em; }
+.title-l { font-family: var(--f-display); font-size: clamp(28px, 3.6vw, 60px); line-height: 1.05; }
+.title-xl em, .title-l em { font-style: normal; color: var(--accent); }
+.lead { font-size: 1.2em; color: var(--ink-muted); max-width: 46ch; }
+.muted { color: var(--ink-muted); }
+.mono { font-family: var(--f-mono); }
+.card p, .card .mono { overflow-wrap: anywhere; min-width: 0; }
+
+/* ---------- Passos (aparecem com → ) ---------- */
+[data-step] { opacity: 0; transform: translateY(14px); transition: opacity .45s var(--ease), transform .45s var(--ease), background .45s, color .45s, border-color .45s; }
+[data-step].on { opacity: 1; transform: none; }
+[data-step].dim { opacity: .28; }
+
+/* ---------- Cartões ---------- */
+.card {
+  background: var(--surface-200); border: 1px solid var(--line); border-radius: 16px;
+  padding: 1.1em 1.3em; display: grid; gap: .5em; align-content: start;
+  transition: transform .25s var(--ease), border-color .25s, box-shadow .25s, opacity .45s, background .45s;
+}
+.card:hover { transform: translateY(-4px); border-color: var(--accent); box-shadow: 0 14px 34px -20px var(--accent); }
+.label { font-family: var(--f-mono); font-size: .62em; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-muted); }
+.grid { display: grid; gap: 1.2vw; }
+.g3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
+.g2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+
+/* ---------- Fluxo do módulo ---------- */
+.flow { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(6, minmax(0,1fr)); gap: .8vw; counter-reset: a; }
+.flow li { counter-increment: a; background: var(--surface-200); border: 1px solid var(--line); border-radius: 14px; padding: .9em .8em; display: grid; gap: .3em; position: relative; transition: transform .25s var(--ease), border-color .25s, background .25s, opacity .45s; }
+.flow li::before { content: "Aula " counter(a); font-family: var(--f-mono); font-size: .6em; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-muted); }
+.flow li b { font-size: .92em; line-height: 1.2; }
+.flow li small { font-size: .7em; color: var(--ink-muted); }
+.flow li:hover { transform: translateY(-4px); border-color: var(--accent); }
+.flow li.now { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.flow li.now::before, .flow li.now small { color: var(--accent-ink); }
+
+/* ---------- Chamado ---------- */
+.ticket { background: var(--surface-200); border: 1px solid var(--line); border-left: 6px solid var(--yellow); border-radius: 14px; padding: 1.3em 1.6em; display: grid; gap: .9em; max-width: 1100px; }
+.ticket header { display: flex; flex-wrap: wrap; gap: .6em 1.4em; align-items: baseline; font-family: var(--f-mono); font-size: .7em; color: var(--ink-muted); }
+.ticket header b { color: var(--ink); font-size: 1.15em; }
+.pill { border: 1px solid var(--line); border-radius: 999px; padding: .1em .7em; }
+.pill.hot { border-color: var(--red); color: var(--red); }
+.ticket .body { font-size: 1.12em; line-height: 2.5; }
+.hl { position: relative; padding: .05em .2em; border-radius: 6px; background: linear-gradient(var(--accent-soft), var(--accent-soft)) no-repeat 0 100% / 0% 100%; transition: background-size .6s var(--ease), color .3s; opacity: 1; transform: none; }
+.hl.on { background-size: 100% 100%; color: var(--accent); font-weight: 700; }
+.hl::after {
+  content: attr(data-q); position: absolute; left: 50%; top: 100%; transform: translate(-50%, -4px);
+  white-space: nowrap; font-family: var(--f-mono); font-size: .52em; font-weight: 600; line-height: 1.3;
+  color: var(--accent-ink); background: var(--accent); padding: .15em .6em; border-radius: 6px;
+  opacity: 0; pointer-events: none; transition: opacity .35s, transform .35s var(--ease);
+}
+.hl.on::after { opacity: 1; transform: translate(-50%, 2px); }
+.hl.old::after { opacity: 0; }
+.hl:hover::after { opacity: 1; }
+
+/* ---------- Três números ---------- */
+.person { text-align: left; }
+.person .num { font-family: var(--f-display); font-size: clamp(48px, 7vw, 120px); line-height: 1; color: var(--red); }
+.person.right .num { color: var(--green); }
+.person.right { border-color: var(--green); background: var(--green-soft); }
+.punch { font-family: var(--f-display); font-size: clamp(22px, 2.6vw, 42px); line-height: 1.15; }
+.punch em { font-style: normal; color: var(--accent); }
+
+/* ---------- Fontes de dados ---------- */
+.sources { display: grid; grid-template-columns: minmax(0,1fr) auto auto auto minmax(0,1fr); grid-template-rows: auto auto auto; column-gap: 1vw; row-gap: 1.2vh; align-items: center; }
+.src.blue { border-color: var(--blue); background: var(--blue-soft); }
+.src code, .fields code { font-family: var(--f-mono); font-size: .78em; background: var(--surface-300); padding: .05em .4em; border-radius: 5px; }
+.fields { display: flex; flex-wrap: wrap; gap: .35em; }
+.missing { display: inline-flex; gap: .5em; align-items: center; font-family: var(--f-mono); font-size: .72em; font-weight: 600; color: var(--red); border: 1.5px dashed var(--red); border-radius: 8px; padding: .3em .7em; width: fit-content; }
+.s1 { grid-column: 1; grid-row: 1; }
+.s2 { grid-column: 5; grid-row: 1; }
+.arr { font-family: var(--f-mono); color: var(--accent); font-size: 1.8em; line-height: 1; text-align: center; }
+.arr.l { grid-column: 2; grid-row: 1; }
+.arr.r { grid-column: 4; grid-row: 1; }
+.arr.d { grid-column: 3; grid-row: 2; }
+.join { grid-column: 3; grid-row: 1; justify-self: center; text-align: center; font-family: var(--f-mono); font-size: .7em; line-height: 1.35; border: 2px solid var(--ink-muted); border-radius: 999px; padding: .9em 1.3em; background: var(--surface-200); white-space: nowrap; }
+.result { grid-column: 2 / 5; grid-row: 3; justify-self: center; border-color: var(--green); background: var(--green-soft); text-align: center; min-width: 22em; }
+
+/* ---------- Tabela de perguntas ---------- */
+.qtable { display: grid; gap: .55em; }
+.qrow { display: grid; grid-template-columns: 10em minmax(0,1.2fr) minmax(0,1.4fr); gap: 1em; align-items: center; background: var(--surface-200); border: 1px solid var(--line); border-radius: 12px; padding: .6em 1em; transition: border-color .25s, transform .25s var(--ease), opacity .45s; }
+.qrow:hover { border-color: var(--accent); transform: translateX(4px); }
+.qrow .word { font-family: var(--f-mono); font-weight: 600; color: var(--accent); }
+.qrow .prem { color: var(--ink); }
+.qrow .prem::before { content: "PREMISSA  "; font-family: var(--f-mono); font-size: .62em; letter-spacing: .1em; color: var(--yellow); }
+.qhead { display: grid; grid-template-columns: 10em minmax(0,1.2fr) minmax(0,1.4fr); gap: 1em; padding: 0 1em; }
+
+/* ---------- Regras ---------- */
+.rules { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 1.2vw; }
+.rules .card h3 { font-size: 1em; display: flex; gap: .5em; align-items: center; }
+.dot { width: .7em; height: .7em; border-radius: 50%; display: inline-block; }
+.rules ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .45em; font-size: .86em; }
+.rules li { display: grid; grid-template-columns: 3.6em 1fr; gap: .4em; }
+.rules li b { font-family: var(--f-mono); font-size: .85em; color: var(--accent); }
+.legend { display: flex; flex-wrap: wrap; gap: .5em 1.6em; font-size: .78em; color: var(--ink-muted); }
+
+/* ---------- Citação ---------- */
+.quote { font-family: var(--f-display); font-size: clamp(30px, 4.6vw, 76px); line-height: 1.05; max-width: 18ch; }
+.quote em { font-style: normal; color: var(--accent); }
+
+/* ---------- Recap ---------- */
+.recap { list-style: none; margin: 0; padding: 0; display: grid; gap: 1em; counter-reset: r; }
+.recap li { counter-increment: r; display: grid; grid-template-columns: 2.4em 1fr; gap: .8em; align-items: center; font-size: 1.15em; }
+.recap li::before { content: counter(r); font-family: var(--f-display); font-size: 1.6em; color: var(--accent); }
+
+/* ---------- Interface ---------- */
+.hud { position: fixed; left: 0; right: 0; bottom: 0; display: flex; justify-content: space-between; align-items: center; padding: 10px max(16px, 2vw); font-family: var(--f-mono); font-size: 12px; color: var(--ink-muted); z-index: 10; opacity: .35; transition: opacity .3s; }
+.hud:hover { opacity: 1; }
+.hud button { font: inherit; background: var(--surface-200); color: var(--ink); border: 1px solid var(--line); border-radius: 999px; padding: 5px 12px; cursor: pointer; }
+.hud button:hover { border-color: var(--accent); color: var(--accent); }
+.hud .group { display: flex; gap: 6px; align-items: center; }
+.bar { position: fixed; left: 0; top: 0; height: 3px; background: var(--accent); width: 0; transition: width .4s var(--ease); z-index: 10; }
+body.clean .hud { display: none; }
+
+
+/* ---------- Aula 2 · analogia do restaurante ---------- */
+.chain { display: grid; grid-template-columns: minmax(0,1fr) auto minmax(0,1fr) auto minmax(0,1fr); align-items: center; column-gap: 1vw; row-gap: 1.4vh; }
+.actor { text-align: left; }
+.actor .ico { font-size: 2.1em; line-height: 1; }
+.actor b { font-size: 1.05em; }
+.actor.api { border-color: var(--blue); background: var(--blue-soft); }
+.actor.kitchen { border-style: dashed; }
+.tag { font-family: var(--f-mono); font-size: .62em; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--blue); }
+.back { grid-column: 1 / 4; display: flex; align-items: center; gap: .8em; font-family: var(--f-mono); font-size: .8em; color: var(--accent); }
+.back::before { content: ""; flex: 1; height: 2px; background: linear-gradient(90deg, var(--accent), transparent); order: 2; }
+.never { grid-column: 5; justify-self: center; }
+
+/* ---------- Exemplos do dia a dia ---------- */
+.uses { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 1vw; }
+.uses .card { text-align: left; }
+.uses .ico { font-size: 1.8em; line-height: 1; }
+.why .card h3 { font-size: 1.02em; }
+.why .card p { font-size: .9em; color: var(--ink-muted); }
+
+/* ---------- Anatomia da URL ---------- */
+.url { font-family: var(--f-mono); font-size: clamp(14px, 1.5vw, 26px); line-height: 2.9; background: var(--surface-200); border: 1px solid var(--line); border-radius: 14px; padding: .4em 1em 1.4em; overflow-wrap: anywhere; }
+.url .hl::after { top: 88%; }
+.verb { display: inline-block; font-weight: 700; color: var(--accent-ink); background: var(--green); border-radius: 6px; padding: 0 .4em; margin-right: .5em; line-height: 1.4; }
+.ptable { display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); gap: .6vw; }
+.ptable .card { padding: .7em .9em; gap: .25em; }
+.ptable code { font-family: var(--f-mono); font-weight: 600; color: var(--accent); font-size: .9em; }
+.ptable span { font-size: .78em; color: var(--ink-muted); }
+
+/* ---------- JSON da resposta ---------- */
+.json { font-family: var(--f-mono); font-size: clamp(13px, 1.15vw, 20px); line-height: 1.55; background: var(--surface-200); border: 1px solid var(--line); border-radius: 14px; padding: 1em 1.3em; margin: 0; white-space: pre; overflow-x: auto; }
+.json .k { color: var(--blue); }
+.json .s { color: var(--green); }
+.json .n { color: var(--yellow); }
+.json .c { color: var(--ink-muted); }
+.json .box[data-step] { opacity: 1; transform: none; }
+.json .box { border-radius: 6px; padding: 0 .2em; transition: background .45s, outline-color .45s; outline: 2px solid transparent; }
+.json .box.on { background: var(--accent-soft); outline-color: var(--accent); }
+.split { display: grid; grid-template-columns: minmax(0,1.35fr) minmax(0,1fr); gap: 1.6vw; align-items: start; }
+.notes { display: grid; gap: .8em; }
+
+/* ---------- Estrutura do lab ---------- */
+.steps3 { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 1vw; counter-reset: n; }
+.steps3 .card { counter-increment: n; }
+.steps3 .card::before { content: counter(n); font-family: var(--f-display); font-size: 1.6em; color: var(--accent); line-height: 1; }
+.steps3 .card .mono { font-size: .82em; }
+.steps3 .card p { font-size: .88em; color: var(--ink-muted); }
+.tree { font-family: var(--f-mono); font-size: .8em; line-height: 1.6; white-space: pre; margin: 0; color: var(--ink); }
+.tree .c { color: var(--ink-muted); }
+.alt { border-style: dashed; }
+
+/* ---------- Divisor "hora do notebook" ---------- */
+.nb-list { list-style: none; margin: 0; padding: 0; display: grid; gap: .55em; }
+.nb-list li { display: grid; grid-template-columns: 7.5em 1fr; gap: 1em; align-items: baseline; background: var(--surface-200); border: 1px solid var(--line); border-radius: 12px; padding: .55em 1em; transition: border-color .25s, transform .25s var(--ease), opacity .45s; }
+.nb-list li:hover { border-color: var(--accent); transform: translateX(4px); }
+.nb-list li b { font-family: var(--f-mono); font-size: .78em; color: var(--accent); }
+.nb-list li.err b { color: var(--red); }
+
+/* ---------- Códigos HTTP ---------- */
+.codes { display: grid; gap: .5em; }
+.crow, .chead { display: grid; grid-template-columns: 9em minmax(0,1.3fr) minmax(0,1fr) minmax(0,1.2fr); gap: 1em; align-items: center; padding: .55em 1em; }
+.crow { background: var(--surface-200); border: 1px solid var(--line); border-left-width: 6px; border-radius: 12px; transition: transform .25s var(--ease), opacity .45s; }
+.crow:hover { transform: translateX(4px); }
+.crow .code { font-family: var(--f-mono); font-weight: 700; }
+.crow.ok { border-left-color: var(--green); } .crow.ok .code { color: var(--green); }
+.crow.us { border-left-color: var(--red); } .crow.us .code { color: var(--red); }
+.crow.wait { border-left-color: var(--yellow); } .crow.wait .code { color: var(--yellow); }
+
+/* ---------- Backoff ---------- */
+.timeline { display: flex; flex-wrap: wrap; align-items: center; gap: .6em; font-family: var(--f-mono); }
+.tick { border: 2px solid var(--yellow); color: var(--yellow); border-radius: 999px; padding: .25em .9em; font-weight: 600; }
+.tick.fail { border-color: var(--red); color: var(--red); }
+.tick.win { border-color: var(--green); color: var(--green); background: var(--green-soft); }
+.sep { color: var(--ink-muted); }
+
+/* ---------- Páginas ---------- */
+.pages { display: grid; grid-template-columns: repeat(15, minmax(0,1fr)); gap: .45vw; }
+.pg { aspect-ratio: 3 / 4; border-radius: 8px; border: 2px solid var(--line); background: var(--surface-200); display: grid; place-items: center; font-family: var(--f-mono); font-size: .58em; color: var(--ink-muted); transition: background .45s, border-color .45s, color .45s, opacity .45s, transform .45s var(--ease); }
+.pg.first { border-color: var(--accent); background: var(--accent-soft); color: var(--ink); }
+.slide:has(.offsets [data-step="2"].on) .pg { border-color: var(--accent); background: var(--accent-soft); color: var(--ink); }
+.offsets { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 1vw; font-family: var(--f-mono); font-size: .82em; }
+.offsets .card { gap: .2em; }
+
+/* ---------- Números do checkpoint ---------- */
+.nums { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 1vw; }
+.nums .card .big { font-family: var(--f-display); font-size: clamp(34px, 4.6vw, 80px); line-height: 1; color: var(--green); }
+
+@media (max-width: 760px) {
+  body { overflow: auto; }
+  .g3, .g2, .uses, .ptable, .split, .steps3, .nums, .offsets { grid-template-columns: 1fr; }
+  .flow { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .chain { grid-template-columns: 1fr; }
+  .chain .arr, .back, .never { grid-column: 1; }
+  .crow, .chead { grid-template-columns: 1fr; gap: .2em; }
+  .chead { display: none; }
+  .nb-list li { grid-template-columns: 1fr; gap: .2em; }
+  .pages { grid-template-columns: repeat(5, minmax(0,1fr)); }
+  .hl::after { white-space: normal; width: max-content; max-width: 60vw; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; }
+}
+</style>
+</head>
+<body>
+<div class="bar" id="bar"></div>
+
+<!-- 1 · Capa -->
+<section class="slide" data-title="Capa">
+  <span class="kicker">Módulo 01 · Do dado à confiança · Aula 2</span>
+  <h1 class="title-xl">Ingerindo uma <em>API de verdade</em></h1>
+  <p class="lead">Buscar os dados da loja página por página, sobreviver aos erros e guardar tudo com prova de que veio inteiro.</p>
+</section>
+
+<!-- 2 · Gancho -->
+<section class="slide center" data-title="O gancho">
+  <span class="kicker">Uma chamada. Status 200. Deu certo?</span>
+  <h2 class="title-l" data-step="1"><span class="mono" style="color:var(--green)">HTTP 200</span><br>vieram <em>100</em> de <em>1.500</em> pedidos.</h2>
+  <p class="lead" data-step="2">O erro mais perigoso é o que <b>não dá erro</b>.</p>
+</section>
+
+<!-- 3 · Mapa do módulo -->
+<section class="slide" data-title="O módulo">
+  <span class="kicker">Onde estamos</span>
+  <h2 class="title-l">Do contrato para os <em>dados de verdade</em></h2>
+  <ol class="flow">
+    <li><b>O pedido virou regra</b><small>contrato de dados</small></li>
+    <li class="now"><b>Ingerindo uma API</b><small>paginação, limites</small></li>
+    <li><b>Regra rastreável</b><small>bronze → gold</small></li>
+    <li><b>Testes que provam</b><small>qualidade</small></li>
+    <li><b>Governança de verdade</b><small>filtro e máscara</small></li>
+    <li><b>Portfólio</b><small>README e LinkedIn</small></li>
+  </ol>
+  <p class="muted" data-step="1">Hoje a gente não transforma nada. Só busca, confere e guarda.</p>
+</section>
+
+<!-- 4 · O que é uma API -->
+<section class="slide" data-title="O que é uma API">
+  <span class="kicker">Antes do código · O que é uma API?</span>
+  <div class="chain">
+    <div class="card actor" data-step="1">
+      <span class="ico" aria-hidden="true">🧑‍💻</span>
+      <span class="tag" style="color:var(--ink-muted)">O cliente</span>
+      <b>Você, no notebook</b>
+      <p class="muted">Sabe o que quer, mas não entra na cozinha.</p>
+    </div>
+    <span class="arr" data-step="2">→</span>
+    <div class="card actor api" data-step="2">
+      <span class="ico" aria-hidden="true">🤵</span>
+      <span class="tag">O garçom · API</span>
+      <b>Recebe o pedido, leva e traz</b>
+      <p class="muted">Só aceita o que está no cardápio (a documentação).</p>
+    </div>
+    <span class="arr" data-step="3">→</span>
+    <div class="card actor kitchen" data-step="3">
+      <span class="ico" aria-hidden="true">🍳</span>
+      <span class="tag" style="color:var(--ink-muted)">A cozinha</span>
+      <b>O sistema da loja</b>
+      <p class="muted">Banco de dados, regras, servidores.</p>
+    </div>
+    <div class="back" data-step="4">← o prato volta: uma resposta em JSON</div>
+    <span class="missing never" data-step="5">✕ ninguém te dá a senha do banco</span>
+  </div>
+  <p class="lead" data-step="6"><b>API</b> (<i>Application Programming Interface</i>) é a porta combinada para um sistema conversar com outro.</p>
+</section>
+
+<!-- 5 · Por que importa -->
+<section class="slide" data-title="Por que importa">
+  <span class="kicker">Você usa API o dia todo, sem perceber</span>
+  <div class="uses">
+    <div class="card" data-step="1"><span class="ico" aria-hidden="true">🌦️</span><b>Previsão do tempo</b><p class="muted">O app pergunta para o serviço de meteorologia.</p></div>
+    <div class="card" data-step="1"><span class="ico" aria-hidden="true">🗺️</span><b>Mapa no app de entrega</b><p class="muted">O app pede o mapa para outro serviço.</p></div>
+    <div class="card" data-step="1"><span class="ico" aria-hidden="true">🔑</span><b>“Entrar com Google”</b><p class="muted">O site pergunta ao Google quem é você.</p></div>
+    <div class="card" data-step="1"><span class="ico" aria-hidden="true">💳</span><b>Pagamento</b><p class="muted">A loja pede ao serviço de pagamento para cobrar.</p></div>
+  </div>
+  <span class="kicker" data-step="2" style="margin-top:1vh">E para quem trabalha com dados</span>
+  <div class="grid g3 why">
+    <div class="card" data-step="2"><h3>Muito dado só sai por API</h3><p>CRM, pagamentos, marketing, sistemas de terceiros: ninguém te dá acesso ao banco deles.</p></div>
+    <div class="card" data-step="3"><h3>A fonte dita as regras</h3><p>Limite por chamada, limite por minuto, formato da resposta. O seu código se adapta, não o contrário.</p></div>
+    <div class="card" data-step="4"><h3>API cai e muda</h3><p>Fica fora do ar, devolve erro, troca coluna. O pipeline precisa perceber e reagir.</p></div>
+  </div>
+</section>
+
+<!-- 6 · Anatomia da chamada -->
+<section class="slide" data-title="Anatomia da chamada">
+  <span class="kicker">Uma chamada é só uma URL bem montada</span>
+  <p class="url">
+    <span class="verb">GET</span><span class="hl" data-step="1" data-q="onde fica o serviço">https://datasets-server.huggingface.co</span><span class="hl" data-step="2" data-q="endpoint: o que eu quero">/rows</span><span class="hl" data-step="3" data-q="parâmetros: os detalhes do pedido">?dataset=trilhajornadadatabricks/loja-ficticia-jornada&amp;config=pedidos&amp;split=train&amp;offset=0&amp;length=100</span>
+  </p>
+  <div class="ptable" data-step="4">
+    <div class="card"><code>dataset</code><span>qual dataset (dono/nome)</span></div>
+    <div class="card"><code>config</code><span>qual tabela</span></div>
+    <div class="card"><code>split</code><span>partição; aqui sempre <b>train</b></span></div>
+    <div class="card"><code>offset</code><span>a partir de qual linha (começa em 0)</span></div>
+    <div class="card"><code>length</code><span>quantas linhas (máx. <b>100</b>)</span></div>
+  </div>
+  <p class="muted" data-step="5"><span class="mono">GET</span> = “quero ler”. É o único verbo que a gente usa hoje.</p>
+</section>
+
+<!-- 7 · O que volta -->
+<section class="slide" data-title="A resposta">
+  <span class="kicker">O que volta: JSON, um texto com chaves e valores</span>
+  <div class="split">
+<pre class="json">{
+  <span class="box" data-step="1"><span class="k">"features"</span>: [ {<span class="k">"name"</span>: <span class="s">"order_id"</span>}, … ],</span>
+  <span class="box" data-step="2"><span class="k">"rows"</span>: [
+    { <span class="k">"row_idx"</span>: <span class="n">0</span>,
+      <span class="k">"row"</span>: { <span class="k">"order_id"</span>: <span class="n">1</span>, <span class="k">"valor_liquido"</span>: <span class="n">…</span> } },
+    <span class="c">… mais 99 linhas</span>
+  ],</span>
+  <span class="box" data-step="3"><span class="k">"num_rows_total"</span>: <span class="n">1500</span>,</span>
+  <span class="k">"num_rows_per_page"</span>: <span class="n">100</span>,
+  <span class="k">"partial"</span>: <span class="n">false</span>
+}</pre>
+    <div class="notes">
+      <div class="card" data-step="1"><span class="label">features</span><p>A lista de colunas. Vamos comparar com o contrato.</p></div>
+      <div class="card" data-step="2"><span class="label">rows</span><p>Os dados. <span class="mono">row_idx</span> é a posição da linha na fonte.</p></div>
+      <div class="card" data-step="3" style="border-color:var(--accent)"><span class="label">num_rows_total</span><p>Quantas linhas existem. É assim que sabemos <b>quando parar</b> e <b>se veio tudo</b>.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 8 · Estrutura do lab -->
+<section class="slide" data-title="Estrutura do lab">
+  <span class="kicker">O lab desta aula: 3 notebooks, sempre nesta ordem</span>
+  <div class="steps3">
+    <div class="card" data-step="1"><span class="mono">setup/01_criar_ambiente</span><p>Cria o catálogo <span class="mono">jornada_comercial</span>, os schemas e o Volume <span class="mono">raw.landing</span>.</p></div>
+    <div class="card" data-step="2" style="border-color:var(--accent)"><span class="mono">src/aula02_ingestao_api</span><p>A sua versão, com <b>TODO</b> para completar. A resposta fica em <span class="mono">solucao/</span>.</p></div>
+    <div class="card" data-step="3"><span class="mono">tests/aula02_conferir_landing</span><p>Prova que veio tudo. Se algo falhar, fica vermelho.</p></div>
+  </div>
+  <div class="grid g2">
+    <div class="card" data-step="4">
+      <span class="label">O que fica no Volume</span>
+<pre class="tree">raw/landing/
+└── pedidos/
+    └── carga_20261110_175501/  <span class="c">← uma pasta por carga</span>
+        ├── pagina_0000.json     <span class="c">← resposta crua</span>
+        ├── …
+        └── _manifesto.json      <span class="c">← o recibo</span></pre>
+    </div>
+    <div class="card alt" data-step="5">
+      <span class="label">Plano B · setup/02_plano_b_sem_api</span>
+      <p>Se a API estiver fora do ar no dia, este notebook grava os mesmos dados, no mesmo formato. O resto do curso nem percebe.</p>
+      <p class="muted">Todos os notebooks usam o widget <span class="mono">catalogo</span> com o mesmo valor.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 9 · Notebook parte 1 -->
+<section class="slide" data-title="Notebook · parte 1">
+  <span class="kicker">Hora do notebook · Parte 1</span>
+  <h2 class="title-l">Conhecer a API <em>errando de propósito</em></h2>
+  <ul class="nb-list">
+    <li data-step="1"><b>setup/01</b><span>Criar o ambiente</span></li>
+    <li data-step="2"><b>Passo 0</b><span>Widgets e o contrato das colunas</span></li>
+    <li class="err" data-step="3"><b>Passo 1</b><span>A rede deixa? IBGE bloqueado, Hugging Face liberado</span></li>
+    <li data-step="4"><b>Passo 2</b><span>A primeira chamada, olhando a resposta</span></li>
+    <li class="err" data-step="5"><b>Erro 2</b><span>Pedir 1.000 linhas de uma vez</span></li>
+    <li class="err" data-step="6"><b>Erro 3</b><span>Uma chamada só: 100 de 1.500</span></li>
+  </ul>
+</section>
+
+<!-- 10 · Códigos HTTP -->
+<section class="slide" data-title="Quem errou?">
+  <span class="kicker">O código de resposta diz quem errou</span>
+  <div class="codes">
+    <div class="chead label"><span>Código</span><span>O que significa</span><span>Quem errou</span><span>Tentar de novo?</span></div>
+    <div class="crow ok" data-step="1"><span class="code">200</span><span>Deu certo</span><span>ninguém</span><span>—</span></div>
+    <div class="crow us" data-step="2"><span class="code">400 404 422</span><span>Pedido errado (ex.: <span class="mono">length=1000</span>)</span><span>nós</span><span><b>Não.</b> Corrigir o pedido.</span></div>
+    <div class="crow wait" data-step="3"><span class="code">429</span><span>“Calma, chamadas demais”</span><span>ninguém: é cota</span><span><b>Sim</b>, depois de esperar</span></div>
+    <div class="crow wait" data-step="4"><span class="code">500 502 503</span><span>O servidor falhou</span><span>eles</span><span><b>Sim</b>, depois de esperar</span></div>
+    <div class="crow wait" data-step="5"><span class="code">timeout</span><span>Sem resposta, a rede oscilou</span><span>a rede</span><span><b>Sim</b>, depois de esperar</span></div>
+  </div>
+  <p class="muted" data-step="6">Regra de bolso: <b>4xx</b> é com você · <b>5xx</b> é com eles.</p>
+</section>
+
+<!-- 11 · Retry -->
+<section class="slide" data-title="Retry">
+  <span class="kicker">Retry com backoff: tentar de novo sem atropelar</span>
+  <div class="timeline" data-step="1">
+    <span class="tick fail">502</span><span class="sep">espera 2 s →</span>
+    <span class="tick fail">502</span><span class="sep">espera 4 s →</span>
+    <span class="tick fail">503</span><span class="sep">espera 8 s →</span>
+    <span class="tick win">200 ✓</span>
+  </div>
+  <div class="grid g3">
+    <div class="card" data-step="2"><span class="label">Backoff exponencial</span><p>A espera <b>dobra</b> a cada tentativa. Dá tempo para o serviço voltar.</p></div>
+    <div class="card" data-step="3"><span class="label">429 · limite de chamadas</span><p>Medido em 10/11: ~40 a 55 chamadas seguidas e vem 429. Libera em ~60 s. A carga toda são <b>76</b> chamadas.</p></div>
+    <div class="card" data-step="4" style="border-color:var(--red)"><span class="label">Tem limite</span><p>Depois de 6 tentativas, desiste com mensagem clara. E <b>nunca</b> grava uma resposta de erro como se fosse dado.</p></div>
+  </div>
+</section>
+
+<!-- 12 · Paginação -->
+<section class="slide" data-title="Paginação">
+  <span class="kicker">Paginação: 1.500 pedidos, 100 por vez</span>
+  <div class="pages" id="pages">
+    <span class="pg first">0</span><span class="pg">1</span><span class="pg">2</span><span class="pg">3</span><span class="pg">4</span><span class="pg">5</span><span class="pg">6</span><span class="pg">7</span><span class="pg">8</span><span class="pg">9</span><span class="pg">10</span><span class="pg">11</span><span class="pg">12</span><span class="pg">13</span><span class="pg">14</span>
+  </div>
+  <div class="offsets">
+    <div class="card" data-step="1"><span class="label">Página 0</span><span>offset=0 · linhas 0–99</span></div>
+    <div class="card" data-step="1"><span class="label">Página 1</span><span>offset=100 · linhas 100–199</span></div>
+    <div class="card" data-step="2"><span class="label">Página 14</span><span>offset=1400 · linhas 1400–1499</span></div>
+  </div>
+  <p class="lead" data-step="3">Soma 100 no <span class="mono">offset</span> até chegar no <span class="mono">num_rows_total</span>. No fim: <b>as linhas que vieram batem com o total?</b></p>
+</section>
+
+<!-- 13 · Landing e manifesto -->
+<section class="slide" data-title="Landing">
+  <span class="kicker">Três decisões na hora de guardar</span>
+  <div class="grid g3">
+    <div class="card" data-step="1"><span class="label">1 · Resposta crua</span><p>Grava o texto exatamente como veio. É a <b>prova</b> do que a fonte mandou, e dá para reprocessar sem chamar a API de novo.</p></div>
+    <div class="card" data-step="2"><span class="label">2 · Uma pasta por carga</span><p><span class="mono">carga_AAAAMMDD_HHMMSS</span>, em UTC. Nunca sobrescreve: dá para refazer e auditar qualquer dia.</p></div>
+    <div class="card" data-step="3" style="border-color:var(--green)"><span class="label">3 · Manifesto no fim</span><p>Só escrito se o total bateu. <b>Pasta sem manifesto = carga incompleta</b>, e ninguém lê.</p></div>
+  </div>
+  <p class="punch" data-step="4">A landing é um <em>arquivo morto</em>: só recebe, nunca altera.</p>
+</section>
+
+<!-- 14 · Notebook parte 2 -->
+<section class="slide" data-title="Notebook · parte 2">
+  <span class="kicker">Hora do notebook · Parte 2</span>
+  <h2 class="title-l">Agora a carga <em>de verdade</em></h2>
+  <ul class="nb-list">
+    <li data-step="1"><b>Passo 3</b><span>Retry: um 404 para na hora</span></li>
+    <li data-step="2"><b>Passo 4</b><span>Validar as colunas contra o contrato</span></li>
+    <li data-step="3"><b>Passo 5</b><span>O laço de paginação + manifesto</span></li>
+    <li data-step="4"><b>Passo 6</b><span>As 4 tabelas (2 a 6 min; se vier 429, é o retry trabalhando)</span></li>
+    <li data-step="5"><b>Passo 7</b><span>Checkpoint: o Spark lê de volta</span></li>
+    <li data-step="6"><b>tests/</b><span>Conferir a landing</span></li>
+  </ul>
+</section>
+
+<!-- 15 · Checkpoint -->
+<section class="slide" data-title="Checkpoint">
+  <span class="kicker">Checkpoint · Se você vê isso, deu certo</span>
+  <div class="nums">
+    <div class="card" data-step="1"><span class="label">clientes</span><span class="big">500</span></div>
+    <div class="card" data-step="1"><span class="label">produtos</span><span class="big">60</span></div>
+    <div class="card" data-step="1"><span class="label">pedidos</span><span class="big">1.500</span></div>
+    <div class="card" data-step="1"><span class="label">eventos_pedido</span><span class="big">5.416</span></div>
+  </div>
+  <p class="lead mono" data-step="2" style="color:var(--green)">Landing completa: todos os testes OK</p>
+</section>
+
+<!-- 16 · Recap -->
+<section class="slide" data-title="Resumo">
+  <span class="kicker">Para levar desta aula</span>
+  <ol class="recap">
+    <li data-step="1"><span>API é a porta combinada para buscar dados de outro sistema. Quem manda nas regras é a fonte.</span></li>
+    <li data-step="2"><span><b>HTTP 200 não é “veio tudo”.</b> Pagine e compare com o total.</span></li>
+    <li data-step="3"><span>Erro temporário: espera e tenta de novo. Erro nosso: para e avisa. E guarde tudo cru, com recibo.</span></li>
+  </ol>
+</section>
+
+<!-- 17 · Tarefa e próxima aula -->
+<section class="slide" data-title="Próxima aula">
+  <div class="grid g2">
+    <div class="card" style="border-color:var(--yellow)">
+      <span class="label">Sua tarefa</span>
+      <p>Complete os <b>TODO</b> de <span class="mono">src/aula02_ingestao_api</span> sem olhar a solução e rode o teste até ficar verde.</p>
+      <p class="muted">Desafio: troque <span class="mono">valor_liquido</span> por <span class="mono">valor_liq</span> no contrato. O que acontece? Por que isso é bom?</p>
+    </div>
+    <div class="card" data-step="1" style="border-color:var(--accent)">
+      <span class="label">Próxima aula · Transformação com regra rastreável</span>
+      <p>Abrir esses JSON e transformar em bronze, silver e gold, com cada regra do contrato apontando para o código.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 18 · Encerramento -->
+<section class="slide center" data-title="Encerramento">
+  <span class="kicker">Fim da aula 2 · Módulo 01 · Do dado à confiança</span>
+  <h2 class="title-xl" data-step="1">Status 200<br><em>não é prova.</em></h2>
+  <div class="grid g3" data-step="2" style="max-width:1100px; text-align:left">
+    <div class="card"><span class="label">Você saiu com</span><p>As 4 tabelas da loja no Volume, com manifesto e teste verde</p></div>
+    <div class="card"><span class="label">Material</span><p>Notebooks do lab e o guia peça por peça<br><span class="mono" style="font-size:.8em">aula02_como_funciona.md</span></p></div>
+    <div class="card" style="border-color:var(--accent)"><span class="label">Na aula 3</span><p>Bronze → silver → gold, com regra rastreável</p></div>
+  </div>
+  <p class="muted" data-step="3">Jornada de Dados · Trilha Databricks</p>
+</section>
+
+<nav class="hud" aria-label="Controles">
+  <div class="group"><span id="count">1 / 1</span><span id="title"></span></div>
+  <div class="group">
+    <button id="prev" aria-label="Voltar">←</button>
+    <button id="next" aria-label="Avançar">→</button>
+    <button id="theme">Tema (T)</button>
+    <button id="full">Tela cheia (F)</button>
+    <button id="clean">Esconder barra (H)</button>
+  </div>
+</nav>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  var slides = [].slice.call(document.querySelectorAll('.slide'));
+  var cur = 0, step = 0;
+
+  function steps(s) {
+    var max = 0;
+    s.querySelectorAll('[data-step]').forEach(function (el) { max = Math.max(max, +el.dataset.step); });
+    return max;
+  }
+  function render() {
+    slides.forEach(function (s, i) {
+      s.classList.toggle('active', i === cur);
+      s.classList.toggle('past', i < cur);
+    });
+    var s = slides[cur];
+    s.querySelectorAll('[data-step]').forEach(function (el) {
+      el.classList.toggle('on', +el.dataset.step <= step);
+    });
+    // No chamado, a palavra anterior perde o balão para não poluir.
+    s.querySelectorAll('.hl').forEach(function (el) {
+      var n = +el.dataset.step;
+      el.classList.toggle('on', n <= step);
+      el.classList.toggle('old', n < step);
+    });
+    document.getElementById('count').textContent = (cur + 1) + ' / ' + slides.length;
+    document.getElementById('title').textContent = '· ' + (s.dataset.title || '');
+    document.getElementById('bar').style.width = ((cur + 1) / slides.length * 100) + '%';
+    try { history.replaceState(null, '', '#' + (cur + 1) + (step ? '.' + step : '')); } catch (e) {}
+  }
+  function next() {
+    if (step < steps(slides[cur])) step++;
+    else if (cur < slides.length - 1) { cur++; step = 0; }
+    render();
+  }
+  function prev() {
+    if (step > 0) step--;
+    else if (cur > 0) { cur--; step = steps(slides[cur]); }
+    render();
+  }
+
+  document.getElementById('next').addEventListener('click', function (e) { e.stopPropagation(); next(); });
+  document.getElementById('prev').addEventListener('click', function (e) { e.stopPropagation(); prev(); });
+  document.getElementById('theme').addEventListener('click', function (e) { e.stopPropagation(); toggleTheme(); });
+  document.getElementById('full').addEventListener('click', function (e) { e.stopPropagation(); toggleFull(); });
+  document.getElementById('clean').addEventListener('click', function (e) { e.stopPropagation(); document.body.classList.toggle('clean'); });
+
+  function toggleTheme() {
+    var dark = getComputedStyle(root).colorScheme.indexOf('dark') > -1;
+    var nextTheme = dark ? 'light' : 'dark';
+    root.setAttribute('data-theme', nextTheme);
+    try { localStorage.setItem('jd-theme', nextTheme); } catch (e) {}
+  }
+  function toggleFull() {
+    if (!document.fullscreenElement) { if (root.requestFullscreen) root.requestFullscreen(); }
+    else if (document.exitFullscreen) document.exitFullscreen();
+  }
+
+  document.addEventListener('keydown', function (e) {
+    if (e.altKey || e.ctrlKey || e.metaKey) return;
+    var k = e.key;
+    if (k === 'ArrowRight' || k === 'ArrowDown' || k === 'PageDown' || k === ' ' || k === 'Enter') { e.preventDefault(); next(); }
+    else if (k === 'ArrowLeft' || k === 'ArrowUp' || k === 'PageUp' || k === 'Backspace') { e.preventDefault(); prev(); }
+    else if (k === 'Home') { cur = 0; step = 0; render(); }
+    else if (k === 'End') { cur = slides.length - 1; step = steps(slides[cur]); render(); }
+    else if (k === 'f' || k === 'F') toggleFull();
+    else if (k === 't' || k === 'T') toggleTheme();
+    else if (k === 'h' || k === 'H') document.body.classList.toggle('clean');
+  });
+  // Clique em área vazia avança (útil com passador de slides/mouse).
+  document.addEventListener('click', function (e) {
+    if (e.target.closest('button, a')) return;
+    if (window.innerWidth > 760) next();
+  });
+
+  var m = /^#(\d+)(?:\.(\d+))?$/.exec(location.hash);
+  if (m) { cur = Math.min(slides.length - 1, +m[1] - 1); step = m[2] ? +m[2] : 0; }
+  render();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+{
+ "clientes": [
+  {
+   "feature_idx": 0,
+   "name": "customer_id",
+   "type": {
+    "dtype": "int64",
+    "_type": "Value"
+   }
+  },
+  {
+   "feature_idx": 1,
+   "name": "nome",
+   "type": {
+    "dtype": "string",
+    "_type": "Value"
+   }
+  },
+  {
+   "feature_idx": 2,
+   "name": "email",
+   "type": {
+    "dtype": "string",
+    "_type": "Value"
+   }
+  },
+  {
+   "feature_idx": 3,
+   "name": "telefone",
+   "type": {
+    "dtype": "string",
+    "_type": "Value"
+   }
+  },
+  {
+   "feature_idx": 4,
+   "name": "cidade",
+   "type": {
+    "dtype": "string",
+    "_type": "Value"
+   }
+  },
+  {
+   "feature_idx": 5,
+   "name": "uf",
+   "type": {
+    "dtype": "string",
+    "_type": "Value"
+   }
+  },
+  {
+   "feature_idx": 6,
+   "name": "cadastrado_em",
+   "type": {
+    "dtype": "timestamp[s]",
+    "_type": "Value"
+   }
+  }
+ ],
+ "produtos": [
+  {
+   "feature_idx": 0,
+   "name": "product_id",
+   "type": {
+    "dtype": "int64",
+    "_type": "Value"
+   }
+  },
+  {
+   "feature_idx": 1,
+   "name": "nome",
+   "type": {
+    "dtype": "string",
+    "_type": "Value"
+   }
+  },
+  {
+   "feature_idx": 2,
+   "name": "categoria",
+   "type": {
+    "dtype": "string",
+    "_type": "Value"
+   }
+  },
+  {
+   "feature_idx": 3,
+   "name": "preco",
+   "type": {
+    "dtype": "float64",
+    "_type": "Value"
+   }
+  }
+ ],
+ "pedidos": [
+  {
+   "feature_idx": 0,
+   "name": "order_id",
+   "type": {
+    "dtype": "int64",
+    "_type": "Value"
+   }
+  },
+  {
+   "feature_idx": 1,
+   "name": "customer_id",
+   "type": {
+    "dtype": "int64",
+    "_type": "Value"
+   }
+  },
+  {
+   "feature_idx": 2,
+   "name": "criado_em",
+   "type": {
+    "dtype": "timestamp[s]",
+    "_type": "Value"
+   }
+  },
+  {
+   "feature_idx": 3,
+   "name": "itens",
+   "type": {
+    "feature": {
+     "product_id": {
+      "dtype": "int64",
+      "_type": "Value"
+     },
+     "quantidade": {
+      "dtype": "int64",
+      "_type": "Value"
+     },
+     "preco_unitario": {
+      "dtype": "float64",
+      "_type": "Value"
+     },
+     "desconto_pct": {
+      "dtype": "int64",
+      "_type": "Value"
+     },
+     "valor_bruto": {
+      "dtype": "float64",
+      "_type": "Value"
+     },
+     "valor_liquido": {
+      "dtype": "float64",
+      "_type": "Value"
+     }
+    },
+    "_type": "List"
+   }
+  },
+  {
+   "feature_idx": 4,
+   "name": "valor_bruto",
+   "type": {
+    "dtype": "float64",
+    "_type": "Value"
+   }
+  },
+  {
+   "feature_idx": 5,
+   "name": "valor_liquido",
+   "type": {
+    "dtype": "float64",
+    "_type": "Value"
+   }
+  }
+ ],
+ "eventos_pedido": [
+  {
+   "feature_idx": 0,
+   "name": "event_id",
+   "type": {
+    "dtype": "string",
+    "_type": "Value"
+   }
+  },
+  {
+   "feature_idx": 1,
+   "name": "order_id",
+   "type": {
+    "dtype": "int64",
+    "_type": "Value"
+   }
+  },
+  {
+   "feature_idx": 2,
+   "name": "status",
+   "type": {
+    "dtype": "string",
+    "_type": "Value"
+   }
+  },
+  {
+   "feature_idx": 3,
+   "name": "event_ts",
+   "type": {
+    "dtype": "timestamp[s]",
+    "_type": "Value"
+   }
+  },
+  {
+   "feature_idx": 4,
+   "name": "canal",
+   "type": {
+    "dtype": "string",
+    "_type": "Value"
+   }
+  }
+ ]
+}

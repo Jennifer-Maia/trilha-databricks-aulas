@@ -1,0 +1,24 @@
+{
+  "titulo": "Aula 2 · Deu erro. Tento de novo ou paro?",
+  "linhas": [
+    [
+      {"id": "chamada", "texto": "Chamada\nà API", "cor": "cinza"},
+      {"id": "resp", "texto": "Qual foi\na resposta?", "cor": "cinza", "forma": "diamond"},
+      {"id": "ok", "texto": "200: deu certo\ngrava a página", "cor": "verde"}
+    ],
+    [
+      {"id": "temp", "texto": "429 · 5xx · timeout\nproblema temporário:\nespera 2s, 4s, 8s…", "cor": "amarelo"},
+      {"id": "nosso", "texto": "400 · 404 · 422\no pedido está errado:\npara e avisa", "cor": "vermelho"}
+    ]
+  ],
+  "setas": [
+    ["chamada", "resp"],
+    ["resp", "ok", "200"],
+    ["resp", "temp", "temporário"],
+    ["temp", "chamada", "tenta de novo"],
+    ["resp", "nosso", "erro nosso"]
+  ],
+  "notas": [
+    {"texto": "429 = muitas chamadas: espera 60 s", "linha": 1, "coluna": 0}
+  ]
+}

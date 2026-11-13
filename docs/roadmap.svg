@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1230 580" width="1230" height="580" font-family="Segoe UI, Calibri, Helvetica, Arial, sans-serif" role="img" aria-labelledby="t d">
+  <title id="t">Roadmap da trilha Databricks · Jornada de Dados</title>
+  <desc id="d">Novembro de 2026: Analytics Engineering com Databricks. Dezembro de 2026: Por que minha tabela ficou lenta e cara. 2027: uma trilha por certificação, começando por Engenharia de Dados no 1º trimestre, depois Machine Learning e IA Generativa.</desc>
+  <defs>
+    <style>
+      .kick{fill:#12D4FF;font-weight:700;font-size:12px;letter-spacing:2.5px}
+      .tit{fill:#FFFFFF;font-weight:700;font-size:18px}
+      .txt{fill:#CFEFFF;font-size:13.5px}
+      .pill{fill:#FFFFFF;font-weight:700;font-size:11.5px}
+      .grp{fill:#8FB6D9;font-weight:700;font-size:13px;letter-spacing:2px}
+      .card{fill:#0B2C5E;stroke:#005ADF;stroke-width:1.5}
+      .now{stroke:#12D4FF;stroke-width:2.5}
+    </style>
+  </defs>
+  <rect width="1230" height="580" fill="#071A3D"/>
+
+  <!-- cabeçalho -->
+  <text x="40" y="48" class="kick">JORNADA DE DADOS · TRILHA DATABRICKS</text>
+  <text x="40" y="86" fill="#FFFFFF" font-weight="700" font-size="30">Roadmap 2026 → 2027</text>
+
+  <!-- grupos -->
+  <text x="40" y="132" class="grp">2026 · DOIS MÓDULOS NOVOS</text>
+  <path d="M40 142 H480" stroke="#8FB6D9" stroke-width="1.5"/>
+  <text x="510" y="132" class="grp">2027 · UMA TRILHA POR CERTIFICAÇÃO</text>
+  <path d="M510 142 H1190" stroke="#8FB6D9" stroke-width="1.5"/>
+
+  <!-- linha do tempo -->
+  <path d="M60 178 H1170" stroke="#005ADF" stroke-width="3" stroke-dasharray="0"/>
+  <g fill="#071A3D" stroke-width="3">
+    <circle cx="145" cy="178" r="9" stroke="#12D4FF" fill="#12D4FF"/>
+    <circle cx="380" cy="178" r="9" stroke="#12D4FF"/>
+    <circle cx="615" cy="178" r="9" stroke="#005ADF"/>
+    <circle cx="850" cy="178" r="9" stroke="#005ADF"/>
+    <circle cx="1085" cy="178" r="9" stroke="#005ADF"/>
+  </g>
+  <path d="M1170 170 L1186 178 L1170 186 Z" fill="#005ADF"/>
+
+  <!-- 1 · novembro -->
+  <rect x="40" y="205" width="210" height="270" rx="10" class="card now"/>
+  <text x="58" y="233" class="kick">NOVEMBRO 2026</text>
+  <text class="tit"><tspan x="58" y="262">Analytics</tspan><tspan x="58" y="284">Engineering com</tspan><tspan x="58" y="306">Databricks</tspan></text>
+  <text class="txt"><tspan x="58" y="336">Do pedido do negócio a</tspan><tspan x="58" y="355">uma tabela confiável:</tspan><tspan x="58" y="374">regra escrita, testes e</tspan><tspan x="58" y="393">acesso por perfil.</tspan></text>
+  <rect x="58" y="428" width="174" height="30" rx="15" fill="#005ADF"/>
+  <text x="145" y="447" text-anchor="middle" class="pill">Data Analyst Associate</text>
+
+  <!-- 2 · dezembro -->
+  <rect x="275" y="205" width="210" height="270" rx="10" class="card now"/>
+  <text x="293" y="233" class="kick">DEZEMBRO 2026</text>
+  <text class="tit"><tspan x="293" y="262">Por que minha</tspan><tspan x="293" y="284">tabela ficou lenta</tspan><tspan x="293" y="306">e cara?</tspan></text>
+  <text class="txt"><tspan x="293" y="336">Delta Lake por dentro,</tspan><tspan x="293" y="355">performance e custo,</tspan><tspan x="293" y="374">com números de antes</tspan><tspan x="293" y="393">e depois.</tspan></text>
+  <rect x="293" y="428" width="174" height="30" rx="15" fill="#005ADF"/>
+  <text x="380" y="447" text-anchor="middle" class="pill">Data Engineer Associate</text>
+
+  <!-- 3 · 1º tri 2027 -->
+  <rect x="510" y="205" width="210" height="270" rx="10" class="card"/>
+  <text x="528" y="233" class="kick">1º TRI · ATÉ ABRIL</text>
+  <text class="tit"><tspan x="528" y="262">Engenharia</tspan><tspan x="528" y="284">de Dados</tspan></text>
+  <text class="txt"><tspan x="528" y="336">Foco nos temas da</tspan><tspan x="528" y="355">prova, com projeto de</tspan><tspan x="528" y="374">portfólio. Continua o</tspan><tspan x="528" y="393">que dezembro abriu.</tspan></text>
+  <rect x="528" y="428" width="174" height="30" rx="15" fill="#005ADF"/>
+  <text x="615" y="447" text-anchor="middle" class="pill">Data Engineer Associate</text>
+
+  <!-- 4 · ML -->
+  <rect x="745" y="205" width="210" height="270" rx="10" class="card"/>
+  <text x="763" y="233" class="kick">NA SEQUÊNCIA</text>
+  <text class="tit"><tspan x="763" y="262">Machine</tspan><tspan x="763" y="284">Learning</tspan></text>
+  <text class="txt"><tspan x="763" y="336">Do treino ao modelo</tspan><tspan x="763" y="355">em produção no</tspan><tspan x="763" y="374">Databricks.</tspan></text>
+  <rect x="763" y="428" width="174" height="30" rx="15" fill="#005ADF"/>
+  <text x="850" y="447" text-anchor="middle" class="pill">ML Associate</text>
+
+  <!-- 5 · GenAI -->
+  <rect x="980" y="205" width="210" height="270" rx="10" class="card"/>
+  <text x="998" y="233" class="kick">NA SEQUÊNCIA</text>
+  <text class="tit"><tspan x="998" y="262">IA Generativa</tspan></text>
+  <text class="txt"><tspan x="998" y="336">Agentes e aplicações</tspan><tspan x="998" y="355">de IA no Databricks.</tspan></text>
+  <rect x="998" y="428" width="174" height="30" rx="15" fill="#005ADF"/>
+  <text x="1085" y="447" text-anchor="middle" class="pill">GenAI Engineer Associate</text>
+
+  <!-- faixa comum -->
+  <rect x="40" y="500" width="1150" height="54" rx="10" fill="#0B2C5E" stroke="#12D4FF" stroke-width="1.5"/>
+  <text x="62" y="533" fill="#FFFFFF" font-size="15"><tspan class="kick" font-size="12">EM TODAS AS TRILHAS</tspan><tspan dx="18">Quiz em cada aula  ·  Simulado cronometrado no formato da prova  ·  Projeto de portfólio que evolui de módulo em módulo</tspan></text>
+</svg>
