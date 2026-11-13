@@ -11,7 +11,7 @@ Esta pasta deixa o repositório pronto para você estudar com uma IA que entende
 
 ## Com o Claude Code
 
-1. Clone o repositório no seu computador: `git clone <url-deste-repositório>`.
+1. Clone o repositório no seu computador: `git clone https://github.com/Jennifer-Maia/trilha-databricks-aulas`.
 2. Entre na pasta e rode `claude`.
 3. O Claude lê o [`CLAUDE.md`](../CLAUDE.md) sozinho: ele responde em português, segue as regras do lab e não entrega a solução dos exercícios de cara.
 

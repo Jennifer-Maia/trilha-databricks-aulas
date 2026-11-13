@@ -54,7 +54,7 @@ modulo-NN-slug/
 ## Como começar
 
 1. Crie uma conta na [Databricks Free Edition](https://docs.databricks.com/aws/en/getting-started/free-edition).
-2. Traga este repositório para o Databricks: **Workspace → Create → Git folder** e cole a URL do repositório. Se a opção não aparecer no seu workspace, baixe os arquivos `.py` da aula e importe pela opção **Import** (os que começam com `# Databricks notebook source` viram notebooks).
+2. Traga este repositório para o Databricks: **Workspace → Create → Git folder** e cole a URL `https://github.com/Jennifer-Maia/trilha-databricks-aulas`. Se a opção não aparecer no seu workspace, baixe os arquivos `.py` da aula e importe pela opção **Import** (os que começam com `# Databricks notebook source` viram notebooks).
 3. Para receber as aulas novas, abra o Git folder e clique em **Pull**.
 4. Abra o README do módulo e siga as aulas em ordem.
 
