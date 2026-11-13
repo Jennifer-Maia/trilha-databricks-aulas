@@ -15,7 +15,7 @@
 # MAGIC                                     └── _manifesto.json    ← "recibo" da carga: quantas páginas, linhas, quando
 # MAGIC ```
 # MAGIC
-# MAGIC Antes: rode `setup/01_criar_ambiente.py` com o mesmo catálogo.
+# MAGIC Antes: rode `setup/01_criar_ambiente` (na pasta `setup/` do módulo) com o mesmo catálogo.
 
 # COMMAND ----------
 

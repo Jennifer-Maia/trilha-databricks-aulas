@@ -27,32 +27,43 @@ As questões são autorais, baseadas no guia oficial de cada prova.
 
 ## Módulos
 
-| Módulo | Pasta | O que tem |
-|---|---|---|
-| 01 · Analytics Engineering com Databricks | [`modulo-01-analytics-engineering/`](modulo-01-analytics-engineering/) | Lab da ingestão via API (aula 2), slides das aulas 1 e 2, contrato de dados, diagramas |
-| 02 · Por que minha tabela ficou lenta e cara? | [`modulo-02-delta-performance-custo/`](modulo-02-delta-performance-custo/) | Ementa prevista e diagrama de visão geral |
+| Módulo | O que já saiu |
+|---|---|
+| [01 · Analytics Engineering com Databricks](modulo-01-analytics-engineering/) | [Aula 1 · O pedido virou regra](modulo-01-analytics-engineering/aula-01-o-pedido-virou-regra/) · [Aula 2 · Ingerindo uma API de verdade](modulo-01-analytics-engineering/aula-02-ingerindo-uma-api/) |
+| [02 · Por que minha tabela ficou lenta e cara?](modulo-02-delta-performance-custo/) | Ementa prevista. As aulas entram em dezembro |
 
-## Estrutura de cada módulo
+As aulas são publicadas aos poucos, conforme forem gravadas. Dê **Watch** ou **Star** no repositório para acompanhar.
+
+## Como cada módulo está organizado
 
 ```
 modulo-NN-slug/
-├── README.md     # o que você vai aprender, aulas e como rodar
-├── slides/       # slides de cada aula (abra o .html no navegador)
-├── diagramas/    # desenhos de cada aula (.excalidraw, abra em https://excalidraw.com)
-├── docs/         # documentos de apoio (ex.: contrato de dados)
-└── lab/
-    ├── setup/    # prepara o ambiente e o plano B sem internet
-    ├── src/      # versão do aluno, com TODOs para completar
-    ├── solucao/  # versão completa, para conferir
-    ├── tests/    # prova que o resultado está certo
-    └── docs/     # explicação peça por peça do código
+├── README.md              # o que você vai aprender, cenário e lista de aulas
+├── docs/                  # documentos de apoio (ex.: contrato de dados)
+├── setup/                 # prepara o ambiente do módulo (roda uma vez) + plano B
+└── aula-NN-slug/
+    ├── README.md          # passo a passo da aula, checkpoint e tarefa
+    ├── exercicio/         # a SUA versão, com TODO para completar
+    ├── solucao/           # a resposta completa, para conferir
+    ├── teste/             # prova que o resultado está certo
+    ├── slides.html        # abra no navegador
+    ├── img/               # imagens usadas no README
+    └── diagramas/         # os mesmos desenhos, editáveis em https://excalidraw.com
 ```
 
 ## Como começar
 
 1. Crie uma conta na [Databricks Free Edition](https://docs.databricks.com/aws/en/getting-started/free-edition).
-2. Traga este repositório para o Databricks: **Workspace → Create → Git folder** e cole a URL do repositório. Se a opção não aparecer no seu workspace, baixe os `.py` de `lab/` e importe pela opção **Import**.
-3. Abra o `README.md` do módulo e siga a tabela **Como rodar do zero**.
+2. Traga este repositório para o Databricks: **Workspace → Create → Git folder** e cole a URL do repositório. Se a opção não aparecer no seu workspace, baixe os arquivos `.py` da aula e importe pela opção **Import** (os que começam com `# Databricks notebook source` viram notebooks).
+3. Para receber as aulas novas, abra o Git folder e clique em **Pull**.
+4. Abra o README do módulo e siga as aulas em ordem.
+
+## Estudando com IA
+
+Este repositório vem pronto para estudar com o [Claude Code](https://docs.claude.com/en/docs/claude-code/overview) ou outra IA:
+
+- [`CLAUDE.md`](CLAUDE.md) diz ao Claude como te ajudar: em português, explicando o porquê e **sem entregar a solução dos exercícios de cara**.
+- [`llm/`](llm/) tem o contexto do projeto (cenário, dados, API, limites da Free Edition) e prompts prontos para estudar. Se você usa outra IA, anexe os arquivos de `llm/contexto/` no começo da conversa.
 
 ## Dados
 

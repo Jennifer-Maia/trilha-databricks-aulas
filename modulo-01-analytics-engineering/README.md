@@ -14,6 +14,10 @@ Antes de escrever código, transformamos esse pedido num contrato de dados: [`do
 
 ## Arquitetura
 
+![Visão geral do módulo: do pedido do negócio ao consumo seguro](img/visao-geral.svg)
+
+Em detalhe:
+
 ```mermaid
 flowchart LR
   A[API da loja<br/>pedidos · clientes · produtos · eventos_pedido] -->|Python + paginação| V[(Volume raw/landing<br/>JSON bruto)]
@@ -28,28 +32,35 @@ flowchart LR
 
 ## Aulas
 
-| # | Aula | Duração | O que você faz | Material |
+As aulas são publicadas aos poucos, conforme forem gravadas. Cada pasta de aula tem o próprio README com o passo a passo, o exercício e a solução.
+
+| # | Aula | Duração | O que você faz | Status |
 |---|---|---|---|---|
-| 1 | O pedido virou regra | 25 min | Lê o pedido, levanta as perguntas e escreve o contrato de dados. Sem código | [slides](slides/aula-01.html) · [contrato](docs/contrato_de_dados.md) · diagramas `aula-01-*` |
-| 2 | Ingerindo uma API de verdade | 45 min | Paginação, retry com espera, limite de chamadas, validação de schema e JSON bruto no Volume | [slides](slides/aula-02.html) · [lab](lab/) · diagramas `aula-02-*` |
+| 1 | [O pedido virou regra](aula-01-o-pedido-virou-regra/) | 25 min | Lê o pedido, levanta as perguntas e escreve o contrato de dados. Sem código | ✅ disponível |
+| 2 | [Ingerindo uma API de verdade](aula-02-ingerindo-uma-api/) | 45 min | Paginação, retry com espera, limite de chamadas, validação de schema e JSON bruto no Volume | ✅ disponível |
 | 3 | Transformação com regra rastreável | 40 min | Bronze → silver → gold, com cada regra do contrato apontando para o código | em breve |
 | 4 | Testes que provam a regra | 40 min | Constraints Delta e testes de unicidade, domínio, reconciliação e regra de negócio, salvos numa tabela | em breve |
 | 5 | Governança que protege de verdade | 45 min | Comentários, tags, grants, filtro de linha por região e máscara de e-mail e telefone | em breve |
 | 6 | Validar o consumo e publicar | 25 min | Testa o que cada perfil enxerga e publica o projeto no seu portfólio | em breve |
 
+## Como esta pasta está organizada
+
+```
+modulo-01-analytics-engineering/
+├── README.md                       ← você está aqui
+├── docs/contrato_de_dados.md       ← o contrato da aula 1: guia todas as aulas
+├── setup/                          ← roda uma vez, vale para o módulo inteiro
+│   ├── 01_criar_ambiente.py        ← catálogo, schemas e o Volume raw.landing
+│   ├── 02_plano_b_sem_api.py       ← carrega os dados sem a API (se ela cair)
+│   ├── plano_b/                    ← os dados da API em arquivo
+│   └── gerar_dados_loja.py         ← como os dados fictícios foram gerados (não precisa rodar)
+├── aula-01-o-pedido-virou-regra/   ← README + slides + diagramas
+└── aula-02-ingerindo-uma-api/      ← README + exercicio/ + solucao/ + teste/ + slides + diagramas
+```
+
+Em toda aula com código: **`exercicio/`** é a sua versão, com TODO para completar; **`solucao/`** é a resposta; **`teste/`** prova que o resultado está certo.
+
 Os slides são páginas HTML: baixe o arquivo e abra no navegador (`F` para tela cheia, setas para navegar).
-
-## Como rodar o lab
-
-Passo a passo completo em [`lab/README.md`](lab/README.md). Resumo:
-
-| Ordem | Notebook | Resultado esperado |
-|---|---|---|
-| 1 | `lab/setup/01_criar_ambiente` | schemas `raw`, `bronze`, `silver`, `gold`, `governanca`, `qualidade` e o Volume `raw.landing` |
-| 2 | `lab/src/aula02_ingestao_api` (ou `lab/solucao/…`) | 4 pastas `landing/<tabela>/carga_<data>/` com as páginas e um `_manifesto.json` |
-| 3 | `lab/tests/aula02_conferir_landing` | `Landing completa: todos os testes OK` |
-
-Se a API estiver fora do ar ou bloqueada, rode `lab/setup/02_plano_b_sem_api`: ele grava os mesmos dados, no mesmo formato.
 
 ## Para o seu portfólio
 
@@ -57,6 +68,6 @@ No fim do módulo você terá um repositório próprio (sugestão: `produto-dado
 
 ## Desafios extras
 
-1. Ingerir também `/products` e calcular vendas por categoria.
+1. Usar a tabela `produtos` (que já vem na aula 2) para calcular vendas por categoria.
 2. Teste de reconciliação por mês (não só pelo total).
-3. Fazer a ingestão parar com mensagem clara se a API mudar o formato.
+3. Gravar os manifestos da landing numa tabela Delta de controle de cargas (uma linha por carga e tabela).

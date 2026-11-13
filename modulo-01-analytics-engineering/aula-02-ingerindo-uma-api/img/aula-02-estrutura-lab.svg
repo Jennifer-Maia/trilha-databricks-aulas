@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 430" width="1200" height="430" font-family="Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-label="Aula 2 · O lab em 3 notebooks (e um plano B)">
+<title>Aula 2 · O lab em 3 notebooks (e um plano B)</title>
+<defs><marker id="ponta" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#343a40"/></marker></defs>
+<rect width="1200" height="430" fill="#ffffff"/>
+<text font-size="22" fill="#1e1e1e" font-weight="700" text-anchor="start" dominant-baseline="middle"><tspan x="40" y="50.0">Aula 2 · O lab em 3 notebooks (e um plano B)</tspan></text>
+<line x1="264" y1="150" x2="334" y2="150" stroke="#343a40" stroke-width="2" marker-end="url(#ponta)"/>
+<line x1="564" y1="150" x2="634" y2="150" stroke="#343a40" stroke-width="2" marker-end="url(#ponta)"/>
+<line x1="864" y1="150" x2="934" y2="150" stroke="#343a40" stroke-width="2" marker-end="url(#ponta)"/>
+<line x1="150" y1="204" x2="150" y2="284" stroke="#343a40" stroke-width="2" marker-end="url(#ponta)"/>
+<line x1="150" y1="286" x2="750" y2="206" stroke="#343a40" stroke-width="2" marker-end="url(#ponta)"/>
+<rect x="40" y="100" width="220" height="100" rx="14" fill="#f1f3f5" stroke="#495057" stroke-width="2"/>
+<text font-size="14" fill="#1e1e1e" font-weight="normal" text-anchor="middle" dominant-baseline="middle"><tspan x="150" y="122.7">1. setup/</tspan><tspan x="150" y="140.9">01_criar_ambiente</tspan><tspan x="150" y="159.1">catálogo + schemas</tspan><tspan x="150" y="177.3">+ Volume</tspan></text>
+<rect x="340" y="100" width="220" height="100" rx="14" fill="#ffe8cc" stroke="#e8590c" stroke-width="2"/>
+<text font-size="14" fill="#1e1e1e" font-weight="normal" text-anchor="middle" dominant-baseline="middle"><tspan x="450" y="131.8">2. exercicio/ (com TODO)</tspan><tspan x="450" y="150.0">ou solucao/</tspan><tspan x="450" y="168.2">aula02_ingestao_api</tspan></text>
+<rect x="640" y="100" width="220" height="100" rx="14" fill="#ffe3e3" stroke="#e03131" stroke-width="2"/>
+<text font-size="15" fill="#1e1e1e" font-weight="normal" text-anchor="middle" dominant-baseline="middle"><tspan x="750" y="130.5">3. teste/</tspan><tspan x="750" y="150.0">aula02_conferir</tspan><tspan x="750" y="169.5">_landing</tspan></text>
+<rect x="940" y="100" width="220" height="100" rx="14" fill="#d3f9d8" stroke="#2f9e44" stroke-width="2"/>
+<text font-size="15" fill="#1e1e1e" font-weight="normal" text-anchor="middle" dominant-baseline="middle"><tspan x="1050" y="140.2">Landing completa:</tspan><tspan x="1050" y="159.8">todos os testes OK</tspan></text>
+<rect x="40" y="290" width="220" height="100" rx="14" fill="#f1f3f5" stroke="#495057" stroke-width="2"/>
+<text font-size="15" fill="#1e1e1e" font-weight="normal" text-anchor="middle" dominant-baseline="middle"><tspan x="150" y="320.5">setup/</tspan><tspan x="150" y="340.0">02_plano_b_sem_api</tspan><tspan x="150" y="359.5">mesmo formato</tspan></text>
+<rect x="88" y="232" width="124" height="23" rx="4" fill="#ffffff"/>
+<text font-size="13" fill="#495057" font-weight="normal" text-anchor="middle" dominant-baseline="middle"><tspan x="150" y="244.0">API fora do ar?</tspan></text>
+</svg>

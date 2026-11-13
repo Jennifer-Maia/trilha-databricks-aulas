@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="900" height="480" font-family="Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-label="Aula 2 · O que é uma API? O garçom entre você e a cozinha">
+<title>Aula 2 · O que é uma API? O garçom entre você e a cozinha</title>
+<defs><marker id="ponta" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#343a40"/></marker></defs>
+<rect width="900" height="480" fill="#ffffff"/>
+<text font-size="22" fill="#1e1e1e" font-weight="700" text-anchor="start" dominant-baseline="middle"><tspan x="40" y="50.0">Aula 2 · O que é uma API? O garçom entre você e a cozinha</tspan></text>
+<line x1="264" y1="150" x2="334" y2="150" stroke="#343a40" stroke-width="2" marker-end="url(#ponta)"/>
+<line x1="564" y1="150" x2="634" y2="150" stroke="#343a40" stroke-width="2" marker-end="url(#ponta)"/>
+<line x1="450" y1="204" x2="150" y2="284" stroke="#343a40" stroke-width="2" marker-end="url(#ponta)"/>
+<rect x="40" y="100" width="220" height="100" rx="14" fill="#f1f3f5" stroke="#495057" stroke-width="2"/>
+<text font-size="15" fill="#1e1e1e" font-weight="normal" text-anchor="middle" dominant-baseline="middle"><tspan x="150" y="130.5">Você</tspan><tspan x="150" y="150.0">(seu código</tspan><tspan x="150" y="169.5">no notebook)</tspan></text>
+<rect x="340" y="100" width="220" height="100" rx="14" fill="#d0ebff" stroke="#1971c2" stroke-width="2"/>
+<text font-size="15" fill="#1e1e1e" font-weight="normal" text-anchor="middle" dominant-baseline="middle"><tspan x="450" y="130.5">API</tspan><tspan x="450" y="150.0">o garçom:</tspan><tspan x="450" y="169.5">anota e leva o pedido</tspan></text>
+<rect x="640" y="100" width="220" height="100" rx="14" fill="#d0ebff" stroke="#1971c2" stroke-width="2"/>
+<text font-size="15" fill="#1e1e1e" font-weight="normal" text-anchor="middle" dominant-baseline="middle"><tspan x="750" y="130.5">Sistema da loja</tspan><tspan x="750" y="150.0">a cozinha:</tspan><tspan x="750" y="169.5">banco, regras</tspan></text>
+<rect x="40" y="290" width="220" height="100" rx="14" fill="#ffe8cc" stroke="#e8590c" stroke-width="2"/>
+<text font-size="15" fill="#1e1e1e" font-weight="normal" text-anchor="middle" dominant-baseline="middle"><tspan x="150" y="330.2">Resposta em JSON</tspan><tspan x="150" y="349.8">o prato pronto</tspan></text>
+<rect x="340" y="290" width="220" height="100" rx="14" fill="#fff3bf" stroke="#f08c00" stroke-width="2"/>
+<text font-size="15" fill="#1e1e1e" font-weight="normal" text-anchor="middle" dominant-baseline="middle"><tspan x="450" y="320.5">Documentação</tspan><tspan x="450" y="340.0">o cardápio: o que</tspan><tspan x="450" y="359.5">dá para pedir</tspan></text>
+<rect x="248" y="124" width="102" height="23" rx="4" fill="#ffffff"/>
+<text font-size="13" fill="#495057" font-weight="normal" text-anchor="middle" dominant-baseline="middle"><tspan x="299" y="136.0">pedido (GET)</tspan></text>
+<rect x="574" y="124" width="50" height="23" rx="4" fill="#ffffff"/>
+<text font-size="13" fill="#495057" font-weight="normal" text-anchor="middle" dominant-baseline="middle"><tspan x="599" y="136.0">busca</tspan></text>
+<rect x="268" y="232" width="64" height="23" rx="4" fill="#ffffff"/>
+<text font-size="13" fill="#495057" font-weight="normal" text-anchor="middle" dominant-baseline="middle"><tspan x="300" y="244.0">devolve</tspan></text>
+<text font-size="13" fill="#868e96" font-weight="normal" text-anchor="middle" dominant-baseline="middle"><tspan x="750" y="230.0">Você nunca entra na cozinha</tspan></text>
+</svg>

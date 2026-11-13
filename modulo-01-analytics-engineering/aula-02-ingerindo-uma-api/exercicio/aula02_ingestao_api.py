@@ -2,7 +2,7 @@
 # MAGIC %md
 # MAGIC # Aula 2 · Ingerindo uma API de verdade (versão do aluno)
 # MAGIC
-# MAGIC Procure os blocos `TODO`. A resposta completa está em `solucao/aula02_ingestao_api.py`: tente antes de olhar.
+# MAGIC Procure os blocos `TODO`. A resposta completa está na pasta ao lado, `solucao/aula02_ingestao_api`: tente antes de olhar.
 # MAGIC
 # MAGIC **O que esta etapa faz:** busca as 4 tabelas da loja (`clientes`, `produtos`, `pedidos`, `eventos_pedido`) numa API REST
 # MAGIC pública e grava as respostas **do jeito que vieram** no Volume `raw.landing`, uma pasta por carga, com um manifesto.
@@ -17,7 +17,7 @@
 # MAGIC                                     └── _manifesto.json    ← "recibo" da carga: quantas páginas, linhas, quando
 # MAGIC ```
 # MAGIC
-# MAGIC Antes: rode `setup/01_criar_ambiente.py` com o mesmo catálogo.
+# MAGIC Antes: rode `setup/01_criar_ambiente` (na pasta `setup/` do módulo) com o mesmo catálogo.
 
 # COMMAND ----------
 

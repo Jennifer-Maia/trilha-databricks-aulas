@@ -1,6 +1,6 @@
 # Contrato de dados · Vendas por região (v0.2)
 
-> Documento apresentado na aula 1 (slides `slides/aula-01.html`). Esta versão é o gabarito.
+> Documento apresentado na aula 1 (slides `aula-01-o-pedido-virou-regra/slides.html`). Esta versão é o gabarito.
 > Tudo marcado como **Premissa** foi assumido por nós e precisa ser confirmado pela área de negócio.
 
 ## 1. O pedido original (chamado fictício do projeto)

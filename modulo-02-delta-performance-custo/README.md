@@ -10,7 +10,9 @@ Este módulo é a porta de entrada da trilha de **Engenharia de Dados** de 2027.
 
 Três meses depois, o produto de dados do Módulo 01 cresceu. A gerente reclama: o painel demora, a fatura subiu e ontem o dado não atualizou e ninguém percebeu. O laboratório começa com uma versão propositalmente ruim do pipeline, e você melhora passo a passo, medindo antes e depois.
 
-Diagrama de visão geral: [`diagramas/visao-geral.excalidraw`](diagramas/visao-geral.excalidraw) (abra em https://excalidraw.com).
+![Visão geral do Módulo 02](img/visao-geral.svg)
+
+Versão editável: [`diagramas/visao-geral.excalidraw`](diagramas/visao-geral.excalidraw) (abra em https://excalidraw.com).
 
 ## Aulas previstas
 

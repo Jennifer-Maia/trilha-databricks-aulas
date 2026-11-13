@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="900" height="480" font-family="Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-label="Aula 2 · Deu erro. Tento de novo ou paro?">
+<title>Aula 2 · Deu erro. Tento de novo ou paro?</title>
+<defs><marker id="ponta" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#343a40"/></marker></defs>
+<rect width="900" height="480" fill="#ffffff"/>
+<text font-size="22" fill="#1e1e1e" font-weight="700" text-anchor="start" dominant-baseline="middle"><tspan x="40" y="50.0">Aula 2 · Deu erro. Tento de novo ou paro?</tspan></text>
+<line x1="264" y1="150" x2="334" y2="150" stroke="#343a40" stroke-width="2" marker-end="url(#ponta)"/>
+<line x1="564" y1="150" x2="634" y2="150" stroke="#343a40" stroke-width="2" marker-end="url(#ponta)"/>
+<line x1="450" y1="204" x2="150" y2="284" stroke="#343a40" stroke-width="2" marker-end="url(#ponta)"/>
+<line x1="150" y1="286" x2="150" y2="206" stroke="#343a40" stroke-width="2" marker-end="url(#ponta)"/>
+<line x1="450" y1="204" x2="450" y2="284" stroke="#343a40" stroke-width="2" marker-end="url(#ponta)"/>
+<rect x="40" y="100" width="220" height="100" rx="14" fill="#f1f3f5" stroke="#495057" stroke-width="2"/>
+<text font-size="15" fill="#1e1e1e" font-weight="normal" text-anchor="middle" dominant-baseline="middle"><tspan x="150" y="140.2">Chamada</tspan><tspan x="150" y="159.8">à API</tspan></text>
+<polygon points="450.0,86.0 578.0,150.0 450.0,214.0 322.0,150.0" fill="#f1f3f5" stroke="#495057" stroke-width="2" stroke-linejoin="round"/>
+<text font-size="15" fill="#1e1e1e" font-weight="normal" text-anchor="middle" dominant-baseline="middle"><tspan x="450" y="140.2">Qual foi</tspan><tspan x="450" y="159.8">a resposta?</tspan></text>
+<rect x="640" y="100" width="220" height="100" rx="14" fill="#d3f9d8" stroke="#2f9e44" stroke-width="2"/>
+<text font-size="15" fill="#1e1e1e" font-weight="normal" text-anchor="middle" dominant-baseline="middle"><tspan x="750" y="140.2">200: deu certo</tspan><tspan x="750" y="159.8">grava a página</tspan></text>
+<rect x="40" y="290" width="220" height="100" rx="14" fill="#fff3bf" stroke="#f08c00" stroke-width="2"/>
+<text font-size="15" fill="#1e1e1e" font-weight="normal" text-anchor="middle" dominant-baseline="middle"><tspan x="150" y="320.5">429 · 5xx · timeout</tspan><tspan x="150" y="340.0">problema temporário:</tspan><tspan x="150" y="359.5">espera 2s, 4s, 8s…</tspan></text>
+<rect x="340" y="290" width="220" height="100" rx="14" fill="#ffe3e3" stroke="#e03131" stroke-width="2"/>
+<text font-size="15" fill="#1e1e1e" font-weight="normal" text-anchor="middle" dominant-baseline="middle"><tspan x="450" y="320.5">400 · 404 · 422</tspan><tspan x="450" y="340.0">o pedido está errado:</tspan><tspan x="450" y="359.5">para e avisa</tspan></text>
+<rect x="582" y="124" width="34" height="23" rx="4" fill="#ffffff"/>
+<text font-size="13" fill="#495057" font-weight="normal" text-anchor="middle" dominant-baseline="middle"><tspan x="599" y="136.0">200</tspan></text>
+<rect x="256" y="232" width="87" height="23" rx="4" fill="#ffffff"/>
+<text font-size="13" fill="#495057" font-weight="normal" text-anchor="middle" dominant-baseline="middle"><tspan x="300" y="244.0">temporário</tspan></text>
+<rect x="95" y="234" width="110" height="23" rx="4" fill="#ffffff"/>
+<text font-size="13" fill="#495057" font-weight="normal" text-anchor="middle" dominant-baseline="middle"><tspan x="150" y="246.0">tenta de novo</tspan></text>
+<rect x="406" y="232" width="87" height="23" rx="4" fill="#ffffff"/>
+<text font-size="13" fill="#495057" font-weight="normal" text-anchor="middle" dominant-baseline="middle"><tspan x="450" y="244.0">erro nosso</tspan></text>
+<text font-size="13" fill="#868e96" font-weight="normal" text-anchor="middle" dominant-baseline="middle"><tspan x="150" y="420.0">429 = muitas chamadas: espera 60 s</tspan></text>
+</svg>

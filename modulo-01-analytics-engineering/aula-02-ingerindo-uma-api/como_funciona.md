@@ -20,15 +20,15 @@ API Hugging Face  │  notebook aula02                                   │
 | # | Notebook | O que faz | Tempo |
 |---|---|---|---|
 | 1 | `setup/01_criar_ambiente` | Cria catálogo, schemas e o Volume `raw.landing` | < 1 min |
-| 2 | `src/aula02_ingestao_api` (aluno) ou `solucao/aula02_ingestao_api` | Busca as 4 tabelas e grava na landing | 2 a 6 min (depende dos 429) |
-| 3 | `tests/aula02_conferir_landing` | Prova que a landing está completa | < 1 min |
+| 2 | `exercicio/aula02_ingestao_api` (aluno) ou `solucao/aula02_ingestao_api` | Busca as 4 tabelas e grava na landing | 2 a 6 min (depende dos 429) |
+| 3 | `teste/aula02_conferir_landing` | Prova que a landing está completa | < 1 min |
 | — | `setup/02_plano_b_sem_api` | **Só se a API não responder.** Grava os mesmos dados, no mesmo formato | < 1 min |
 
 Em todos, o widget `catalogo` precisa ter o mesmo valor (padrão `jornada_comercial`).
 
 ## Como rodar na mão no seu workspace
 
-1. **Levar os arquivos para o Databricks.** O jeito mais simples é clonar este repositório como **Git folder** (Workspace → Create → Git folder). Sem Git folder: no Databricks, **Workspace → sua pasta → ⋮ → Import**, e importe os `.py` de `lab/setup`, `lab/src`, `lab/solucao` e `lab/tests`. Os `.py` que começam com `# Databricks notebook source` viram notebooks.
+1. **Levar os arquivos para o Databricks.** O jeito mais simples é clonar este repositório como **Git folder** (Workspace → Create → Git folder). Sem Git folder: no Databricks, **Workspace → sua pasta → ⋮ → Import**, e importe os `.py` de `setup/` (do módulo) e de `exercicio/`, `solucao/` e `teste/` (desta aula). Os `.py` que começam com `# Databricks notebook source` viram notebooks.
    Para o plano B, importe também a pasta `setup/plano_b/` (os `.jsonl` e o `features.json`) **ao lado** do notebook `02_plano_b_sem_api`.
    Alternativa pelo terminal: `databricks workspace import-dir lab "/Users/<seu-email>/modulo01-lab"`.
 2. **Conectar no serverless:** no topo do notebook, em *Connect*, escolha **Serverless**.
@@ -127,7 +127,7 @@ Em todos, o widget `catalogo` precisa ter o mesmo valor (padrão `jornada_comerc
 - Esperado: `clientes 500 · produtos 60 · pedidos 1500 · eventos_pedido 5416`, todos `OK`.
 - Para ver os arquivos: **Catalog → jornada_comercial → raw → landing**.
 
-## O teste (`tests/aula02_conferir_landing`)
+## O teste (`teste/aula02_conferir_landing`)
 
 Pega, para cada tabela, a carga completa mais recente (pela data do manifesto) e confere total, unicidade de `row_idx` e colunas. Lista as cargas sem manifesto como aviso. Termina com `assert`: se algo falhar, o notebook fica vermelho.
 
@@ -155,5 +155,5 @@ Lê os `.jsonl` de `setup/plano_b/` (os mesmos arquivos publicados no Hugging Fa
 ## O que não foi testado
 
 - O caminho do aluno com o repositório clonado via **Git folder** (o repositório público ainda não existe). Testei importando os arquivos para a pasta do workspace.
-- A versão do aluno (`src/`) só foi conferida em sintaxe: os `TODO` param com `NotImplementedError` de propósito.
+- A versão do aluno (`exercicio/`) só foi conferida em sintaxe: os `TODO` param com `NotImplementedError` de propósito.
 - O limite do `/rows` (~40–55 chamadas, ~60 s) foi **medido**, não está na documentação. **[validar]** de novo antes de gravar.

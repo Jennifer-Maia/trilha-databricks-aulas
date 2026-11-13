@@ -3,8 +3,8 @@
   "linhas": [
     [
       {"id": "setup", "texto": "1. setup/\n01_criar_ambiente\ncatálogo + schemas\n+ Volume", "cor": "cinza"},
-      {"id": "ingestao", "texto": "2. src/ (com TODO)\nou solucao/\naula02_ingestao_api", "cor": "laranja"},
-      {"id": "teste", "texto": "3. tests/\naula02_conferir\n_landing", "cor": "vermelho"},
+      {"id": "ingestao", "texto": "2. exercicio/ (com TODO)\nou solucao/\naula02_ingestao_api", "cor": "laranja"},
+      {"id": "teste", "texto": "3. teste/\naula02_conferir\n_landing", "cor": "vermelho"},
       {"id": "ok", "texto": "Landing completa:\ntodos os testes OK", "cor": "verde"}
     ],
     [
