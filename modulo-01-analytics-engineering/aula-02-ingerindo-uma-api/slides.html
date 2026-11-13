@@ -14,11 +14,11 @@ try { var t = localStorage.getItem('jd-theme'); if (t === 'light' || t === 'dark
 /* Um slide por tela. → / espaço / clique: próximo passo. ←: volta. F: tela cheia. T: tema.
    Elementos com data-step="n" aparecem no passo n do slide. Mesma identidade da apresentação de 07/11. */
 :root {
-  --surface-100: #0c0c0e; --surface-200: #15151a; --surface-300: #1d1d24;
-  --ink: #f4efe6; --ink-muted: #a3a3ad;
-  --accent: #ff5b1f; --accent-soft: rgba(255,91,31,0.16); --accent-ink: #0c0c0e;
-  --line: rgba(244,239,230,0.14);
-  --blue: #4dabf7; --blue-soft: rgba(77,171,247,0.14);
+  --surface-100: #071A3D; --surface-200: #0B2C5E; --surface-300: #12397A;
+  --ink: #F2F8FF; --ink-muted: #9DBBDD;
+  --accent: #12D4FF; --accent-soft: rgba(18,212,255,0.16); --accent-ink: #071A3D; --dbx: #FF5F46;
+  --line: rgba(207,239,255,0.16);
+  --blue: #7FA8FF; --blue-soft: rgba(127,168,255,0.16);
   --green: #51cf66; --green-soft: rgba(81,207,102,0.14);
   --red: #ff6b6b; --red-soft: rgba(255,107,107,0.14);
   --yellow: #fcc419; --yellow-soft: rgba(252,196,25,0.14);
@@ -30,10 +30,10 @@ try { var t = localStorage.getItem('jd-theme'); if (t === 'light' || t === 'dark
   color-scheme: dark;
 }
 :root[data-theme="light"] {
-  --surface-100: #f4efe6; --surface-200: #ffffff; --surface-300: #ece5d8;
-  --ink: #15151a; --ink-muted: #55555f;
-  --accent: #e04a14; --accent-soft: rgba(224,74,20,0.12);
-  --line: rgba(21,21,26,0.14);
+  --surface-100: #F3F7FC; --surface-200: #ffffff; --surface-300: #E2EBF7;
+  --ink: #0B1F3F; --ink-muted: #4A6283;
+  --accent: #005ADF; --accent-soft: rgba(0,90,223,0.10); --accent-ink: #ffffff; --dbx: #E8331C;
+  --line: rgba(11,31,63,0.14);
   --blue: #1971c2; --blue-soft: rgba(25,113,194,0.10);
   --green: #2f9e44; --green-soft: rgba(47,158,68,0.10);
   --red: #e03131; --red-soft: rgba(224,49,49,0.10);
@@ -43,10 +43,10 @@ try { var t = localStorage.getItem('jd-theme'); if (t === 'light' || t === 'dark
 }
 @media (prefers-color-scheme: light) {
   :root:not([data-theme="dark"]) {
-    --surface-100: #f4efe6; --surface-200: #ffffff; --surface-300: #ece5d8;
-    --ink: #15151a; --ink-muted: #55555f;
-    --accent: #e04a14; --accent-soft: rgba(224,74,20,0.12);
-    --line: rgba(21,21,26,0.14);
+    --surface-100: #F3F7FC; --surface-200: #ffffff; --surface-300: #E2EBF7;
+    --ink: #0B1F3F; --ink-muted: #4A6283;
+    --accent: #005ADF; --accent-soft: rgba(0,90,223,0.10); --accent-ink: #ffffff; --dbx: #E8331C;
+    --line: rgba(11,31,63,0.14);
     --blue: #1971c2; --blue-soft: rgba(25,113,194,0.10);
     --green: #2f9e44; --green-soft: rgba(47,158,68,0.10);
     --red: #e03131; --red-soft: rgba(224,49,49,0.10);
@@ -270,7 +270,7 @@ body.clean .hud { display: none; }
 .pages { display: grid; grid-template-columns: repeat(15, minmax(0,1fr)); gap: .45vw; }
 .pg { aspect-ratio: 3 / 4; border-radius: 8px; border: 2px solid var(--line); background: var(--surface-200); display: grid; place-items: center; font-family: var(--f-mono); font-size: .58em; color: var(--ink-muted); transition: background .45s, border-color .45s, color .45s, opacity .45s, transform .45s var(--ease); }
 .pg.first { border-color: var(--accent); background: var(--accent-soft); color: var(--ink); }
-.slide:has(.offsets [data-step="2"].on) .pg { border-color: var(--accent); background: var(--accent-soft); color: var(--ink); }
+.pages .pg { border-color: var(--accent); background: var(--accent-soft); color: var(--ink); }
 .offsets { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 1vw; font-family: var(--f-mono); font-size: .82em; }
 .offsets .card { gap: .2em; }
 
@@ -333,14 +333,15 @@ body.clean .hud { display: none; }
   .slide.com-desenho { grid-template-columns: 1fr; }
   .slide.com-desenho > .desenho, .slide.com-desenho > .lado-texto { grid-column: 1; }
 }
-/* ---------- fim desenhos ---------- */</style>
+/* ---------- fim desenhos ---------- */.dbx { color: var(--dbx); font-weight: 700; }
+</style>
 </head>
 <body>
 <div class="bar" id="bar"></div>
 
 <!-- 1 · Capa -->
 <section class="slide" data-title="Capa">
-  <span class="kicker">Módulo 01 · Do dado à confiança · Aula 2</span>
+  <span class="kicker">Módulo 01 · Analytics Engineering com <span class="dbx">Databricks</span> · Aula 2</span>
   <h1 class="title-xl">Ingerindo uma <em>API de verdade</em></h1>
   <p class="lead">Buscar os dados da loja página por página, sobreviver aos erros e guardar tudo com prova de que veio inteiro.</p>
 </section>
@@ -364,7 +365,7 @@ body.clean .hud { display: none; }
     <li><b>Governança de verdade</b><small>filtro e máscara</small></li>
     <li><b>Portfólio</b><small>README e LinkedIn</small></li>
   </ol>
-  <p class="muted" data-step="1">Hoje a gente não transforma nada. Só busca, confere e guarda.</p>
+  <p class="muted">Hoje a gente não transforma nada. Só busca, confere e guarda.</p>
 </section>
 
 <!-- 4 · O que é uma API -->
@@ -440,16 +441,16 @@ body.clean .hud { display: none; }
 <section class="slide" data-title="Por que importa">
   <span class="kicker">Você usa API o dia todo, sem perceber</span>
   <div class="uses">
-    <div class="card" data-step="1"><span class="ico" aria-hidden="true">🌦️</span><b>Previsão do tempo</b><p class="muted">O app pergunta para o serviço de meteorologia.</p></div>
-    <div class="card" data-step="1"><span class="ico" aria-hidden="true">🗺️</span><b>Mapa no app de entrega</b><p class="muted">O app pede o mapa para outro serviço.</p></div>
-    <div class="card" data-step="1"><span class="ico" aria-hidden="true">🔑</span><b>“Entrar com Google”</b><p class="muted">O site pergunta ao Google quem é você.</p></div>
-    <div class="card" data-step="1"><span class="ico" aria-hidden="true">💳</span><b>Pagamento</b><p class="muted">A loja pede ao serviço de pagamento para cobrar.</p></div>
+    <div class="card"><span class="ico" aria-hidden="true">🌦️</span><b>Previsão do tempo</b><p class="muted">O app pergunta para o serviço de meteorologia.</p></div>
+    <div class="card"><span class="ico" aria-hidden="true">🗺️</span><b>Mapa no app de entrega</b><p class="muted">O app pede o mapa para outro serviço.</p></div>
+    <div class="card"><span class="ico" aria-hidden="true">🔑</span><b>“Entrar com Google”</b><p class="muted">O site pergunta ao Google quem é você.</p></div>
+    <div class="card"><span class="ico" aria-hidden="true">💳</span><b>Pagamento</b><p class="muted">A loja pede ao serviço de pagamento para cobrar.</p></div>
   </div>
-  <span class="kicker" data-step="2" style="margin-top:1vh">E para quem trabalha com dados</span>
+  <span class="kicker" style="margin-top:1vh">E para quem trabalha com dados</span>
   <div class="grid g3 why">
-    <div class="card" data-step="2"><h3>Muito dado só sai por API</h3><p>CRM, pagamentos, marketing, sistemas de terceiros: ninguém te dá acesso ao banco deles.</p></div>
-    <div class="card" data-step="3"><h3>A fonte dita as regras</h3><p>Limite por chamada, limite por minuto, formato da resposta. O seu código se adapta, não o contrário.</p></div>
-    <div class="card" data-step="4"><h3>API cai e muda</h3><p>Fica fora do ar, devolve erro, troca coluna. O pipeline precisa perceber e reagir.</p></div>
+    <div class="card"><h3>Muito dado só sai por API</h3><p>CRM, pagamentos, marketing, sistemas de terceiros: ninguém te dá acesso ao banco deles.</p></div>
+    <div class="card"><h3>A fonte dita as regras</h3><p>Limite por chamada, limite por minuto, formato da resposta. O seu código se adapta, não o contrário.</p></div>
+    <div class="card"><h3>API cai e muda</h3><p>Fica fora do ar, devolve erro, troca coluna. O pipeline precisa perceber e reagir.</p></div>
   </div>
 </section>
 
@@ -457,16 +458,16 @@ body.clean .hud { display: none; }
 <section class="slide" data-title="Anatomia da chamada">
   <span class="kicker">Uma chamada é só uma URL bem montada</span>
   <p class="url">
-    <span class="verb">GET</span><span class="hl" data-step="1" data-q="onde fica o serviço">https://datasets-server.huggingface.co</span><span class="hl" data-step="2" data-q="endpoint: o que eu quero">/rows</span><span class="hl" data-step="3" data-q="parâmetros: os detalhes do pedido">?dataset=trilhajornadadatabricks/loja-ficticia-jornada&amp;config=pedidos&amp;split=train&amp;offset=0&amp;length=100</span>
+    <span class="verb">GET</span><span class="hl" data-q="onde fica o serviço">https://datasets-server.huggingface.co</span><span class="hl" data-q="endpoint: o que eu quero">/rows</span><span class="hl" data-q="parâmetros: os detalhes do pedido">?dataset=trilhajornadadatabricks/loja-ficticia-jornada&amp;config=pedidos&amp;split=train&amp;offset=0&amp;length=100</span>
   </p>
-  <div class="ptable" data-step="4">
+  <div class="ptable">
     <div class="card"><code>dataset</code><span>qual dataset (dono/nome)</span></div>
     <div class="card"><code>config</code><span>qual tabela</span></div>
     <div class="card"><code>split</code><span>partição; aqui sempre <b>train</b></span></div>
     <div class="card"><code>offset</code><span>a partir de qual linha (começa em 0)</span></div>
     <div class="card"><code>length</code><span>quantas linhas (máx. <b>100</b>)</span></div>
   </div>
-  <p class="muted" data-step="5"><span class="mono">GET</span> = “quero ler”. É o único verbo que a gente usa hoje.</p>
+  <p class="muted"><span class="mono">GET</span> = “quero ler”. É o único verbo que a gente usa hoje.</p>
 </section>
 
 <!-- 7 · O que volta -->
@@ -474,20 +475,20 @@ body.clean .hud { display: none; }
   <span class="kicker">O que volta: JSON, um texto com chaves e valores</span>
   <div class="split">
 <pre class="json">{
-  <span class="box" data-step="1"><span class="k">"features"</span>: [ {<span class="k">"name"</span>: <span class="s">"order_id"</span>}, … ],</span>
-  <span class="box" data-step="2"><span class="k">"rows"</span>: [
+  <span class="box on"><span class="k">"features"</span>: [ {<span class="k">"name"</span>: <span class="s">"order_id"</span>}, … ],</span>
+  <span class="box on"><span class="k">"rows"</span>: [
     { <span class="k">"row_idx"</span>: <span class="n">0</span>,
       <span class="k">"row"</span>: { <span class="k">"order_id"</span>: <span class="n">1</span>, <span class="k">"valor_liquido"</span>: <span class="n">…</span> } },
     <span class="c">… mais 99 linhas</span>
   ],</span>
-  <span class="box" data-step="3"><span class="k">"num_rows_total"</span>: <span class="n">1500</span>,</span>
+  <span class="box on"><span class="k">"num_rows_total"</span>: <span class="n">1500</span>,</span>
   <span class="k">"num_rows_per_page"</span>: <span class="n">100</span>,
   <span class="k">"partial"</span>: <span class="n">false</span>
 }</pre>
     <div class="notes">
-      <div class="card" data-step="1"><span class="label">features</span><p>A lista de colunas. Vamos comparar com o contrato.</p></div>
-      <div class="card" data-step="2"><span class="label">rows</span><p>Os dados. <span class="mono">row_idx</span> é a posição da linha na fonte.</p></div>
-      <div class="card" data-step="3" style="border-color:var(--accent)"><span class="label">num_rows_total</span><p>Quantas linhas existem. É assim que sabemos <b>quando parar</b> e <b>se veio tudo</b>.</p></div>
+      <div class="card"><span class="label">features</span><p>A lista de colunas. Vamos comparar com o contrato.</p></div>
+      <div class="card"><span class="label">rows</span><p>Os dados. <span class="mono">row_idx</span> é a posição da linha na fonte.</p></div>
+      <div class="card" style="border-color:var(--accent)"><span class="label">num_rows_total</span><p>Quantas linhas existem. É assim que sabemos <b>quando parar</b> e <b>se veio tudo</b>.</p></div>
     </div>
   </div>
 </section>
@@ -537,12 +538,12 @@ body.clean .hud { display: none; }
   </figure>
   <div class="lado-texto">
   <div class="steps3">
-    <div class="card" data-step="1"><span class="mono">setup/01_criar_ambiente</span><p>Cria o catálogo <span class="mono">jornada_comercial</span>, os schemas e o Volume <span class="mono">raw.landing</span>.</p></div>
-    <div class="card" data-step="2" style="border-color:var(--accent)"><span class="mono">exercicio/aula02_ingestao_api</span><p>A sua versão, com <b>TODO</b> para completar. A resposta fica em <span class="mono">solucao/</span>.</p></div>
-    <div class="card" data-step="3"><span class="mono">teste/aula02_conferir_landing</span><p>Prova que veio tudo. Se algo falhar, fica vermelho.</p></div>
+    <div class="card"><span class="mono">setup/01_criar_ambiente</span><p>Cria o catálogo <span class="mono">jornada_comercial</span>, os schemas e o Volume <span class="mono">raw.landing</span>.</p></div>
+    <div class="card" style="border-color:var(--accent)"><span class="mono">exercicio/aula02_ingestao_api</span><p>A sua versão, com <b>TODO</b> para completar. A resposta fica em <span class="mono">solucao/</span>.</p></div>
+    <div class="card"><span class="mono">teste/aula02_conferir_landing</span><p>Prova que veio tudo. Se algo falhar, fica vermelho.</p></div>
   </div>
   <div class="grid g2">
-    <div class="card" data-step="4">
+    <div class="card">
       <span class="label">O que fica no Volume</span>
 <pre class="tree">raw/landing/
 └── pedidos/
@@ -551,7 +552,7 @@ body.clean .hud { display: none; }
         ├── …
         └── _manifesto.json      <span class="c">← o recibo</span></pre>
     </div>
-    <div class="card alt" data-step="5">
+    <div class="card alt">
       <span class="label">Plano B · setup/02_plano_b_sem_api</span>
       <p>Se a API estiver fora do ar no dia, este notebook grava os mesmos dados, no mesmo formato. O resto do curso nem percebe.</p>
       <p class="muted">Todos os notebooks usam o widget <span class="mono">catalogo</span> com o mesmo valor.</p>
@@ -565,12 +566,12 @@ body.clean .hud { display: none; }
   <span class="kicker">Hora do notebook · Parte 1</span>
   <h2 class="title-l">Conhecer a API <em>errando de propósito</em></h2>
   <ul class="nb-list">
-    <li data-step="1"><b>setup/01</b><span>Criar o ambiente</span></li>
-    <li data-step="2"><b>Passo 0</b><span>Widgets e o contrato das colunas</span></li>
-    <li class="err" data-step="3"><b>Passo 1</b><span>A rede deixa? IBGE bloqueado, Hugging Face liberado</span></li>
-    <li data-step="4"><b>Passo 2</b><span>A primeira chamada, olhando a resposta</span></li>
-    <li class="err" data-step="5"><b>Erro 2</b><span>Pedir 1.000 linhas de uma vez</span></li>
-    <li class="err" data-step="6"><b>Erro 3</b><span>Uma chamada só: 100 de 1.500</span></li>
+    <li><b>setup/01</b><span>Criar o ambiente</span></li>
+    <li><b>Passo 0</b><span>Widgets e o contrato das colunas</span></li>
+    <li class="err"><b>Passo 1</b><span>A rede deixa? IBGE bloqueado, Hugging Face liberado</span></li>
+    <li><b>Passo 2</b><span>A primeira chamada, olhando a resposta</span></li>
+    <li class="err"><b>Erro 2</b><span>Pedir 1.000 linhas de uma vez</span></li>
+    <li class="err"><b>Erro 3</b><span>Uma chamada só: 100 de 1.500</span></li>
   </ul>
 </section>
 
@@ -579,13 +580,13 @@ body.clean .hud { display: none; }
   <span class="kicker">O código de resposta diz quem errou</span>
   <div class="codes">
     <div class="chead label"><span>Código</span><span>O que significa</span><span>Quem errou</span><span>Tentar de novo?</span></div>
-    <div class="crow ok" data-step="1"><span class="code">200</span><span>Deu certo</span><span>ninguém</span><span>—</span></div>
-    <div class="crow us" data-step="2"><span class="code">400 404 422</span><span>Pedido errado (ex.: <span class="mono">length=1000</span>)</span><span>nós</span><span><b>Não.</b> Corrigir o pedido.</span></div>
-    <div class="crow wait" data-step="3"><span class="code">429</span><span>“Calma, chamadas demais”</span><span>ninguém: é cota</span><span><b>Sim</b>, depois de esperar</span></div>
-    <div class="crow wait" data-step="4"><span class="code">500 502 503</span><span>O servidor falhou</span><span>eles</span><span><b>Sim</b>, depois de esperar</span></div>
-    <div class="crow wait" data-step="5"><span class="code">timeout</span><span>Sem resposta, a rede oscilou</span><span>a rede</span><span><b>Sim</b>, depois de esperar</span></div>
+    <div class="crow ok"><span class="code">200</span><span>Deu certo</span><span>ninguém</span><span>—</span></div>
+    <div class="crow us"><span class="code">400 404 422</span><span>Pedido errado (ex.: <span class="mono">length=1000</span>)</span><span>nós</span><span><b>Não.</b> Corrigir o pedido.</span></div>
+    <div class="crow wait"><span class="code">429</span><span>“Calma, chamadas demais”</span><span>ninguém: é cota</span><span><b>Sim</b>, depois de esperar</span></div>
+    <div class="crow wait"><span class="code">500 502 503</span><span>O servidor falhou</span><span>eles</span><span><b>Sim</b>, depois de esperar</span></div>
+    <div class="crow wait"><span class="code">timeout</span><span>Sem resposta, a rede oscilou</span><span>a rede</span><span><b>Sim</b>, depois de esperar</span></div>
   </div>
-  <p class="muted" data-step="6">Regra de bolso: <b>4xx</b> é com você · <b>5xx</b> é com eles.</p>
+  <p class="muted">Regra de bolso: <b>4xx</b> é com você · <b>5xx</b> é com eles.</p>
 </section>
 
 <!-- 11 · Retry -->
@@ -636,16 +637,16 @@ body.clean .hud { display: none; }
   <figcaption>diagramas/aula-02-retry.excalidraw</figcaption>
   </figure>
   <div class="lado-texto">
-  <div class="timeline" data-step="1">
+  <div class="timeline">
     <span class="tick fail">502</span><span class="sep">espera 2 s →</span>
     <span class="tick fail">502</span><span class="sep">espera 4 s →</span>
     <span class="tick fail">503</span><span class="sep">espera 8 s →</span>
     <span class="tick win">200 ✓</span>
   </div>
   <div class="grid g3">
-    <div class="card" data-step="2"><span class="label">Backoff exponencial</span><p>A espera <b>dobra</b> a cada tentativa. Dá tempo para o serviço voltar.</p></div>
-    <div class="card" data-step="3"><span class="label">429 · limite de chamadas</span><p>Medido em 10/11: ~40 a 55 chamadas seguidas e vem 429. Libera em ~60 s. A carga toda são <b>76</b> chamadas.</p></div>
-    <div class="card" data-step="4" style="border-color:var(--red)"><span class="label">Tem limite</span><p>Depois de 6 tentativas, desiste com mensagem clara. E <b>nunca</b> grava uma resposta de erro como se fosse dado.</p></div>
+    <div class="card"><span class="label">Backoff exponencial</span><p>A espera <b>dobra</b> a cada tentativa. Dá tempo para o serviço voltar.</p></div>
+    <div class="card"><span class="label">429 · limite de chamadas</span><p>Medido em 10/11: ~40 a 55 chamadas seguidas e vem 429. Libera em ~60 s. A carga toda são <b>76</b> chamadas.</p></div>
+    <div class="card" style="border-color:var(--red)"><span class="label">Tem limite</span><p>Depois de 6 tentativas, desiste com mensagem clara. E <b>nunca</b> grava uma resposta de erro como se fosse dado.</p></div>
   </div>
   </div><!-- /lado-texto -->
 </section>
@@ -704,11 +705,11 @@ body.clean .hud { display: none; }
     <span class="pg first">0</span><span class="pg">1</span><span class="pg">2</span><span class="pg">3</span><span class="pg">4</span><span class="pg">5</span><span class="pg">6</span><span class="pg">7</span><span class="pg">8</span><span class="pg">9</span><span class="pg">10</span><span class="pg">11</span><span class="pg">12</span><span class="pg">13</span><span class="pg">14</span>
   </div>
   <div class="offsets">
-    <div class="card" data-step="1"><span class="label">Página 0</span><span>offset=0 · linhas 0–99</span></div>
-    <div class="card" data-step="1"><span class="label">Página 1</span><span>offset=100 · linhas 100–199</span></div>
-    <div class="card" data-step="2"><span class="label">Página 14</span><span>offset=1400 · linhas 1400–1499</span></div>
+    <div class="card"><span class="label">Página 0</span><span>offset=0 · linhas 0–99</span></div>
+    <div class="card"><span class="label">Página 1</span><span>offset=100 · linhas 100–199</span></div>
+    <div class="card"><span class="label">Página 14</span><span>offset=1400 · linhas 1400–1499</span></div>
   </div>
-  <p class="lead" data-step="3">Soma 100 no <span class="mono">offset</span> até chegar no <span class="mono">num_rows_total</span>. No fim: <b>as linhas que vieram batem com o total?</b></p>
+  <p class="lead">Soma 100 no <span class="mono">offset</span> até chegar no <span class="mono">num_rows_total</span>. No fim: <b>as linhas que vieram batem com o total?</b></p>
   </div><!-- /lado-texto -->
 </section>
 
@@ -760,11 +761,11 @@ body.clean .hud { display: none; }
   </figure>
   <div class="lado-texto">
   <div class="grid g3">
-    <div class="card" data-step="1"><span class="label">1 · Resposta crua</span><p>Grava o texto exatamente como veio. É a <b>prova</b> do que a fonte mandou, e dá para reprocessar sem chamar a API de novo.</p></div>
-    <div class="card" data-step="2"><span class="label">2 · Uma pasta por carga</span><p><span class="mono">carga_AAAAMMDD_HHMMSS</span>, em UTC. Nunca sobrescreve: dá para refazer e auditar qualquer dia.</p></div>
-    <div class="card" data-step="3" style="border-color:var(--green)"><span class="label">3 · Manifesto no fim</span><p>Só escrito se o total bateu. <b>Pasta sem manifesto = carga incompleta</b>, e ninguém lê.</p></div>
+    <div class="card"><span class="label">1 · Resposta crua</span><p>Grava o texto exatamente como veio. É a <b>prova</b> do que a fonte mandou, e dá para reprocessar sem chamar a API de novo.</p></div>
+    <div class="card"><span class="label">2 · Uma pasta por carga</span><p><span class="mono">carga_AAAAMMDD_HHMMSS</span>, em UTC. Nunca sobrescreve: dá para refazer e auditar qualquer dia.</p></div>
+    <div class="card" style="border-color:var(--green)"><span class="label">3 · Manifesto no fim</span><p>Só escrito se o total bateu. <b>Pasta sem manifesto = carga incompleta</b>, e ninguém lê.</p></div>
   </div>
-  <p class="punch" data-step="4">A landing é um <em>arquivo morto</em>: só recebe, nunca altera.</p>
+  <p class="punch">A landing é um <em>arquivo morto</em>: só recebe, nunca altera.</p>
   </div><!-- /lado-texto -->
 </section>
 
@@ -773,12 +774,12 @@ body.clean .hud { display: none; }
   <span class="kicker">Hora do notebook · Parte 2</span>
   <h2 class="title-l">Agora a carga <em>de verdade</em></h2>
   <ul class="nb-list">
-    <li data-step="1"><b>Passo 3</b><span>Retry: um 404 para na hora</span></li>
-    <li data-step="2"><b>Passo 4</b><span>Validar as colunas contra o contrato</span></li>
-    <li data-step="3"><b>Passo 5</b><span>O laço de paginação + manifesto</span></li>
-    <li data-step="4"><b>Passo 6</b><span>As 4 tabelas (2 a 6 min; se vier 429, é o retry trabalhando)</span></li>
-    <li data-step="5"><b>Passo 7</b><span>Checkpoint: o Spark lê de volta</span></li>
-    <li data-step="6"><b>teste/</b><span>Conferir a landing</span></li>
+    <li><b>Passo 3</b><span>Retry: um 404 para na hora</span></li>
+    <li><b>Passo 4</b><span>Validar as colunas contra o contrato</span></li>
+    <li><b>Passo 5</b><span>O laço de paginação + manifesto</span></li>
+    <li><b>Passo 6</b><span>As 4 tabelas (2 a 6 min; se vier 429, é o retry trabalhando)</span></li>
+    <li><b>Passo 7</b><span>Checkpoint: o Spark lê de volta</span></li>
+    <li><b>teste/</b><span>Conferir a landing</span></li>
   </ul>
 </section>
 
@@ -786,21 +787,21 @@ body.clean .hud { display: none; }
 <section class="slide" data-title="Checkpoint">
   <span class="kicker">Checkpoint · Se você vê isso, deu certo</span>
   <div class="nums">
-    <div class="card" data-step="1"><span class="label">clientes</span><span class="big">500</span></div>
-    <div class="card" data-step="1"><span class="label">produtos</span><span class="big">60</span></div>
-    <div class="card" data-step="1"><span class="label">pedidos</span><span class="big">1.500</span></div>
-    <div class="card" data-step="1"><span class="label">eventos_pedido</span><span class="big">5.416</span></div>
+    <div class="card"><span class="label">clientes</span><span class="big">500</span></div>
+    <div class="card"><span class="label">produtos</span><span class="big">60</span></div>
+    <div class="card"><span class="label">pedidos</span><span class="big">1.500</span></div>
+    <div class="card"><span class="label">eventos_pedido</span><span class="big">5.416</span></div>
   </div>
-  <p class="lead mono" data-step="2" style="color:var(--green)">Landing completa: todos os testes OK</p>
+  <p class="lead mono" style="color:var(--green)">Landing completa: todos os testes OK</p>
 </section>
 
 <!-- 16 · Recap -->
 <section class="slide" data-title="Resumo">
   <span class="kicker">Para levar desta aula</span>
   <ol class="recap">
-    <li data-step="1"><span>API é a porta combinada para buscar dados de outro sistema. Quem manda nas regras é a fonte.</span></li>
-    <li data-step="2"><span><b>HTTP 200 não é “veio tudo”.</b> Pagine e compare com o total.</span></li>
-    <li data-step="3"><span>Erro temporário: espera e tenta de novo. Erro nosso: para e avisa. E guarde tudo cru, com recibo.</span></li>
+    <li><span>API é a porta combinada para buscar dados de outro sistema. Quem manda nas regras é a fonte.</span></li>
+    <li><span><b>HTTP 200 não é “veio tudo”.</b> Pagine e compare com o total.</span></li>
+    <li><span>Erro temporário: espera e tenta de novo. Erro nosso: para e avisa. E guarde tudo cru, com recibo.</span></li>
   </ol>
 </section>
 
@@ -812,7 +813,7 @@ body.clean .hud { display: none; }
       <p>Complete os <b>TODO</b> de <span class="mono">exercicio/aula02_ingestao_api</span> sem olhar a solução e rode o teste até ficar verde.</p>
       <p class="muted">Desafio: troque <span class="mono">valor_liquido</span> por <span class="mono">valor_liq</span> no contrato. O que acontece? Por que isso é bom?</p>
     </div>
-    <div class="card" data-step="1" style="border-color:var(--accent)">
+    <div class="card" style="border-color:var(--accent)">
       <span class="label">Próxima aula · Transformação com regra rastreável</span>
       <p>Abrir esses JSON e transformar em bronze, silver e gold, com cada regra do contrato apontando para o código.</p>
     </div>
@@ -821,14 +822,14 @@ body.clean .hud { display: none; }
 
 <!-- 18 · Encerramento -->
 <section class="slide center" data-title="Encerramento">
-  <span class="kicker">Fim da aula 2 · Módulo 01 · Do dado à confiança</span>
-  <h2 class="title-xl" data-step="1">Status 200<br><em>não é prova.</em></h2>
-  <div class="grid g3" data-step="2" style="max-width:1100px; text-align:left">
+  <span class="kicker">Fim da aula 2 · Módulo 01 · Analytics Engineering com <span class="dbx">Databricks</span></span>
+  <h2 class="title-xl">Status 200<br><em>não é prova.</em></h2>
+  <div class="grid g3" style="max-width:1100px; text-align:left">
     <div class="card"><span class="label">Você saiu com</span><p>As 4 tabelas da loja no Volume, com manifesto e teste verde</p></div>
     <div class="card"><span class="label">Material</span><p>Notebooks do lab e o guia peça por peça<br><span class="mono" style="font-size:.8em">aula02_como_funciona.md</span></p></div>
     <div class="card" style="border-color:var(--accent)"><span class="label">Na aula 3</span><p>Bronze → silver → gold, com regra rastreável</p></div>
   </div>
-  <p class="muted" data-step="3">Jornada de Dados · Trilha Databricks</p>
+  <p class="muted">Jornada de Dados · Trilha <span class="dbx">Databricks</span></p>
 </section>
 
 <nav class="hud" aria-label="Controles">

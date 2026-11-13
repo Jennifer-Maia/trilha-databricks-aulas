@@ -14,11 +14,11 @@ try { var t = localStorage.getItem('jd-theme'); if (t === 'light' || t === 'dark
 /* Um slide por tela. → / espaço / clique: próximo passo. ←: volta. F: tela cheia. T: tema.
    Elementos com data-step="n" aparecem no passo n do slide. Mesma identidade da apresentação de 07/11. */
 :root {
-  --surface-100: #0c0c0e; --surface-200: #15151a; --surface-300: #1d1d24;
-  --ink: #f4efe6; --ink-muted: #a3a3ad;
-  --accent: #ff5b1f; --accent-soft: rgba(255,91,31,0.16); --accent-ink: #0c0c0e;
-  --line: rgba(244,239,230,0.14);
-  --blue: #4dabf7; --blue-soft: rgba(77,171,247,0.14);
+  --surface-100: #071A3D; --surface-200: #0B2C5E; --surface-300: #12397A;
+  --ink: #F2F8FF; --ink-muted: #9DBBDD;
+  --accent: #12D4FF; --accent-soft: rgba(18,212,255,0.16); --accent-ink: #071A3D; --dbx: #FF5F46;
+  --line: rgba(207,239,255,0.16);
+  --blue: #7FA8FF; --blue-soft: rgba(127,168,255,0.16);
   --green: #51cf66; --green-soft: rgba(81,207,102,0.14);
   --red: #ff6b6b; --red-soft: rgba(255,107,107,0.14);
   --yellow: #fcc419; --yellow-soft: rgba(252,196,25,0.14);
@@ -30,10 +30,10 @@ try { var t = localStorage.getItem('jd-theme'); if (t === 'light' || t === 'dark
   color-scheme: dark;
 }
 :root[data-theme="light"] {
-  --surface-100: #f4efe6; --surface-200: #ffffff; --surface-300: #ece5d8;
-  --ink: #15151a; --ink-muted: #55555f;
-  --accent: #e04a14; --accent-soft: rgba(224,74,20,0.12);
-  --line: rgba(21,21,26,0.14);
+  --surface-100: #F3F7FC; --surface-200: #ffffff; --surface-300: #E2EBF7;
+  --ink: #0B1F3F; --ink-muted: #4A6283;
+  --accent: #005ADF; --accent-soft: rgba(0,90,223,0.10); --accent-ink: #ffffff; --dbx: #E8331C;
+  --line: rgba(11,31,63,0.14);
   --blue: #1971c2; --blue-soft: rgba(25,113,194,0.10);
   --green: #2f9e44; --green-soft: rgba(47,158,68,0.10);
   --red: #e03131; --red-soft: rgba(224,49,49,0.10);
@@ -43,10 +43,10 @@ try { var t = localStorage.getItem('jd-theme'); if (t === 'light' || t === 'dark
 }
 @media (prefers-color-scheme: light) {
   :root:not([data-theme="dark"]) {
-    --surface-100: #f4efe6; --surface-200: #ffffff; --surface-300: #ece5d8;
-    --ink: #15151a; --ink-muted: #55555f;
-    --accent: #e04a14; --accent-soft: rgba(224,74,20,0.12);
-    --line: rgba(21,21,26,0.14);
+    --surface-100: #F3F7FC; --surface-200: #ffffff; --surface-300: #E2EBF7;
+    --ink: #0B1F3F; --ink-muted: #4A6283;
+    --accent: #005ADF; --accent-soft: rgba(0,90,223,0.10); --accent-ink: #ffffff; --dbx: #E8331C;
+    --line: rgba(11,31,63,0.14);
     --blue: #1971c2; --blue-soft: rgba(25,113,194,0.10);
     --green: #2f9e44; --green-soft: rgba(47,158,68,0.10);
     --red: #e03131; --red-soft: rgba(224,49,49,0.10);
@@ -245,14 +245,15 @@ body.clean .hud { display: none; }
   .slide.com-desenho { grid-template-columns: 1fr; }
   .slide.com-desenho > .desenho, .slide.com-desenho > .lado-texto { grid-column: 1; }
 }
-/* ---------- fim desenhos ---------- */</style>
+/* ---------- fim desenhos ---------- */.dbx { color: var(--dbx); font-weight: 700; }
+</style>
 </head>
 <body>
 <div class="bar" id="bar"></div>
 
 <!-- 1 · Capa -->
 <section class="slide" data-title="Capa">
-  <span class="kicker">Módulo 01 · Do dado à confiança · Aula 1</span>
+  <span class="kicker">Módulo 01 · Analytics Engineering com <span class="dbx">Databricks</span> · Aula 1</span>
   <h1 class="title-xl">O pedido <em>virou regra</em></h1>
   <p class="lead">Antes da primeira linha de código: transformar um pedido vago em um contrato de dados.</p>
 </section>
@@ -269,14 +270,14 @@ body.clean .hud { display: none; }
   <span class="kicker">O que vamos construir neste módulo</span>
   <h2 class="title-l">Um produto de dados em que dá para <em>confiar</em></h2>
   <ol class="flow">
-    <li class="now" data-step="1"><b>O pedido virou regra</b><small>contrato de dados</small></li>
-    <li data-step="2"><b>Ingerindo uma API</b><small>paginação, limites</small></li>
-    <li data-step="2"><b>Regra rastreável</b><small>bronze → gold</small></li>
-    <li data-step="2"><b>Testes que provam</b><small>qualidade</small></li>
-    <li data-step="2"><b>Governança de verdade</b><small>filtro e máscara</small></li>
-    <li data-step="2"><b>Portfólio</b><small>README e LinkedIn</small></li>
+    <li class="now"><b>O pedido virou regra</b><small>contrato de dados</small></li>
+    <li><b>Ingerindo uma API</b><small>paginação, limites</small></li>
+    <li><b>Regra rastreável</b><small>bronze → gold</small></li>
+    <li><b>Testes que provam</b><small>qualidade</small></li>
+    <li><b>Governança de verdade</b><small>filtro e máscara</small></li>
+    <li><b>Portfólio</b><small>README e LinkedIn</small></li>
   </ol>
-  <p class="muted" data-step="3">Pré-requisitos: Unity Catalog (Módulo 1, aula 3) e Arquitetura Medalhão (Módulo 2).</p>
+  <p class="muted">Pré-requisitos: Unity Catalog (Módulo 1, aula 3) e Arquitetura Medalhão (Módulo 2).</p>
 </section>
 
 <!-- 4 · O chamado -->
@@ -356,11 +357,11 @@ body.clean .hud { display: none; }
   </figure>
   <div class="lado-texto">
   <div class="grid g3">
-    <div class="card person" data-step="1"><span class="label">Pessoa A</span><p>Contou as linhas com <span class="mono">status = 'entregue'</span></p><span class="num">946</span></div>
-    <div class="card person" data-step="2"><span class="label">Pessoa B</span><p>Ignorou maiúsculas, mas contou eventos duplicados</p><span class="num">1.060</span></div>
-    <div class="card person right" data-step="3"><span class="label">Pessoa C</span><p>Último status de cada pedido, sem duplicata, sem evento sem data</p><span class="num">1.052</span></div>
+    <div class="card person"><span class="label">Pessoa A</span><p>Contou as linhas com <span class="mono">status = 'entregue'</span></p><span class="num">946</span></div>
+    <div class="card person"><span class="label">Pessoa B</span><p>Ignorou maiúsculas, mas contou eventos duplicados</p><span class="num">1.060</span></div>
+    <div class="card person right"><span class="label">Pessoa C</span><p>Último status de cada pedido, sem duplicata, sem evento sem data</p><span class="num">1.052</span></div>
   </div>
-  <p class="punch" data-step="4">Ninguém errou o código.<br>Erraram ao <em>não perguntar</em>.</p>
+  <p class="punch">Ninguém errou o código.<br>Erraram ao <em>não perguntar</em>.</p>
   </div><!-- /lado-texto -->
 </section>
 
@@ -399,22 +400,22 @@ body.clean .hud { display: none; }
   </figure>
   <div class="lado-texto">
   <div class="sources">
-    <div class="card src blue s1" data-step="1">
+    <div class="card src blue s1">
       <span class="label">API da loja · tabelas pedidos + clientes</span>
       <b>O que foi vendido e para quem</b>
       <div class="fields"><code>order_id</code><code>itens</code><code>valor_liquido</code><code>customer_id</code><code>email</code><code>telefone</code><code>uf</code></div>
-      <span class="missing" data-step="2">✕ sem status · ✕ sem data de entrega</span>
+      <span class="missing">✕ sem status · ✕ sem data de entrega</span>
     </div>
-    <span class="arr l" data-step="4">→</span>
-    <div class="join" data-step="4">order_id<br>=<br>order_id</div>
-    <span class="arr r" data-step="4">←</span>
-    <div class="card src blue s2" data-step="3">
+    <span class="arr l">→</span>
+    <div class="join">order_id<br>=<br>order_id</div>
+    <span class="arr r">←</span>
+    <div class="card src blue s2">
       <span class="label">API da loja · tabela eventos_pedido</span>
       <b>Cada mudança de status, com data</b>
       <div class="fields"><code>event_id</code><code>order_id</code><code>status</code><code>event_ts</code><code>canal</code></div>
     </div>
-    <span class="arr d" data-step="4">↓</span>
-    <div class="card result" data-step="4"><b>Pedido completo</b><span class="muted">valor + cliente + status + data</span></div>
+    <span class="arr d">↓</span>
+    <div class="card result"><b>Pedido completo</b><span class="muted">valor + cliente + status + data</span></div>
   </div>
   </div><!-- /lado-texto -->
 </section>
@@ -424,13 +425,13 @@ body.clean .hud { display: none; }
   <span class="kicker">Palavra ambígua → pergunta → premissa escrita</span>
   <div class="qtable">
     <div class="qhead label"><span>Palavra</span><span>Pergunta para o negócio</span><span>Enquanto não há resposta</span></div>
-    <div class="qrow" data-step="1"><span class="word">concluído</span><span>É pago, enviado ou entregue?</span><span class="prem">status atual = entregue</span></div>
-    <div class="qrow" data-step="2"><span class="word">status atual</span><span>Se o pedido tem vários eventos, qual vale?</span><span class="prem">o mais recente por data</span></div>
-    <div class="qrow" data-step="3"><span class="word">duplicidade</span><span>Mesmo pedido ou mesmo evento repetido?</span><span class="prem">mesmo event_id conta uma vez</span></div>
-    <div class="qrow" data-step="4"><span class="word">vendas</span><span>Valor bruto ou com desconto?</span><span class="prem">com desconto</span></div>
-    <div class="qrow" data-step="5"><span class="word">região</span><span>Do cliente ou da entrega? Qual divisão?</span><span class="prem">UF do cliente → 5 regiões do IBGE</span></div>
+    <div class="qrow"><span class="word">concluído</span><span>É pago, enviado ou entregue?</span><span class="prem">status atual = entregue</span></div>
+    <div class="qrow"><span class="word">status atual</span><span>Se o pedido tem vários eventos, qual vale?</span><span class="prem">o mais recente por data</span></div>
+    <div class="qrow"><span class="word">duplicidade</span><span>Mesmo pedido ou mesmo evento repetido?</span><span class="prem">mesmo event_id conta uma vez</span></div>
+    <div class="qrow"><span class="word">vendas</span><span>Valor bruto ou com desconto?</span><span class="prem">com desconto</span></div>
+    <div class="qrow"><span class="word">região</span><span>Do cliente ou da entrega? Qual divisão?</span><span class="prem">UF do cliente → 5 regiões do IBGE</span></div>
   </div>
-  <p class="muted" data-step="6">As outras 5 perguntas estão no contrato, no material da aula.</p>
+  <p class="muted">As outras 5 perguntas estão no contrato, no material da aula.</p>
 </section>
 
 <!-- 8 · Premissa -->
@@ -489,7 +490,7 @@ body.clean .hud { display: none; }
   </figure>
   <div class="lado-texto">
   <div class="rules">
-    <div class="card" data-step="1">
+    <div class="card">
       <h3><span class="dot" style="background:var(--blue)"></span>Limpeza (silver)</h3>
       <ul>
         <li><b>RN-01</b><span>Status normalizado (ENTREGUE, delivered → entregue)</span></li>
@@ -498,7 +499,7 @@ body.clean .hud { display: none; }
         <li><b>RN-07</b><span>Sem data ou órfão → quarentena</span></li>
       </ul>
     </div>
-    <div class="card" data-step="2">
+    <div class="card">
       <h3><span class="dot" style="background:var(--green)"></span>Negócio (gold)</h3>
       <ul>
         <li><b>RN-04</b><span>Concluído = status atual entregue</span></li>
@@ -506,7 +507,7 @@ body.clean .hud { display: none; }
         <li><b>RN-06</b><span>UF → região do IBGE</span></li>
       </ul>
     </div>
-    <div class="card" data-step="3">
+    <div class="card">
       <h3><span class="dot" style="background:var(--purple)"></span>Acesso (governança)</h3>
       <ul>
         <li><b>RN-08</b><span>Vendas só vê a própria região</span></li>
@@ -514,7 +515,7 @@ body.clean .hud { display: none; }
       </ul>
     </div>
   </div>
-  <div class="legend" data-step="4">
+  <div class="legend">
     <span>Cada regra tem um <b>ID</b></span><span>→ vira <b>código</b> na aula 3</span><span>→ vira <b>teste</b> na aula 4</span>
   </div>
   </div><!-- /lado-texto -->
@@ -524,26 +525,26 @@ body.clean .hud { display: none; }
 <section class="slide" data-title="Escopo">
   <span class="kicker">O contrato também diz o que entregamos e o que não</span>
   <div class="grid g2">
-    <div class="card" data-step="1" style="border-color:var(--green)">
+    <div class="card" style="border-color:var(--green)">
       <span class="label">Saída esperada</span>
       <p><span class="mono">gold.vendas_por_regiao</span>: região × mês, pedidos, valor, ticket médio</p>
       <p><span class="mono">gold.pedidos_concluidos</span>: um pedido por linha, dado pessoal protegido</p>
     </div>
-    <div class="card" data-step="2" style="border-color:var(--red)">
+    <div class="card" style="border-color:var(--red)">
       <span class="label">Fora do escopo</span>
       <p>Devoluções, frete, impostos e atualização incremental (fica para o Módulo 02).</p>
     </div>
   </div>
-  <p class="punch" data-step="3">Dizer o que <em>não</em> vamos fazer também é entrega.</p>
+  <p class="punch">Dizer o que <em>não</em> vamos fazer também é entrega.</p>
 </section>
 
 <!-- 11 · Recap -->
 <section class="slide" data-title="Resumo">
   <span class="kicker">Para levar desta aula</span>
   <ol class="recap">
-    <li data-step="1"><span>Todo pedido de negócio esconde decisões. Encontre as palavras ambíguas.</span></li>
-    <li data-step="2"><span>Toda dúvida vira resposta ou <b>premissa escrita</b>.</span></li>
-    <li data-step="3"><span>Cada regra tem ID, lugar no código e teste.</span></li>
+    <li><span>Todo pedido de negócio esconde decisões. Encontre as palavras ambíguas.</span></li>
+    <li><span>Toda dúvida vira resposta ou <b>premissa escrita</b>.</span></li>
+    <li><span>Cada regra tem ID, lugar no código e teste.</span></li>
   </ol>
 </section>
 
@@ -554,7 +555,7 @@ body.clean .hud { display: none; }
       <span class="label">Sua tarefa</span>
       <p>Copie o contrato para o seu repositório e responda: <b>o que você perguntaria que eu não perguntei?</b></p>
     </div>
-    <div class="card" data-step="1" style="border-color:var(--accent)">
+    <div class="card" style="border-color:var(--accent)">
       <span class="label">Próxima aula · Ingerindo uma API de verdade</span>
       <p>Por que um simples <span class="mono">requests.get</span> traz só <b>100</b> dos <b>1.500</b> pedidos?</p>
     </div>
@@ -563,14 +564,14 @@ body.clean .hud { display: none; }
 
 <!-- 13 · Encerramento -->
 <section class="slide center" data-title="Encerramento">
-  <span class="kicker">Fim da aula 1 · Módulo 01 · Do dado à confiança</span>
-  <h2 class="title-xl" data-step="1">Antes do código,<br><em>a pergunta certa.</em></h2>
-  <div class="grid g3" data-step="2" style="max-width:1100px; text-align:left">
+  <span class="kicker">Fim da aula 1 · Módulo 01 · Analytics Engineering com <span class="dbx">Databricks</span></span>
+  <h2 class="title-xl">Antes do código,<br><em>a pergunta certa.</em></h2>
+  <div class="grid g3" style="max-width:1100px; text-align:left">
     <div class="card"><span class="label">Você saiu com</span><p>Um contrato de dados: chamado, perguntas, premissas e 9 regras numeradas</p></div>
     <div class="card"><span class="label">Material</span><p>Contrato de dados completo, no material desta aula<br><span class="mono" style="font-size:.8em">contrato_de_dados.md</span></p></div>
     <div class="card" style="border-color:var(--accent)"><span class="label">Na aula 2</span><p>Buscar os dados numa API de verdade: paginação, limites e erros</p></div>
   </div>
-  <p class="muted" data-step="3">Jornada de Dados · Trilha Databricks</p>
+  <p class="muted">Jornada de Dados · Trilha <span class="dbx">Databricks</span></p>
 </section>
 
 <nav class="hud" aria-label="Controles">
