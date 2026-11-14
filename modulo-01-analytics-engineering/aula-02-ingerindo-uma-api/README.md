@@ -8,7 +8,7 @@
 |---|---|
 | Você vai precisar de | conta na [Databricks Free Edition](https://docs.databricks.com/aws/en/getting-started/free-edition) e o [contrato da aula 1](../docs/contrato_de_dados.md) |
 | Você sai com | 4 tabelas no Volume `raw.landing` (500 clientes, 60 produtos, 1.500 pedidos, 5.416 eventos), com manifesto e teste verde |
-| Material | [slides](slides.html) (baixe e abra no navegador) · [explicação peça por peça](como_funciona.md) · [diagramas](diagramas/) |
+| Material | [slides](slides.html) (baixe e abra no navegador) · [anotações passo a passo](anotacoes.md) · [diagramas](diagramas/) |
 
 ## O que você vai aprender
 
@@ -58,7 +58,7 @@ aula-02-ingerindo-uma-api/
 ├── exercicio/aula02_ingestao_api.py   ← a SUA versão, com TODO para completar
 ├── solucao/aula02_ingestao_api.py     ← a versão completa (tente antes de olhar!)
 ├── teste/aula02_conferir_landing.py   ← prova que a landing veio completa
-├── como_funciona.md                   ← cada peça do código explicada, com as saídas esperadas
+├── anotacoes.md                       ← minhas notas sobre cada passo do notebook, com as saídas esperadas
 ├── slides.html
 ├── img/ e diagramas/
 ```
@@ -84,7 +84,7 @@ Em todos os notebooks, o widget `catalogo` (a caixinha no topo) precisa ter o me
 | `get_com_retry` | Chamar a API e, em erro temporário, esperar e tentar de novo | Siga a tabela de códigos acima. As dicas estão nos comentários do próprio TODO |
 | `baixar_tabela` | O laço de paginação: pedir 100, gravar a resposta crua, somar 100 no `offset`, repetir até o total | Na 1ª página, guarde o `num_rows_total` e confira as colunas |
 
-Travou? Primeiro leia [`como_funciona.md`](como_funciona.md). Depois compare com a [`solucao/`](solucao/aula02_ingestao_api.py).
+Travou? Primeiro leia as [anotações](anotacoes.md). Depois compare com a [`solucao/`](solucao/aula02_ingestao_api.py).
 
 ### Erros de propósito
 
