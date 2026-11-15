@@ -43,9 +43,10 @@ modulo-NN-slug/
 ├── setup/                 # prepara o ambiente do módulo (roda uma vez) + plano B
 └── aula-NN-slug/
     ├── README.md          # passo a passo da aula, checkpoint e tarefa
-    ├── exercicio/         # a SUA versão, com TODO para completar
-    ├── solucao/           # a resposta completa, para conferir
+    ├── exercicio/         # a SUA prática: exercícios com conferência ✅/❌
+    ├── solucao/           # o notebook da aula + o gabarito dos exercícios
     ├── teste/             # prova que o resultado está certo
+    ├── quiz.md            # perguntas para fechar a aula, com a explicação de cada alternativa
     ├── slides.html        # abra no navegador
     ├── img/               # imagens usadas no README
     └── diagramas/         # os mesmos desenhos, editáveis em https://excalidraw.com

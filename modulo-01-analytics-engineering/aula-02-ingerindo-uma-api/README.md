@@ -8,7 +8,7 @@
 |---|---|
 | Você vai precisar de | conta na [Databricks Free Edition](https://docs.databricks.com/aws/en/getting-started/free-edition) e o [contrato da aula 1](../docs/contrato_de_dados.md) |
 | Você sai com | 4 tabelas no Volume `raw.landing` (500 clientes, 60 produtos, 1.500 pedidos, 5.416 eventos), com manifesto e teste verde |
-| Material | [slides](slides.html) (baixe e abra no navegador) · [anotações passo a passo](anotacoes.md) · [diagramas](diagramas/) |
+| Material | [slides](slides.html) (baixe e abra no navegador) · [anotações passo a passo](anotacoes.md) · [quiz](quiz.md) · [diagramas](diagramas/) |
 
 ## O que você vai aprender
 
@@ -55,10 +55,12 @@ Você (o seu código) faz o pedido ao garçom (a API), que leva até a cozinha (
 
 ```
 aula-02-ingerindo-uma-api/
-├── exercicio/aula02_ingestao_api.py   ← a SUA versão, com TODO para completar
-├── solucao/aula02_ingestao_api.py     ← a versão completa (tente antes de olhar!)
-├── teste/aula02_conferir_landing.py   ← prova que a landing veio completa
-├── anotacoes.md                       ← minhas notas sobre cada passo do notebook, com as saídas esperadas
+├── solucao/aula02_ingestao_api.py          ← o notebook da aula, completo
+├── exercicio/aula02_exercicios.py          ← a SUA prática: 6 exercícios para construir a ingestão
+├── solucao/aula02_exercicios_gabarito.py   ← o gabarito dos exercícios (tente antes de olhar!)
+├── teste/aula02_conferir_landing.py        ← prova que a landing veio completa
+├── anotacoes.md                            ← minhas notas sobre cada passo do notebook, com as saídas esperadas
+├── quiz.md                                 ← 10 perguntas para fechar a aula
 ├── slides.html
 ├── img/ e diagramas/
 ```
@@ -72,19 +74,27 @@ Os notebooks de preparação ficam na pasta [`setup/`](../setup/) do módulo, po
 | Ordem | Notebook | O que faz | Resultado esperado |
 |---|---|---|---|
 | 1 | [`setup/01_criar_ambiente`](../setup/01_criar_ambiente.py) | Cria o catálogo, os schemas e o Volume | schemas `raw`, `bronze`, `silver`, `gold`, `governanca`, `qualidade` e o Volume `raw.landing` |
-| 2 | [`exercicio/aula02_ingestao_api`](exercicio/aula02_ingestao_api.py) | Busca as 4 tabelas na API e grava na landing. **Complete os 2 TODO** | `clientes: 500 linhas em 5 páginas` … `eventos_pedido: 5416 linhas em 55 páginas` |
+| 2 | [`solucao/aula02_ingestao_api`](solucao/aula02_ingestao_api.py) | O notebook da aula: busca as 4 tabelas na API e grava na landing | `clientes: 500 linhas em 5 páginas` … `eventos_pedido: 5416 linhas em 55 páginas` |
 | 3 | [`teste/aula02_conferir_landing`](teste/aula02_conferir_landing.py) | Confere total, linhas repetidas e colunas | `Landing completa: todos os testes OK` |
 
 Em todos os notebooks, o widget `catalogo` (a caixinha no topo) precisa ter o mesmo valor. O padrão é `jornada_comercial`.
 
-### Os dois TODO do exercício
+### Agora é com você: os exercícios
 
-| TODO | O que implementar | Dica |
+Assistir à ingestão pronta é diferente de construir. Em [`exercicio/aula02_exercicios`](exercicio/aula02_exercicios.py) você monta a ingestão do zero, um pedaço por vez. Cada exercício tem uma célula **Conferir**, que mostra ✅ ou ❌ para cada caso.
+
+| # | Exercício | O que você constrói |
 |---|---|---|
-| `get_com_retry` | Chamar a API e, em erro temporário, esperar e tentar de novo | Siga a tabela de códigos acima. As dicas estão nos comentários do próprio TODO |
-| `baixar_tabela` | O laço de paginação: pedir 100, gravar a resposta crua, somar 100 no `offset`, repetir até o total | Na 1ª página, guarde o `num_rows_total` e confira as colunas |
+| 1 | Ler a resposta | a chamada à API, achando o total e as colunas no JSON |
+| 2 | Quem errou? | `classificar(status)`: seguir, parar ou tentar de novo |
+| 3 | Quantas chamadas? | `planejar_offsets(total)`: o plano da paginação |
+| 4 | Tentar de novo | `com_retry(...)`, testado numa API de mentira (sem esperar minutos de 429) |
+| 5 | A fonte mudou? | `comparar_colunas(...)`: o que falta e o que veio a mais |
+| 6 | A carga de verdade | `baixar(tabela)`: junta tudo e grava na landing, com manifesto |
 
-Travou? Primeiro leia as [anotações](anotacoes.md). Depois compare com a [`solucao/`](solucao/aula02_ingestao_api.py).
+No fim, o seu código busca as 4 tabelas e você roda o `teste/`. Se ficar verde, a sua ingestão serve para a aula 3.
+
+Travou? Primeiro leia as [anotações](anotacoes.md). Depois o [gabarito](solucao/aula02_exercicios_gabarito.py).
 
 ### Erros de propósito
 
@@ -124,9 +134,10 @@ E o teste termina com `Landing completa: todos os testes OK`.
 
 ## Sua tarefa
 
-1. Complete os TODO de `exercicio/` sem olhar a solução e rode o teste até ficar verde.
-2. **Desafio:** em `COLUNAS_ESPERADAS`, troque `valor_liquido` por `valor_liq` e rode a carga de `pedidos`. O que acontece? Por que é bom que a carga quebre aqui, e não três semanas depois num relatório?
-3. Para o portfólio: coloque no seu repositório o notebook, um print do checkpoint e uma frase explicando por que você guarda o dado cru.
+1. Faça os 6 exercícios de [`exercicio/aula02_exercicios`](exercicio/aula02_exercicios.py) até tudo ficar ✅, sem olhar o gabarito. Depois rode o teste até ficar verde.
+2. Responda o [quiz](quiz.md). As perguntas marcadas com 🎓 são sobre a plataforma Databricks.
+3. **Desafio:** em `COLUNAS_ESPERADAS`, troque `valor_liquido` por `valor_liq` e rode a carga de `pedidos`. O que acontece? Por que é bom que a carga quebre aqui, e não três semanas depois num relatório?
+4. Para o portfólio: coloque no seu repositório o notebook, um print do checkpoint e uma frase explicando por que você guarda o dado cru.
 
 ## Próxima aula
 

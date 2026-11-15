@@ -2,20 +2,56 @@
   "titulo": "Aula 2 · O lab em 3 notebooks (e um plano B)",
   "linhas": [
     [
-      {"id": "setup", "texto": "1. setup/\n01_criar_ambiente\ncatálogo + schemas\n+ Volume", "cor": "cinza"},
-      {"id": "ingestao", "texto": "2. exercicio/ (com TODO)\nou solucao/\naula02_ingestao_api", "cor": "laranja"},
-      {"id": "teste", "texto": "3. teste/\naula02_conferir\n_landing", "cor": "vermelho"},
-      {"id": "ok", "texto": "Landing completa:\ntodos os testes OK", "cor": "verde"}
+      {
+        "id": "setup",
+        "texto": "1. setup/\n01_criar_ambiente\ncatálogo + schemas\n+ Volume",
+        "cor": "cinza"
+      },
+      {
+        "id": "ingestao",
+        "texto": "2. solucao/\n(o notebook da aula)\nou exercicio/\n(você constrói)",
+        "cor": "laranja"
+      },
+      {
+        "id": "teste",
+        "texto": "3. teste/\naula02_conferir\n_landing",
+        "cor": "vermelho"
+      },
+      {
+        "id": "ok",
+        "texto": "Landing completa:\ntodos os testes OK",
+        "cor": "verde"
+      }
     ],
     [
-      {"id": "planob", "texto": "setup/\n02_plano_b_sem_api\nmesmo formato", "cor": "cinza"}
+      {
+        "id": "planob",
+        "texto": "setup/\n02_plano_b_sem_api\nmesmo formato",
+        "cor": "cinza"
+      }
     ]
   ],
   "setas": [
-    ["setup", "ingestao"],
-    ["ingestao", "teste"],
-    ["teste", "ok"],
-    ["setup", "planob", "API fora do ar?"],
-    ["planob", "teste"]
+    [
+      "setup",
+      "ingestao"
+    ],
+    [
+      "ingestao",
+      "teste"
+    ],
+    [
+      "teste",
+      "ok"
+    ],
+    [
+      "setup",
+      "planob",
+      "API fora do ar?"
+    ],
+    [
+      "planob",
+      "teste"
+    ]
   ]
 }

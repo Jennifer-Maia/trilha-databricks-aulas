@@ -21,9 +21,9 @@
    "groupIds": [],
    "frameId": null,
    "roundness": null,
-   "seed": 460176163,
+   "seed": 98545100,
    "version": 1,
-   "versionNonce": 1300294176,
+   "versionNonce": 1087615925,
    "isDeleted": false,
    "boundElements": [],
    "updated": 1,
@@ -59,9 +59,9 @@
    "roundness": {
     "type": 3
    },
-   "seed": 1726601193,
+   "seed": 1182854159,
    "version": 1,
-   "versionNonce": 1073896908,
+   "versionNonce": 249174417,
    "isDeleted": false,
    "boundElements": [
     {
@@ -99,9 +99,9 @@
    "groupIds": [],
    "frameId": null,
    "roundness": null,
-   "seed": 1698616009,
+   "seed": 1377834403,
    "version": 1,
-   "versionNonce": 1098387162,
+   "versionNonce": 1897693163,
    "isDeleted": false,
    "boundElements": [],
    "updated": 1,
@@ -137,9 +137,9 @@
    "roundness": {
     "type": 3
    },
-   "seed": 978912536,
+   "seed": 994963147,
    "version": 1,
-   "versionNonce": 1183615142,
+   "versionNonce": 1306583687,
    "isDeleted": false,
    "boundElements": [
     {
@@ -177,16 +177,16 @@
    "groupIds": [],
    "frameId": null,
    "roundness": null,
-   "seed": 1956367146,
+   "seed": 1764150626,
    "version": 1,
-   "versionNonce": 1038415438,
+   "versionNonce": 2112819170,
    "isDeleted": false,
    "boundElements": [],
    "updated": 1,
    "link": null,
    "locked": false,
-   "text": "2. exercicio/ (com TODO)\nou solucao/\naula02_ingestao_api",
-   "originalText": "2. exercicio/ (com TODO)\nou solucao/\naula02_ingestao_api",
+   "text": "2. solucao/\n(o notebook da aula)\nou exercicio/\n(você constrói)",
+   "originalText": "2. solucao/\n(o notebook da aula)\nou exercicio/\n(você constrói)",
    "fontSize": 20,
    "fontFamily": 1,
    "textAlign": "center",
@@ -215,9 +215,9 @@
    "roundness": {
     "type": 3
    },
-   "seed": 610746428,
+   "seed": 133694462,
    "version": 1,
-   "versionNonce": 792949620,
+   "versionNonce": 551179732,
    "isDeleted": false,
    "boundElements": [
     {
@@ -259,9 +259,9 @@
    "groupIds": [],
    "frameId": null,
    "roundness": null,
-   "seed": 1169468144,
+   "seed": 1664490214,
    "version": 1,
-   "versionNonce": 1776794151,
+   "versionNonce": 412671848,
    "isDeleted": false,
    "boundElements": [],
    "updated": 1,
@@ -297,9 +297,9 @@
    "roundness": {
     "type": 3
    },
-   "seed": 2071667194,
+   "seed": 1555404941,
    "version": 1,
-   "versionNonce": 1248105819,
+   "versionNonce": 1375801335,
    "isDeleted": false,
    "boundElements": [
     {
@@ -333,9 +333,9 @@
    "groupIds": [],
    "frameId": null,
    "roundness": null,
-   "seed": 1498188139,
+   "seed": 370802301,
    "version": 1,
-   "versionNonce": 170581626,
+   "versionNonce": 526184746,
    "isDeleted": false,
    "boundElements": [],
    "updated": 1,
@@ -371,9 +371,9 @@
    "roundness": {
     "type": 3
    },
-   "seed": 212900212,
+   "seed": 388555963,
    "version": 1,
-   "versionNonce": 686050442,
+   "versionNonce": 1777686974,
    "isDeleted": false,
    "boundElements": [
     {
@@ -411,9 +411,9 @@
    "groupIds": [],
    "frameId": null,
    "roundness": null,
-   "seed": 1975404632,
+   "seed": 421333258,
    "version": 1,
-   "versionNonce": 2078989337,
+   "versionNonce": 855076068,
    "isDeleted": false,
    "boundElements": [],
    "updated": 1,
@@ -449,9 +449,9 @@
    "roundness": {
     "type": 2
    },
-   "seed": 1398569204,
+   "seed": 218958076,
    "version": 1,
-   "versionNonce": 620624422,
+   "versionNonce": 1534116258,
    "isDeleted": false,
    "boundElements": [],
    "updated": 1,
@@ -501,9 +501,9 @@
    "roundness": {
     "type": 2
    },
-   "seed": 2129915509,
+   "seed": 302480611,
    "version": 1,
-   "versionNonce": 217576290,
+   "versionNonce": 394804917,
    "isDeleted": false,
    "boundElements": [],
    "updated": 1,
@@ -553,9 +553,9 @@
    "roundness": {
     "type": 2
    },
-   "seed": 933703540,
+   "seed": 1483066881,
    "version": 1,
-   "versionNonce": 1711088462,
+   "versionNonce": 123121983,
    "isDeleted": false,
    "boundElements": [],
    "updated": 1,
@@ -605,9 +605,9 @@
    "roundness": {
     "type": 2
    },
-   "seed": 600078657,
+   "seed": 309638170,
    "version": 1,
-   "versionNonce": 354831552,
+   "versionNonce": 41711581,
    "isDeleted": false,
    "boundElements": [],
    "updated": 1,
@@ -655,9 +655,9 @@
    "groupIds": [],
    "frameId": null,
    "roundness": null,
-   "seed": 335744928,
+   "seed": 1426717953,
    "version": 1,
-   "versionNonce": 123540881,
+   "versionNonce": 1667438125,
    "isDeleted": false,
    "boundElements": [],
    "updated": 1,
@@ -693,9 +693,9 @@
    "roundness": {
     "type": 2
    },
-   "seed": 1306794882,
+   "seed": 1449105602,
    "version": 1,
-   "versionNonce": 1900584909,
+   "versionNonce": 1722364733,
    "isDeleted": false,
    "boundElements": [],
    "updated": 1,

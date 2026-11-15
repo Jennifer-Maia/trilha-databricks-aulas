@@ -13,10 +13,13 @@ Copie, cole e ajuste o que está entre `< >`. Funcionam no Claude Code (dentro d
 
 ## Fazer o exercício
 
-> Estou no TODO `<nome da função>` de `aula-<NN>/exercicio/`. Não me dê a resposta. Me faça 3 perguntas que me levem a descobrir o caminho.
+> Estou no exercício `<número>` de `aula-<NN>/exercicio/`. Não me dê a resposta. Me faça 3 perguntas que me levem a descobrir o caminho.
 
-> Este é o meu código para o TODO `<nome>`. Sem reescrever tudo, me diga o que está certo, o que está errado e por quê.
+> Este é o meu código para o exercício `<número>`, e a célula Conferir mostrou isto: `<cole o ✅/❌>`. Sem reescrever tudo, me diga o que está certo, o que está errado e por quê.
 > `<cole o código>`
+
+> Estou fazendo o quiz da aula `<NN>`. Vou te mandar uma pergunta e a minha resposta. Não me diga se acertei: me pergunte por que escolhi essa alternativa e me ajude a testar o raciocínio.
+> `<cole a pergunta e a sua resposta>`
 
 > Rodei o notebook e deu este erro. Leia a última linha, me diga se é problema do meu código, da rede, da API ou do ambiente, e o que eu confiro primeiro.
 > `<cole o erro>`
