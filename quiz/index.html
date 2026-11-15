@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiz da Trilha</title>
+<meta name="description" content="Quiz das aulas da Trilha Databricks da Jornada de Dados">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+:root {
+  --bg: #071A3D; --surface: #0B2C5E; --surface-2: #12397A; --line: rgba(157,187,221,.18);
+  --ink: #F2F8FF; --muted: #9DBBDD; --accent: #12D4FF; --accent-ink: #071A3D; --dbx: #FF5F46;
+  --ok: #51cf66; --ok-soft: rgba(81,207,102,.12); --no: #ff6b6b; --no-soft: rgba(255,107,107,.12);
+  --f-display: "Archivo Black", "Arial Black", sans-serif;
+  --f-sans: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+  --f-mono: "JetBrains Mono", Consolas, monospace;
+  color-scheme: dark;
+}
+:root[data-theme="light"] {
+  --bg: #F3F7FC; --surface: #ffffff; --surface-2: #E2EBF7; --line: rgba(11,31,63,.12);
+  --ink: #0B1F3F; --muted: #4A6283; --accent: #005ADF; --accent-ink: #ffffff; --dbx: #E8331C;
+  --ok: #2f9e44; --ok-soft: rgba(47,158,68,.09); --no: #e03131; --no-soft: rgba(224,49,49,.08);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: #F3F7FC; --surface: #ffffff; --surface-2: #E2EBF7; --line: rgba(11,31,63,.12);
+    --ink: #0B1F3F; --muted: #4A6283; --accent: #005ADF; --accent-ink: #ffffff; --dbx: #E8331C;
+    --ok: #2f9e44; --ok-soft: rgba(47,158,68,.09); --no: #e03131; --no-soft: rgba(224,49,49,.08);
+    color-scheme: light;
+  }
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--bg); color: var(--ink); font-family: var(--f-sans); font-size: 17px; line-height: 1.5;
+  min-height: 100vh; display: flex; flex-direction: column;
+}
+a { color: var(--accent); }
+.wrap { width: 100%; max-width: 760px; margin: 0 auto; padding: 0 16px; }
+header.top { padding: 22px 0 10px; }
+header.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.marca { font-family: var(--f-display); font-size: 18px; line-height: 1.05; text-decoration: none; color: var(--ink); }
+.marca small { display: block; font-family: var(--f-mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-top: 4px; }
+.dbx { color: var(--dbx); font-weight: 700; }
+.topo-dir { display: flex; align-items: center; gap: 10px; font-family: var(--f-mono); font-size: 13px; color: var(--muted); }
+.tema { background: none; border: 1px solid var(--line); color: var(--muted); border-radius: 8px; padding: 5px 9px; font: inherit; cursor: pointer; }
+.tema:hover { color: var(--ink); border-color: var(--accent); }
+main { flex: 1; padding: 8px 0 40px; }
+.barra { height: 5px; background: var(--surface-2); border-radius: 99px; overflow: hidden; margin: 6px 0 26px; }
+.barra i { display: block; height: 100%; width: 0; background: var(--accent); border-radius: 99px; transition: width .35s ease; }
+.kicker { font-family: var(--f-mono); font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.kicker::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+.selo { font-family: var(--f-mono); font-size: 11px; letter-spacing: .06em; text-transform: none; color: var(--ink); background: var(--surface-2); border-radius: 99px; padding: 2px 9px; }
+h1 { font-family: var(--f-display); font-weight: 400; font-size: clamp(22px, 4.2vw, 30px); line-height: 1.2; margin: 12px 0 22px; }
+h1 code, .alt code, .fb code, .rev code { font-family: var(--f-mono); font-size: .88em; background: var(--surface-2); padding: 1px 5px; border-radius: 5px; }
+.alts { display: grid; gap: 10px; }
+.alt {
+  display: flex; align-items: flex-start; gap: 12px; width: 100%; text-align: left;
+  background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-radius: 12px;
+  padding: 14px 16px; font: inherit; cursor: pointer; transition: border-color .2s;
+}
+.alt:hover:not(:disabled) { border-color: var(--accent); }
+.alt:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.alt .letra {
+  flex: none; width: 28px; height: 28px; border-radius: 50%; border: 1px solid var(--line);
+  display: grid; place-items: center; font-family: var(--f-mono); font-size: 12px; color: var(--muted); margin-top: -1px;
+}
+.alt:disabled { cursor: default; }
+.alt.errada { border-color: var(--no); background: var(--no-soft); opacity: .75; }
+.alt.errada .letra { border-color: var(--no); color: var(--no); }
+.alt.certa { border-color: var(--ok); background: var(--ok-soft); }
+.alt.certa .letra { border-color: var(--ok); background: var(--ok); color: var(--bg); }
+.alt.apagada { opacity: .45; }
+.fb { margin-top: 18px; border-radius: 12px; padding: 16px 18px; border: 1px solid; }
+.fb strong { display: block; margin-bottom: 4px; }
+.fb p { margin: 0; }
+.fb.ok { border-color: var(--ok); background: var(--ok-soft); }
+.fb.ok strong { color: var(--ok); }
+.fb.no { border-color: var(--no); background: var(--no-soft); }
+.fb.no strong { color: var(--no); }
+.fb .dica { margin-top: 8px; color: var(--muted); font-size: 15px; }
+.btn {
+  display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; margin-top: 22px;
+  background: var(--accent); color: var(--accent-ink); border: 0; border-radius: 12px; padding: 16px;
+  font-family: var(--f-mono); font-weight: 600; font-size: 14px; letter-spacing: .1em; text-transform: uppercase; cursor: pointer;
+  text-decoration: none;
+}
+.btn:hover { filter: brightness(1.08); }
+.btn[hidden] { display: none; }
+.btn.sec { background: transparent; color: var(--ink); border: 1px solid var(--line); }
+.btn.sec:hover { border-color: var(--accent); }
+.acoes { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.acoes .btn { margin-top: 12px; }
+.atalho { margin-top: 10px; text-align: center; font-family: var(--f-mono); font-size: 12px; color: var(--muted); }
+.nota { text-align: center; padding: 10px 0 4px; }
+.nota .num { font-family: var(--f-display); font-size: clamp(56px, 14vw, 96px); line-height: 1; }
+.nota .num span { color: var(--muted); font-size: .45em; }
+.nota p { color: var(--muted); margin: 10px auto 0; max-width: 46ch; }
+.anel { height: 10px; background: var(--surface-2); border-radius: 99px; overflow: hidden; margin: 22px 0 6px; }
+.anel i { display: block; height: 100%; border-radius: 99px; }
+.rev { margin-top: 30px; }
+.rev h2, .lista h2 { font-family: var(--f-mono); font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin: 0 0 12px; }
+.rev details { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px; margin-bottom: 10px; }
+.rev summary { cursor: pointer; font-weight: 600; }
+.rev .resp { margin: 10px 0 0; }
+.rev .resp b { color: var(--ok); }
+.lista a.item {
+  display: block; text-decoration: none; color: var(--ink); background: var(--surface); border: 1px solid var(--line);
+  border-radius: 12px; padding: 16px 18px; margin-bottom: 10px; transition: border-color .2s;
+}
+.lista a.item:hover { border-color: var(--accent); }
+.lista .item small { display: block; color: var(--muted); font-family: var(--f-mono); font-size: 12px; margin-top: 4px; }
+footer { border-top: 1px solid var(--line); padding: 18px 0; font-family: var(--f-mono); font-size: 12px; color: var(--muted); }
+footer .wrap { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+@media (max-width: 520px) {
+  body { font-size: 16px; }
+  .acoes { grid-template-columns: 1fr; }
+  .atalho { display: none; }
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="marca" href="./">Jornada de Dados<small>Trilha <span class="dbx">Databricks</span> · Quiz</small></a>
+    <div class="topo-dir"><span id="contador"></span><button class="tema" id="tema" type="button" aria-label="Trocar tema claro/escuro">◐</button></div>
+  </div>
+</header>
+<main><div class="wrap" id="app" aria-live="polite"></div></main>
+<footer><div class="wrap"><span>Jornada de Dados · Trilha <span class="dbx">Databricks</span></span><a href="https://github.com/Jennifer-Maia/trilha-databricks-aulas">repositório das aulas</a></div></footer>
+
+<script src="dados/indice.js"></script>
+<script>
+(function () {
+  var app = document.getElementById("app");
+  var contador = document.getElementById("contador");
+  var LETRAS = "ABCDEFG";
+
+  // ---------- tema ----------
+  function guardar(chave, valor) { try { localStorage.setItem(chave, valor); } catch (e) {} }
+  function ler(chave) { try { return localStorage.getItem(chave); } catch (e) { return null; } }
+  var temaSalvo = ler("quiz-tema");
+  if (temaSalvo) document.documentElement.setAttribute("data-theme", temaSalvo);
+  document.getElementById("tema").onclick = function () {
+    var atual = document.documentElement.getAttribute("data-theme") ||
+      (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+    var novo = atual === "light" ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", novo);
+    guardar("quiz-tema", novo);
+  };
+
+  function el(tag, cls, html) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (html != null) e.innerHTML = html;
+    return e;
+  }
+  // `código` → <code>, **negrito** → <b>, [texto](https://...) → link
+  function fmt(t) {
+    return String(t).replace(/&/g, "&amp;").replace(/</g, "&lt;")
+      .replace(/`([^`]+)`/g, "<code>$1</code>").replace(/\*\*([^*]+)\*\*/g, "<b>$1</b>")
+      .replace(/\[([^\]]+)\]\((https:[^)\s]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+  }
+
+  // ---------- lista de quizzes ----------
+  function mostrarLista() {
+    document.title = "Quiz da Trilha";
+    contador.textContent = "";
+    app.innerHTML = "";
+    var l = el("div", "lista");
+    l.appendChild(el("div", "kicker", "Quiz por aula"));
+    l.appendChild(el("h1", null, "Escolha a aula"));
+    (window.QUIZ_INDICE || []).forEach(function (q) {
+      var a = el("a", "item", fmt(q.titulo) + "<small>" + fmt(q.modulo) + " · " + q.perguntas + " perguntas" +
+        (ler("quiz-melhor-" + q.id) ? " · sua melhor nota: " + ler("quiz-melhor-" + q.id) : "") + "</small>");
+      a.href = "?aula=" + encodeURIComponent(q.id);
+      l.appendChild(a);
+    });
+    app.appendChild(l);
+  }
+
+  // ---------- quiz ----------
+  var Q, i, acertos, errouNaPrimeira, tentou;
+
+  function iniciar(quiz) {
+    Q = quiz; i = 0; acertos = 0; errouNaPrimeira = [];
+    document.title = "Quiz · " + Q.titulo.replace(/`/g, "");
+    pergunta();
+  }
+
+  function pergunta() {
+    var p = Q.perguntas[i], total = Q.perguntas.length, resolvida = false;
+    tentou = false;
+    contador.textContent = (i + 1) + "/" + total;
+    app.innerHTML = "";
+    var barra = el("div", "barra"); var fill = el("i"); barra.appendChild(fill); app.appendChild(barra);
+    requestAnimationFrame(function () { fill.style.width = (i / total * 100) + "%"; });
+
+    var k = el("div", "kicker", "Pergunta " + (i + 1) + " de " + total);
+    if (p.plataforma) k.appendChild(el("span", "selo", "🎓 plataforma Databricks"));
+    app.appendChild(k);
+    app.appendChild(el("h1", null, fmt(p.pergunta)));
+
+    var alts = el("div", "alts"); app.appendChild(alts);
+    var fb = el("div"); app.appendChild(fb);
+    var proximo = el("button", "btn", i + 1 < total ? "Próxima pergunta →" : "Ver minha nota →");
+    proximo.type = "button"; proximo.hidden = true; proximo.onclick = avancar;
+    app.appendChild(proximo);
+    var atalho = el("div", "atalho", "Atalhos: teclas A, B, C, D para responder · Enter para seguir");
+    app.appendChild(atalho);
+
+    var botoes = p.alternativas.map(function (a, n) {
+      var b = el("button", "alt", '<span class="letra">' + LETRAS[n] + "</span><span>" + fmt(a.texto) + "</span>");
+      b.type = "button";
+      b.onclick = function () { responder(n); };
+      alts.appendChild(b);
+      return b;
+    });
+
+    function responder(n) {
+      if (resolvida || botoes[n].disabled) return;
+      var a = p.alternativas[n];
+      if (a.certa) {
+        resolvida = true;
+        if (!tentou) acertos++;
+        botoes.forEach(function (b, m) {
+          b.disabled = true;
+          if (m === n) { b.classList.add("certa"); b.querySelector(".letra").textContent = "✓"; }
+          else if (!b.classList.contains("errada")) b.classList.add("apagada");
+        });
+        fb.className = "fb ok";
+        fb.innerHTML = "<strong>" + (tentou ? "Agora sim!" : "Certo!") + "</strong><p>" + fmt(a.porque) + "</p>" +
+          (tentou ? '<p class="dica">Esta não conta na nota, porque não foi de primeira. Ela vai aparecer na revisão no final.</p>' : "");
+        proximo.hidden = false;
+        proximo.focus({ preventScroll: true });
+        fill.style.width = ((i + 1) / total * 100) + "%";
+      } else {
+        if (!tentou) errouNaPrimeira.push(i);
+        tentou = true;
+        botoes[n].disabled = true;
+        botoes[n].classList.add("errada");
+        botoes[n].querySelector(".letra").textContent = "✕";
+        fb.className = "fb no";
+        fb.innerHTML = "<strong>Ainda não.</strong><p>" + fmt(a.porque) + '</p><p class="dica">Tente outra alternativa.</p>';
+      }
+    }
+
+    document.onkeydown = function (e) {
+      if (e.altKey || e.ctrlKey || e.metaKey) return;
+      var n = LETRAS.indexOf(e.key.toUpperCase());
+      if (n >= 0 && n < botoes.length) { e.preventDefault(); responder(n); }
+      else if (e.key === "Enter" && resolvida) { e.preventDefault(); avancar(); }
+    };
+    window.scrollTo(0, 0);
+  }
+
+  function avancar() {
+    i++;
+    if (i < Q.perguntas.length) pergunta(); else resultado();
+  }
+
+  function resultado() {
+    document.onkeydown = null;
+    var total = Q.perguntas.length, pct = Math.round(acertos / total * 100);
+    var melhor = ler("quiz-melhor-" + Q.id);
+    if (!melhor || acertos > parseInt(melhor, 10)) guardar("quiz-melhor-" + Q.id, acertos + "/" + total);
+    contador.textContent = "fim";
+    app.innerHTML = "";
+    var msg = pct === 100 ? "Gabaritou! Bora para a próxima aula."
+      : pct >= 70 ? "Muito bom. Dê uma olhada nas que errou: a explicação está logo abaixo."
+      : pct >= 40 ? "Bom começo. Vale rever as anotações da aula e tentar de novo."
+      : "Vale rever a aula e as anotações antes de tentar de novo. Errar aqui é barato: é para isso que o quiz existe.";
+    var cor = pct >= 70 ? "var(--ok)" : pct >= 40 ? "var(--accent)" : "var(--no)";
+    app.appendChild(el("div", "kicker", fmt(Q.titulo)));
+    var nota = el("div", "nota",
+      '<div class="num">' + acertos + "<span>/" + total + "</span></div>" +
+      "<p><b>" + pct + "% de acerto de primeira.</b> " + msg + "</p>");
+    app.appendChild(nota);
+    var anel = el("div", "anel"); var f = el("i"); f.style.background = cor; anel.appendChild(f); app.appendChild(anel);
+    requestAnimationFrame(function () { f.style.transition = "width .6s ease"; f.style.width = pct + "%"; });
+
+    var acoes = el("div", "acoes");
+    var refazer = el("button", "btn", "Refazer o quiz"); refazer.type = "button";
+    refazer.onclick = function () { iniciar(Q); };
+    var voltar = el("a", "btn sec", "Voltar para a aula"); voltar.href = Q.aula_url;
+    acoes.appendChild(refazer); acoes.appendChild(voltar);
+    app.appendChild(acoes);
+
+    if (errouNaPrimeira.length) {
+      var rev = el("div", "rev");
+      rev.appendChild(el("h2", null, "Para revisar"));
+      errouNaPrimeira.forEach(function (n) {
+        var p = Q.perguntas[n];
+        var certa = p.alternativas.filter(function (a) { return a.certa; })[0];
+        var d = el("details", null, "<summary>" + (n + 1) + ". " + fmt(p.pergunta) + "</summary>" +
+          '<p class="resp"><b>Resposta: ' + fmt(certa.texto) + "</b></p><p>" + fmt(certa.porque) + "</p>");
+        rev.appendChild(d);
+      });
+      app.appendChild(rev);
+    }
+    window.scrollTo(0, 0);
+  }
+
+  // ---------- roteamento: ?aula=01 ----------
+  var id = new URLSearchParams(location.search).get("aula");
+  var item = (window.QUIZ_INDICE || []).filter(function (q) { return q.id === id; })[0];
+  if (!item) { mostrarLista(); return; }
+  var s = document.createElement("script");
+  s.src = "dados/" + item.arquivo;
+  s.onload = function () { iniciar(window.QUIZ[item.id]); };
+  s.onerror = function () { app.innerHTML = "<p>Não consegui carregar este quiz.</p>"; };
+  document.body.appendChild(s);
+})();
+</script>
+</body>
+</html>

@@ -9,7 +9,7 @@ Antes de responder sobre o projeto, leia o contexto em `llm/contexto/` (cenário
 - Responda em **português do Brasil**, em linguagem simples. Explique termos técnicos na primeira vez que aparecerem.
 - Explique o **porquê**, não só o como. O objetivo é a pessoa entender e conseguir refazer sozinha.
 - **Exercícios (`aula-*/exercicio/`):** não entregue a solução pronta logo de cara. Primeiro dê uma dica, depois uma dica mais forte, depois um trecho. Só mostre a solução completa se a pessoa pedir explicitamente ou já tiver tentado. A resposta oficial fica em `aula-*/solucao/`.
-- **Quiz (`aula-*/quiz.md`):** não diga a alternativa certa antes de a pessoa responder. Peça o raciocínio dela primeiro; depois explique a certa e por que as outras estão erradas.
+- **Quiz (`quiz/dados/aula-NN.js`, site em `quiz/`):** não diga a alternativa certa antes de a pessoa responder. Peça o raciocínio dela primeiro; depois explique a certa e por que as outras estão erradas.
 - Ao revisar código da pessoa, compare com o README e o `teste/` da aula: o teste é o critério de "está certo".
 - Ao explicar um erro, leia a última linha da mensagem primeiro e diga se o problema é do código, da rede, da API ou do ambiente.
 

@@ -8,7 +8,7 @@
 |---|---|
 | Você vai precisar de | conta na [Databricks Free Edition](https://docs.databricks.com/aws/en/getting-started/free-edition) e o [contrato da aula 1](../docs/contrato_de_dados.md) |
 | Você sai com | 4 tabelas no Volume `raw.landing` (500 clientes, 60 produtos, 1.500 pedidos, 5.416 eventos), com manifesto e teste verde |
-| Material | [slides](slides.html) (baixe e abra no navegador) · [anotações passo a passo](anotacoes.md) · [quiz](quiz.md) · [diagramas](diagramas/) |
+| Material | [slides](https://jennifer-maia.github.io/trilha-databricks-aulas/modulo-01-analytics-engineering/aula-02-ingerindo-uma-api/slides.html) (abre no navegador) · [anotações passo a passo](anotacoes.md) · [quiz](https://jennifer-maia.github.io/trilha-databricks-aulas/quiz/?aula=02) · [diagramas](diagramas/) |
 
 ## O que você vai aprender
 
@@ -60,7 +60,6 @@ aula-02-ingerindo-uma-api/
 ├── solucao/aula02_exercicios_gabarito.py   ← o gabarito dos exercícios (tente antes de olhar!)
 ├── teste/aula02_conferir_landing.py        ← prova que a landing veio completa
 ├── anotacoes.md                            ← minhas notas sobre cada passo do notebook, com as saídas esperadas
-├── quiz.md                                 ← 10 perguntas para fechar a aula
 ├── slides.html
 ├── img/ e diagramas/
 ```
@@ -135,7 +134,7 @@ E o teste termina com `Landing completa: todos os testes OK`.
 ## Sua tarefa
 
 1. Faça os 6 exercícios de [`exercicio/aula02_exercicios`](exercicio/aula02_exercicios.py) até tudo ficar ✅, sem olhar o gabarito. Depois rode o teste até ficar verde.
-2. Responda o [quiz](quiz.md). As perguntas marcadas com 🎓 são sobre a plataforma Databricks.
+2. Faça o [quiz da aula](https://jennifer-maia.github.io/trilha-databricks-aulas/quiz/?aula=02): 10 perguntas, com a nota no final. As marcadas com 🎓 são sobre a plataforma Databricks.
 3. **Desafio:** em `COLUNAS_ESPERADAS`, troque `valor_liquido` por `valor_liq` e rode a carga de `pedidos`. O que acontece? Por que é bom que a carga quebre aqui, e não três semanas depois num relatório?
 4. Para o portfólio: coloque no seu repositório o notebook, um print do checkpoint e uma frase explicando por que você guarda o dado cru.
 

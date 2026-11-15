@@ -53,7 +53,7 @@ modulo-NN-slug/
     ├── exercicio/  prática do aluno: exercícios curtos, cada um com uma célula "Conferir" (✅/❌)
     ├── solucao/    notebook da aula + gabarito dos exercícios
     ├── teste/      prova que o resultado está certo
-    └── quiz.md     perguntas de múltipla escolha; a resposta fica escondida em <details>
+    └── (o quiz da aula fica em quiz/dados/aula-NN.js e abre no site: https://jennifer-maia.github.io/trilha-databricks-aulas/quiz/)
 ```
 
 Notebooks são arquivos `.py` no formato Databricks (começam com `# Databricks notebook source`; células separadas por `# COMMAND ----------`; markdown em linhas `# MAGIC`).

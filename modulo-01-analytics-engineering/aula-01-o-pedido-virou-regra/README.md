@@ -8,7 +8,7 @@
 |---|---|
 | Você vai precisar de | só os slides e o contrato. Nada de Databricks hoje |
 | Você sai com | o [contrato de dados](../docs/contrato_de_dados.md) do projeto, que guia as aulas 2 a 6 |
-| Material | [slides](slides.html) (baixe e abra no navegador) · [contrato](../docs/contrato_de_dados.md) · [quiz](quiz.md) · [diagramas](diagramas/) |
+| Material | [slides](https://jennifer-maia.github.io/trilha-databricks-aulas/modulo-01-analytics-engineering/aula-01-o-pedido-virou-regra/slides.html) (abre no navegador) · [contrato](../docs/contrato_de_dados.md) · [quiz](https://jennifer-maia.github.io/trilha-databricks-aulas/quiz/?aula=01) · [diagramas](diagramas/) |
 
 ## O problema
 
@@ -53,7 +53,7 @@ O contrato completo, com as 10 perguntas, as 9 regras, a saída esperada e o que
 
 1. Copie o [contrato](../docs/contrato_de_dados.md) para o seu repositório de portfólio.
 2. Responda: **o que você perguntaria à gerente que não está no contrato?** Escreva a pergunta e a premissa que você assumiria.
-3. Responda o [quiz](quiz.md): 8 perguntas sobre o chamado e o contrato.
+3. Faça o [quiz da aula](https://jennifer-maia.github.io/trilha-databricks-aulas/quiz/?aula=01): 8 perguntas sobre o chamado e o contrato. Cada resposta mostra na hora se está certa e por quê.
 
 ## Próxima aula
 

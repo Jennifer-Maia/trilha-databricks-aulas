@@ -19,7 +19,7 @@ Em 2027 a trilha segue a organização da própria Databricks: **uma trilha por 
 
 ### Em todas as trilhas
 
-- **Quiz em cada aula**, com questões no estilo da prova e a explicação de cada alternativa.
+- **[Quiz em cada aula](https://jennifer-maia.github.io/trilha-databricks-aulas/quiz/)**, com questões no estilo da prova, nota no final e a explicação de cada alternativa.
 - **Simulado cronometrado**, no formato da prova, com nota por tema no final.
 - **Projeto de portfólio** que evolui de módulo em módulo. Cada módulo também funciona sozinho.
 
@@ -46,8 +46,7 @@ modulo-NN-slug/
     ├── exercicio/         # a SUA prática: exercícios com conferência ✅/❌
     ├── solucao/           # o notebook da aula + o gabarito dos exercícios
     ├── teste/             # prova que o resultado está certo
-    ├── quiz.md            # perguntas para fechar a aula, com a explicação de cada alternativa
-    ├── slides.html        # abra no navegador
+    ├── slides.html        # também abre online, pelo link no README da aula
     ├── img/               # imagens usadas no README
     └── diagramas/         # os mesmos desenhos, editáveis em https://excalidraw.com
 ```

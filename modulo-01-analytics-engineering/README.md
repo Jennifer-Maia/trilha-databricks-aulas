@@ -54,13 +54,13 @@ modulo-01-analytics-engineering/
 │   ├── 02_plano_b_sem_api.py       ← carrega os dados sem a API (se ela cair)
 │   ├── plano_b/                    ← os dados da API em arquivo
 │   └── gerar_dados_loja.py         ← como os dados fictícios foram gerados (não precisa rodar)
-├── aula-01-o-pedido-virou-regra/   ← README + quiz + slides + diagramas
-└── aula-02-ingerindo-uma-api/      ← README + exercicio/ + solucao/ + teste/ + quiz + slides + diagramas
+├── aula-01-o-pedido-virou-regra/   ← README + slides + diagramas
+└── aula-02-ingerindo-uma-api/      ← README + exercicio/ + solucao/ + teste/ + slides + diagramas
 ```
 
-Em toda aula com código: **`solucao/`** tem o notebook da aula, completo; **`exercicio/`** é a sua prática, com exercícios que conferem o resultado na hora (✅/❌); o gabarito fica em `solucao/`; **`teste/`** prova que o resultado está certo. Toda aula termina com um **`quiz.md`**.
+Em toda aula com código: **`solucao/`** tem o notebook da aula, completo; **`exercicio/`** é a sua prática, com exercícios que conferem o resultado na hora (✅/❌); o gabarito fica em `solucao/`; **`teste/`** prova que o resultado está certo. Toda aula termina com um **[quiz](https://jennifer-maia.github.io/trilha-databricks-aulas/quiz/)**, com nota e a explicação de cada resposta.
 
-Os slides são páginas HTML: baixe o arquivo e abra no navegador (`F` para tela cheia, setas para navegar).
+Os slides abrem direto no navegador, pelo link no README de cada aula (`F` para tela cheia, setas para navegar).
 
 ## Para o seu portfólio
 
