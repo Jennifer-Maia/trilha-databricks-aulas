@@ -1,6 +1,6 @@
 # Aula 2 · Ingerindo uma API de verdade
 
-> Módulo 01 · Analytics Engineering com Databricks · ~45 min · Databricks Free Edition (custo R$ 0)
+> Módulo 01 · Analytics Engineering com Databricks · ~53 min · Databricks Free Edition (custo R$ 0)
 
 **Nesta aula você busca as 4 tabelas da loja numa API pública e guarda as respostas, do jeito que vieram, num Volume do Unity Catalog, com um recibo que prova que veio tudo.**
 

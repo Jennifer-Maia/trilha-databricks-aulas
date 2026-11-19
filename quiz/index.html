@@ -54,6 +54,7 @@ main { flex: 1; padding: 8px 0 40px; }
 .kicker { font-family: var(--f-mono); font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
 .kicker::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
 .selo { font-family: var(--f-mono); font-size: 11px; letter-spacing: .06em; text-transform: none; color: var(--ink); background: var(--surface-2); border-radius: 99px; padding: 2px 9px; }
+.selo-prova { background: var(--accent); color: var(--accent-ink); }
 h1 { font-family: var(--f-display); font-weight: 400; font-size: clamp(22px, 4.2vw, 30px); line-height: 1.2; margin: 12px 0 22px; }
 h1 code, .alt code, .fb code, .rev code { font-family: var(--f-mono); font-size: .88em; background: var(--surface-2); padding: 1px 5px; border-radius: 5px; }
 .alts { display: grid; gap: 10px; }
@@ -201,6 +202,7 @@ footer .wrap { display: flex; justify-content: space-between; gap: 10px; flex-wr
 
     var k = el("div", "kicker", "Pergunta " + (i + 1) + " de " + total);
     if (p.plataforma) k.appendChild(el("span", "selo", "🎓 plataforma Databricks"));
+    if (p.prova) k.appendChild(el("span", "selo selo-prova", "🏅 estilo prova · " + p.prova));
     app.appendChild(k);
     app.appendChild(el("h1", null, fmt(p.pergunta)));
 

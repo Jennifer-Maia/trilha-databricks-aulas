@@ -794,6 +794,41 @@ body.clean .hud { display: none; }
   </div>
   <p class="lead mono" style="color:var(--green)">Landing completa: todos os testes OK</p>
 </section>
+<section class="slide" data-title="Resolvendo junto">
+  <span class="kicker">Resolvendo junto · Exercício 3</span>
+  <h2 class="title-l">Quantas chamadas?</h2>
+  <div class="grid g3 steps3">
+    <div class="card"><h3>Ler o enunciado</h3><p>O que a célula pede e o que a dica sugere.</p></div>
+    <div class="card"><h3>Tentar e ver o ❌</h3><p>A conferência diz o que não bateu. O erro é parte do exercício.</p></div>
+    <div class="card"><h3>Corrigir até ✅</h3><p>E entender por que a primeira tentativa estava errada.</p></div>
+  </div>
+  <p class="lead">Os outros exercícios ficam para você, no mesmo notebook <span class="mono">exercicio/</span>.</p>
+</section>
+
+<section class="slide" data-title="Na prova: questão">
+  <span class="kicker">🏅 Na prova · Data Engineer Associate</span>
+  <p class="lead"><b>Uma API REST precisa entrar no <span class="dbx">Databricks</span> uma vez por dia, paginada e com retry. Qual é o caminho?</b></p>
+  <div class="grid g2">
+    <div class="card"><span class="label">A</span><p>Auto Loader apontando para a URL da API.</p></div>
+    <div class="card"><span class="label">B</span><p>Um notebook com cliente REST gravando no Volume, agendado num Lakeflow Job.</p></div>
+    <div class="card"><span class="label">C</span><p><span class="mono">COPY INTO</span> direto da URL da API.</p></div>
+    <div class="card"><span class="label">D</span><p>Delta Sharing com a API.</p></div>
+  </div>
+  <p class="lead" data-step="1"><b>Resposta: B.</b> É o que a aula fez. Auto Loader e <span class="mono">COPY INTO</span> leem arquivos que já estão num armazenamento; Delta Sharing compartilha tabelas entre plataformas.</p>
+</section>
+
+<section class="slide" data-title="Na prova: questão">
+  <span class="kicker">🏅 Na prova · Data Engineer Associate</span>
+  <p class="lead"><b>A loja passa a deixar arquivos JSON numa pasta várias vezes por dia. Você quer ler só os arquivos novos, sem reler os antigos. O que usar?</b></p>
+  <div class="grid g2">
+    <div class="card"><span class="label">A</span><p><span class="mono">spark.read.json</span> da pasta inteira a cada execução.</p></div>
+    <div class="card"><span class="label">B</span><p>O cliente REST da aula, chamando a API de novo.</p></div>
+    <div class="card"><span class="label">C</span><p>Auto Loader: lê só os arquivos novos e guarda quais já leu.</p></div>
+    <div class="card"><span class="label">D</span><p><span class="mono">DROP TABLE</span> e carga completa todo dia.</p></div>
+  </div>
+  <p class="lead" data-step="1"><b>Resposta: C.</b> O Auto Loader guarda num checkpoint os arquivos que já processou. A Jornada já mostrou ele (Módulo 1, aula 4): aqui é só para reconhecer na prova.</p>
+</section>
+
 
 <!-- 16 · Recap -->
 <section class="slide" data-title="Resumo">

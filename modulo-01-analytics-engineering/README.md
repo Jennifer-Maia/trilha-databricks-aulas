@@ -37,11 +37,11 @@ As aulas são publicadas aos poucos, conforme forem gravadas. Cada pasta de aula
 | # | Aula | Duração | O que você faz | Status |
 |---|---|---|---|---|
 | 1 | [O pedido virou regra](aula-01-o-pedido-virou-regra/) | 25 min | Lê o pedido, levanta as perguntas e escreve o contrato de dados. Sem código | ✅ disponível |
-| 2 | [Ingerindo uma API de verdade](aula-02-ingerindo-uma-api/) | 45 min | Paginação, retry com espera, limite de chamadas, validação de schema e JSON bruto no Volume | ✅ disponível |
-| 3 | Transformação com regra rastreável | 40 min | Bronze → silver → gold, com cada regra do contrato apontando para o código | em breve |
-| 4 | Testes que provam a regra | 40 min | Constraints Delta e testes de unicidade, domínio, reconciliação e regra de negócio, salvos numa tabela | em breve |
-| 5 | Governança que protege de verdade | 45 min | Comentários, tags, grants, filtro de linha por região e máscara de e-mail e telefone | em breve |
-| 6 | Validar o consumo e publicar | 25 min | Testa o que cada perfil enxerga e publica o projeto no seu portfólio | em breve |
+| 2 | [Ingerindo uma API de verdade](aula-02-ingerindo-uma-api/) | 53 min | Paginação, retry com espera, limite de chamadas, validação de schema e JSON bruto no Volume | ✅ disponível |
+| 3 | Transformação com regra rastreável | 52 min | Bronze → silver → gold, com cada regra do contrato apontando para o código | em breve |
+| 4 | Testes que provam a regra | 48 min | Constraints Delta e testes de unicidade, domínio, reconciliação e regra de negócio, salvos numa tabela | em breve |
+| 5 | Governança que protege de verdade | 50 min | Comentários, tags, grants, filtro de linha por região e máscara de e-mail e telefone | em breve |
+| 6 | Validar o consumo e publicar | 28 min | Testa o que cada perfil enxerga e publica o projeto no seu portfólio | em breve |
 
 ## Como esta pasta está organizada
 
