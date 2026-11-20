@@ -1,4 +1,8 @@
 # Databricks notebook source
+# /// script
+# [tool.databricks.environment]
+# environment_version = "6"
+# ///
 # MAGIC %md
 # MAGIC # Aula 2 · Ingerindo uma API de verdade
 # MAGIC
@@ -108,7 +112,7 @@ print("Primeira linha:", json.dumps(corpo["rows"][0], ensure_ascii=False)[:400])
 
 # COMMAND ----------
 
-r = requests.get(API, params={"dataset": DATASET, "config": "pedidos", "split": "train", "offset": 0, "length": 1000},
+r = requests.get(API, params={"dataset": DATASET, "config": "pedidos", "split": "train", "offset": 0, "length": 100},
                  headers=CABECALHOS, timeout=30)
 print("Status:", r.status_code, "→", r.text)
 # Esperado: HTTP 422 → {"error":"Parameter 'length' must not be greater than 100"}
