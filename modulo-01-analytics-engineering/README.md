@@ -38,7 +38,7 @@ As aulas são publicadas aos poucos, conforme forem gravadas. Cada pasta de aula
 |---|---|---|---|---|
 | 1 | [O pedido virou regra](aula-01-o-pedido-virou-regra/) | 25 min | Lê o pedido, levanta as perguntas e escreve o contrato de dados. Sem código | ✅ disponível |
 | 2 | [Ingerindo uma API de verdade](aula-02-ingerindo-uma-api/) | 53 min | Paginação, retry com espera, limite de chamadas, validação de schema e JSON bruto no Volume | ✅ disponível |
-| 3 | Transformação com regra rastreável | 52 min | Bronze → silver → gold, com cada regra do contrato apontando para o código | em breve |
+| 3 | [Transformação com regra rastreável](aula-03-transformacao-rastreavel/) | 52 min | Bronze → silver → gold, com cada regra do contrato apontando para o código | ✅ disponível |
 | 4 | Testes que provam a regra | 48 min | Constraints Delta e testes de unicidade, domínio, reconciliação e regra de negócio, salvos numa tabela | em breve |
 | 5 | Governança que protege de verdade | 50 min | Comentários, tags, grants, filtro de linha por região e máscara de e-mail e telefone | em breve |
 | 6 | Validar o consumo e publicar | 28 min | Testa o que cada perfil enxerga e publica o projeto no seu portfólio | em breve |
@@ -55,7 +55,8 @@ modulo-01-analytics-engineering/
 │   ├── plano_b/                    ← os dados da API em arquivo
 │   └── gerar_dados_loja.py         ← como os dados fictícios foram gerados (não precisa rodar)
 ├── aula-01-o-pedido-virou-regra/   ← README + slides + diagramas
-└── aula-02-ingerindo-uma-api/      ← README + exercicio/ + solucao/ + teste/ + slides + diagramas
+├── aula-02-ingerindo-uma-api/      ← README + exercicio/ + solucao/ + teste/ + slides + diagramas
+└── aula-03-transformacao-rastreavel/ ← README + exercicio/ + solucao/ + teste/ + slides + diagramas
 ```
 
 Em toda aula com código: **`solucao/`** tem o notebook da aula, completo; **`exercicio/`** é a sua prática, com exercícios que conferem o resultado na hora (✅/❌); o gabarito fica em `solucao/`; **`teste/`** prova que o resultado está certo. Toda aula termina com um **[quiz](https://jennifer-maia.github.io/trilha-databricks-aulas/quiz/)**, com nota e a explicação de cada resposta.

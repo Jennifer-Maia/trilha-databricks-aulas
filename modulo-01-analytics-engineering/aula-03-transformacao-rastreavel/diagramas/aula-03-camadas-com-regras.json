@@ -1,0 +1,24 @@
+{
+  "titulo": "Aula 3 · Cada regra mora num lugar",
+  "linhas": [
+    [
+      {"id": "bronze", "texto": "bronze\nfiel à origem\n+ _carga_id, _arquivo", "cor": "laranja"},
+      {"id": "eventos", "texto": "silver.eventos_pedido\nRN-01 status\nRN-02 sem duplicados", "cor": "azul"},
+      {"id": "atual", "texto": "silver.status_atual\nRN-03 o mais recente\n1.500 pedidos", "cor": "azul"},
+      {"id": "concluidos", "texto": "gold.pedidos_concluidos\nRN-04 entregue\nRN-05 valor líquido", "cor": "verde"}
+    ],
+    [
+      {"id": "quarentena", "texto": "silver.quarentena\nRN-07\n12 sem data · 5 órfãos", "cor": "vermelho"},
+      {"id": "clientes", "texto": "silver.clientes\nRN-06 UF → região", "cor": "azul"},
+      {"id": "vendas", "texto": "gold.vendas_por_regiao\n1.052 pedidos\nR$ 2.302.177,12", "cor": "verde"}
+    ]
+  ],
+  "setas": [
+    ["bronze", "eventos", "RN-07 primeiro"],
+    ["bronze", "quarentena"],
+    ["eventos", "atual"],
+    ["atual", "concluidos"],
+    ["clientes", "vendas"],
+    ["concluidos", "vendas"]
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "titulo": "Aula 3 · Sem duplicidade: duplicado é o quê?",
+  "linhas": [
+    [
+      {"id": "validos", "texto": "5.399 eventos válidos\n(depois da quarentena)", "cor": "laranja"},
+      {"id": "porpedido", "texto": "por order_id:\n1 linha por pedido\n(o primeiro evento)", "cor": "vermelho"},
+      {"id": "zero", "texto": "1.500 linhas\n0 entregues", "cor": "vermelho", "forma": "ellipse"}
+    ],
+    [
+      {"id": "vazio", "texto": "Contrato, pergunta 3:\nmesmo event_id =\nmesmo evento", "cor": "amarelo"},
+      {"id": "porevento", "texto": "por event_id:\n1 linha por evento\n(RN-02)", "cor": "verde"},
+      {"id": "certo", "texto": "5.226 eventos\n→ 1.052 entregues", "cor": "verde", "forma": "ellipse"}
+    ]
+  ],
+  "setas": [
+    ["validos", "porpedido", "chave errada"],
+    ["porpedido", "zero"],
+    ["validos", "porevento", "chave certa"],
+    ["vazio", "porevento"],
+    ["porevento", "certo"]
+  ],
+  "notas": [{"texto": "Nenhum erro na tela: só um número errado", "linha": 0, "coluna": 2}]
+}

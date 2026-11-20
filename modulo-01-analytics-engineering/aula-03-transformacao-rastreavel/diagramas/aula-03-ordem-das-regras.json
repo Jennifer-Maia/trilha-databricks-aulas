@@ -1,0 +1,24 @@
+{
+  "titulo": "Aula 3 · A ordem das regras também é regra",
+  "linhas": [
+    [
+      {"id": "dup", "texto": "pedido 990: ev-003457\n(ENTREGUE) duas vezes,\numa delas SEM data", "cor": "amarelo"},
+      {"id": "q1", "texto": "1. quarentena (RN-07)\na cópia sem data sai", "cor": "vermelho"},
+      {"id": "d1", "texto": "2. dedup (RN-02)\nsobra a cópia\ncom data", "cor": "azul"},
+      {"id": "ok", "texto": "1.052\nentregues", "cor": "verde", "forma": "ellipse"}
+    ],
+    [
+      {"id": "d2", "texto": "1. dedup primeiro\npode sobrar a\ncópia sem data", "cor": "cinza"},
+      {"id": "q2", "texto": "2. quarentena\no evento some\ninteiro", "cor": "cinza"},
+      {"id": "ruim", "texto": "1.051\nentregues", "cor": "vermelho", "forma": "ellipse"}
+    ]
+  ],
+  "setas": [
+    ["dup", "q1"],
+    ["q1", "d1"],
+    ["d1", "ok"],
+    ["dup", "d2", "ordem trocada"],
+    ["d2", "q2"],
+    ["q2", "ruim"]
+  ]
+}

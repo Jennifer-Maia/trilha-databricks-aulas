@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 430" width="1200" height="430" font-family="Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-label="Aula 3 · Cada regra mora num lugar">
+<title>Aula 3 · Cada regra mora num lugar</title>
+<defs><marker id="ponta" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#343a40"/></marker></defs>
+<rect width="1200" height="430" fill="#ffffff"/>
+<text font-size="22" fill="#1e1e1e" font-weight="700" text-anchor="start" dominant-baseline="middle"><tspan x="40" y="50.0">Aula 3 · Cada regra mora num lugar</tspan></text>
+<line x1="264" y1="150" x2="334" y2="150" stroke="#343a40" stroke-width="2" marker-end="url(#ponta)"/>
+<line x1="150" y1="204" x2="150" y2="284" stroke="#343a40" stroke-width="2" marker-end="url(#ponta)"/>
+<line x1="564" y1="150" x2="634" y2="150" stroke="#343a40" stroke-width="2" marker-end="url(#ponta)"/>
+<line x1="864" y1="150" x2="934" y2="150" stroke="#343a40" stroke-width="2" marker-end="url(#ponta)"/>
+<line x1="564" y1="340" x2="634" y2="340" stroke="#343a40" stroke-width="2" marker-end="url(#ponta)"/>
+<line x1="1050" y1="204" x2="750" y2="284" stroke="#343a40" stroke-width="2" marker-end="url(#ponta)"/>
+<rect x="40" y="100" width="220" height="100" rx="14" fill="#ffe8cc" stroke="#e8590c" stroke-width="2"/>
+<text font-size="15" fill="#1e1e1e" font-weight="normal" text-anchor="middle" dominant-baseline="middle"><tspan x="150" y="130.5">bronze</tspan><tspan x="150" y="150.0">fiel à origem</tspan><tspan x="150" y="169.5">+ _carga_id, _arquivo</tspan></text>
+<rect x="340" y="100" width="220" height="100" rx="14" fill="#d0ebff" stroke="#1971c2" stroke-width="2"/>
+<text font-size="15" fill="#1e1e1e" font-weight="normal" text-anchor="middle" dominant-baseline="middle"><tspan x="450" y="130.5">silver.eventos_pedido</tspan><tspan x="450" y="150.0">RN-01 status</tspan><tspan x="450" y="169.5">RN-02 sem duplicados</tspan></text>
+<rect x="640" y="100" width="220" height="100" rx="14" fill="#d0ebff" stroke="#1971c2" stroke-width="2"/>
+<text font-size="15" fill="#1e1e1e" font-weight="normal" text-anchor="middle" dominant-baseline="middle"><tspan x="750" y="130.5">silver.status_atual</tspan><tspan x="750" y="150.0">RN-03 o mais recente</tspan><tspan x="750" y="169.5">1.500 pedidos</tspan></text>
+<rect x="940" y="100" width="220" height="100" rx="14" fill="#d3f9d8" stroke="#2f9e44" stroke-width="2"/>
+<text font-size="14" fill="#1e1e1e" font-weight="normal" text-anchor="middle" dominant-baseline="middle"><tspan x="1050" y="131.8">gold.pedidos_concluidos</tspan><tspan x="1050" y="150.0">RN-04 entregue</tspan><tspan x="1050" y="168.2">RN-05 valor líquido</tspan></text>
+<rect x="40" y="290" width="220" height="100" rx="14" fill="#ffe3e3" stroke="#e03131" stroke-width="2"/>
+<text font-size="15" fill="#1e1e1e" font-weight="normal" text-anchor="middle" dominant-baseline="middle"><tspan x="150" y="320.5">silver.quarentena</tspan><tspan x="150" y="340.0">RN-07</tspan><tspan x="150" y="359.5">12 sem data · 5 órfãos</tspan></text>
+<rect x="340" y="290" width="220" height="100" rx="14" fill="#d0ebff" stroke="#1971c2" stroke-width="2"/>
+<text font-size="15" fill="#1e1e1e" font-weight="normal" text-anchor="middle" dominant-baseline="middle"><tspan x="450" y="330.2">silver.clientes</tspan><tspan x="450" y="349.8">RN-06 UF → região</tspan></text>
+<rect x="640" y="290" width="220" height="100" rx="14" fill="#d3f9d8" stroke="#2f9e44" stroke-width="2"/>
+<text font-size="15" fill="#1e1e1e" font-weight="normal" text-anchor="middle" dominant-baseline="middle"><tspan x="750" y="320.5">gold.vendas_por_regiao</tspan><tspan x="750" y="340.0">1.052 pedidos</tspan><tspan x="750" y="359.5">R$ 2.302.177,12</tspan></text>
+<rect x="240" y="124" width="117" height="23" rx="4" fill="#ffffff"/>
+<text font-size="13" fill="#495057" font-weight="normal" text-anchor="middle" dominant-baseline="middle"><tspan x="299" y="136.0">RN-07 primeiro</tspan></text>
+</svg>
