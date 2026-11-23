@@ -117,4 +117,4 @@ Travou? Primeiro leia as [anotações](anotacoes.md). Depois o [gabarito](soluca
 
 ## Próxima aula
 
-**Aula 4 · Testes que provam a regra** (em breve): transformar o checkpoint desta aula em testes de verdade, salvos numa tabela, com constraints Delta.
+**[Aula 4 · Testes que provam a regra](../aula-04-testes-que-provam/)**: transformar o checkpoint desta aula em testes de verdade, salvos numa tabela, com constraints Delta.

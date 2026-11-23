@@ -1,0 +1,21 @@
+{
+  "titulo": "Aula 4 · Antes de confiar no teste, veja ele falhar",
+  "linhas": [
+    [
+      {"id": "sab", "texto": "cópia sabotada\n+ 1 venda\nSEM região", "cor": "amarelo"},
+      {"id": "errado", "texto": "WHERE regiao = NULL", "cor": "vermelho"},
+      {"id": "zero", "texto": "0\npassou?!", "cor": "vermelho", "forma": "ellipse"}
+    ],
+    [
+      {"id": "nota", "texto": "NULL = \"não sei\"\n= NULL nunca\né verdadeiro", "cor": "cinza"},
+      {"id": "certo", "texto": "WHERE regiao IS NULL", "cor": "verde"},
+      {"id": "um", "texto": "1\npegou", "cor": "verde", "forma": "ellipse"}
+    ]
+  ],
+  "setas": [
+    ["sab", "errado"],
+    ["errado", "zero"],
+    ["sab", "certo"],
+    ["certo", "um"]
+  ]
+}

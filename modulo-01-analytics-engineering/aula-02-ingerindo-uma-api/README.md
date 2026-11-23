@@ -140,7 +140,7 @@ E o teste termina com `Landing completa: todos os testes OK`.
 
 ## Próxima aula
 
-**Aula 3 · Transformação com regra rastreável** (em breve): abrir esses JSON e transformar em bronze, silver e gold, com cada regra do contrato apontando para o código.
+**[Aula 3 · Transformação com regra rastreável](../aula-03-transformacao-rastreavel/)**: abrir esses JSON e transformar em bronze, silver e gold, com cada regra do contrato apontando para o código.
 
 ---
 

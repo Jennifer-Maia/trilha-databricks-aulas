@@ -1,0 +1,24 @@
+{
+  "titulo": "Aula 4 · Constraint barra na entrada, teste confere depois",
+  "linhas": [
+    [
+      {"id": "nova", "texto": "linha nova\n(INSERT, MERGE,\ncarga)", "cor": "laranja"},
+      {"id": "cons", "texto": "constraint\nCHECK / NOT NULL\nlinha a linha", "cor": "roxo"},
+      {"id": "tab", "texto": "tabela\nsilver / gold", "cor": "verde"},
+      {"id": "teste", "texto": "testes T01 a T09\nvárias tabelas,\nreconciliação", "cor": "vermelho"}
+    ],
+    [
+      {"id": "recusa", "texto": "recusada:\nnada entra", "cor": "vermelho", "forma": "ellipse"},
+      {"id": "hist", "texto": "qualidade.\nresultados_testes\n(histórico)", "cor": "roxo"},
+      {"id": "alerta", "texto": "falhou?\nnotebook vermelho", "cor": "vermelho", "forma": "ellipse"}
+    ]
+  ],
+  "setas": [
+    ["nova", "cons"],
+    ["cons", "tab", "ok"],
+    ["tab", "teste", "depois"],
+    ["cons", "recusa", "violou"],
+    ["teste", "hist"],
+    ["teste", "alerta"]
+  ]
+}
