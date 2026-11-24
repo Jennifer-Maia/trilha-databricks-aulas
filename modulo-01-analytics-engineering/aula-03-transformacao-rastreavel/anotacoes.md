@@ -95,7 +95,7 @@ END AS status
 E a deduplicação (RN-02) em uma linha:
 
 ```sql
-QUALIFY ROW_NUMBER() OVER (PARTITION BY event_id ORDER BY event_ts) = 1
+QUALIFY ROW_NUMBER() OVER (PARTITION BY event_id ORDER BY event_timestamp) = 1
 ```
 
 - `ROW_NUMBER() OVER (PARTITION BY event_id ...)` numera as linhas de cada `event_id`: 1, 2, 3…
@@ -110,7 +110,7 @@ Esperado: 5.226 eventos e 5 status. Saíram 173 duplicados. O contrato fala em 1
 Mesma ideia do `QUALIFY`, mas agora por pedido e do mais recente para o mais antigo:
 
 ```sql
-QUALIFY ROW_NUMBER() OVER (PARTITION BY order_id ORDER BY event_ts DESC, event_id DESC) = 1
+QUALIFY ROW_NUMBER() OVER (PARTITION BY order_id ORDER BY event_timestamp DESC, event_id DESC) = 1
 ```
 
 O `event_id DESC` desempata dois eventos com a mesma hora (premissa 2 do contrato).

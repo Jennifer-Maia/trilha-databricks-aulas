@@ -1,0 +1,527 @@
+{
+ "datasets": [
+  {
+   "name": "ds_vendas",
+   "displayName": "gold.vendas_por_regiao",
+   "queryLines": [
+    "SELECT regiao, mes, quantidade_pedidos, valor_vendas ",
+    "FROM vendas_por_regiao"
+   ],
+   "columns": [
+    {
+     "displayName": "ticket_medio_geral",
+     "description": "Valor de vendas dividido pelos pedidos (RN-05)",
+     "expression": "SUM(`valor_vendas`) / SUM(`quantidade_pedidos`)"
+    }
+   ]
+  }
+ ],
+ "pages": [
+  {
+   "name": "vendas",
+   "displayName": "Vendas por região",
+   "pageType": "PAGE_TYPE_CANVAS",
+   "layoutVersion": "GRID_V1",
+   "layout": [
+    {
+     "widget": {
+      "name": "titulo",
+      "multilineTextboxSpec": {
+       "lines": [
+        "## Chamado #482 · Vendas por região"
+       ]
+      }
+     },
+     "position": {
+      "x": 0,
+      "y": 0,
+      "width": 12,
+      "height": 1
+     }
+    },
+    {
+     "widget": {
+      "name": "subtitulo",
+      "multilineTextboxSpec": {
+       "lines": [
+        "Pedidos concluídos (status atual `entregue`, RN-04), valor com desconto (RN-05), região do IBGE pela UF do cliente (RN-06). Entregas de ago a out/2026. Dados fictícios. Cada pessoa vê só o que o perfil dela permite (RN-08)."
+       ]
+      }
+     },
+     "position": {
+      "x": 0,
+      "y": 1,
+      "width": 12,
+      "height": 1
+     }
+    },
+    {
+     "widget": {
+      "name": "filtro-regiao",
+      "queries": [
+       {
+        "name": "ds_vendas_regiao",
+        "query": {
+         "datasetName": "ds_vendas",
+         "fields": [
+          {
+           "name": "regiao",
+           "expression": "`regiao`"
+          }
+         ],
+         "disaggregated": false
+        }
+       }
+      ],
+      "spec": {
+       "version": 2,
+       "widgetType": "filter-multi-select",
+       "encodings": {
+        "fields": [
+         {
+          "fieldName": "regiao",
+          "displayName": "Região",
+          "queryName": "ds_vendas_regiao"
+         }
+        ]
+       },
+       "frame": {
+        "showTitle": true,
+        "title": "Região"
+       }
+      }
+     },
+     "position": {
+      "x": 0,
+      "y": 2,
+      "width": 12,
+      "height": 1
+     }
+    },
+    {
+     "widget": {
+      "name": "kpi-pedidos",
+      "queries": [
+       {
+        "name": "main_query",
+        "query": {
+         "datasetName": "ds_vendas",
+         "fields": [
+          {
+           "name": "sum(quantidade_pedidos)",
+           "expression": "SUM(`quantidade_pedidos`)"
+          },
+          {
+           "name": "monthly(mes)",
+           "expression": "DATE_TRUNC(\"MONTH\", `mes`)"
+          }
+         ],
+         "disaggregated": false
+        }
+       }
+      ],
+      "spec": {
+       "version": 2,
+       "widgetType": "counter",
+       "encodings": {
+        "value": {
+         "fieldName": "sum(quantidade_pedidos)",
+         "displayName": "Pedidos concluídos"
+        },
+        "period": {
+         "fieldName": "monthly(mes)"
+        }
+       },
+       "frame": {
+        "showTitle": true,
+        "title": "Pedidos concluídos"
+       }
+      }
+     },
+     "position": {
+      "x": 0,
+      "y": 3,
+      "width": 4,
+      "height": 3
+     }
+    },
+    {
+     "widget": {
+      "name": "kpi-valor",
+      "queries": [
+       {
+        "name": "main_query",
+        "query": {
+         "datasetName": "ds_vendas",
+         "fields": [
+          {
+           "name": "sum(valor_vendas)",
+           "expression": "SUM(`valor_vendas`)"
+          },
+          {
+           "name": "monthly(mes)",
+           "expression": "DATE_TRUNC(\"MONTH\", `mes`)"
+          }
+         ],
+         "disaggregated": false
+        }
+       }
+      ],
+      "spec": {
+       "version": 2,
+       "widgetType": "counter",
+       "encodings": {
+        "value": {
+         "fieldName": "sum(valor_vendas)",
+         "displayName": "Valor de vendas",
+         "format": {
+          "type": "number-currency",
+          "currencyCode": "BRL",
+          "abbreviation": "compact",
+          "decimalPlaces": {
+           "type": "max",
+           "places": 2
+          }
+         }
+        },
+        "period": {
+         "fieldName": "monthly(mes)"
+        }
+       },
+       "frame": {
+        "showTitle": true,
+        "title": "Valor de vendas"
+       }
+      }
+     },
+     "position": {
+      "x": 4,
+      "y": 3,
+      "width": 4,
+      "height": 3
+     }
+    },
+    {
+     "widget": {
+      "name": "kpi-ticket",
+      "queries": [
+       {
+        "name": "main_query",
+        "query": {
+         "datasetName": "ds_vendas",
+         "fields": [
+          {
+           "name": "measure(ticket_medio_geral)",
+           "expression": "MEASURE(`ticket_medio_geral`)"
+          },
+          {
+           "name": "monthly(mes)",
+           "expression": "DATE_TRUNC(\"MONTH\", `mes`)"
+          }
+         ],
+         "disaggregated": false
+        }
+       }
+      ],
+      "spec": {
+       "version": 2,
+       "widgetType": "counter",
+       "encodings": {
+        "value": {
+         "fieldName": "measure(ticket_medio_geral)",
+         "displayName": "Ticket médio",
+         "format": {
+          "type": "number-currency",
+          "currencyCode": "BRL",
+          "decimalPlaces": {
+           "type": "exact",
+           "places": 2
+          }
+         }
+        },
+        "period": {
+         "fieldName": "monthly(mes)"
+        }
+       },
+       "frame": {
+        "showTitle": true,
+        "title": "Ticket médio"
+       }
+      }
+     },
+     "position": {
+      "x": 8,
+      "y": 3,
+      "width": 4,
+      "height": 3
+     }
+    },
+    {
+     "widget": {
+      "name": "barra-regiao",
+      "queries": [
+       {
+        "name": "main_query",
+        "query": {
+         "datasetName": "ds_vendas",
+         "fields": [
+          {
+           "name": "regiao",
+           "expression": "`regiao`"
+          },
+          {
+           "name": "sum(valor_vendas)",
+           "expression": "SUM(`valor_vendas`)"
+          }
+         ],
+         "disaggregated": false
+        }
+       }
+      ],
+      "spec": {
+       "version": 3,
+       "widgetType": "bar",
+       "encodings": {
+        "x": {
+         "fieldName": "sum(valor_vendas)",
+         "scale": {
+          "type": "quantitative"
+         },
+         "displayName": "Valor de vendas",
+         "format": {
+          "type": "number-currency",
+          "currencyCode": "BRL",
+          "abbreviation": "compact",
+          "decimalPlaces": {
+           "type": "max",
+           "places": 2
+          }
+         }
+        },
+        "y": {
+         "fieldName": "regiao",
+         "scale": {
+          "type": "categorical",
+          "sort": {
+           "by": "custom-order",
+           "orderedValues": [
+            "Sudeste",
+            "Nordeste",
+            "Sul",
+            "Norte",
+            "Centro-Oeste",
+            "Não informada"
+           ]
+          }
+         },
+         "displayName": "Região"
+        }
+       },
+       "frame": {
+        "showTitle": true,
+        "title": "Valor de vendas por região"
+       }
+      }
+     },
+     "position": {
+      "x": 0,
+      "y": 6,
+      "width": 6,
+      "height": 6
+     }
+    },
+    {
+     "widget": {
+      "name": "barra-mes",
+      "queries": [
+       {
+        "name": "main_query",
+        "query": {
+         "datasetName": "ds_vendas",
+         "fields": [
+          {
+           "name": "mes",
+           "expression": "`mes`"
+          },
+          {
+           "name": "regiao",
+           "expression": "`regiao`"
+          },
+          {
+           "name": "sum(valor_vendas)",
+           "expression": "SUM(`valor_vendas`)"
+          }
+         ],
+         "disaggregated": false
+        }
+       }
+      ],
+      "spec": {
+       "version": 3,
+       "widgetType": "bar",
+       "encodings": {
+        "x": {
+         "fieldName": "mes",
+         "scale": {
+          "type": "temporal"
+         },
+         "displayName": "Mês"
+        },
+        "y": {
+         "fieldName": "sum(valor_vendas)",
+         "scale": {
+          "type": "quantitative"
+         },
+         "displayName": "Valor de vendas",
+         "format": {
+          "type": "number-currency",
+          "currencyCode": "BRL",
+          "abbreviation": "compact",
+          "decimalPlaces": {
+           "type": "max",
+           "places": 2
+          }
+         }
+        },
+        "color": {
+         "fieldName": "regiao",
+         "scale": {
+          "type": "categorical"
+         },
+         "displayName": "Região"
+        }
+       },
+       "frame": {
+        "showTitle": true,
+        "title": "Valor de vendas por mês"
+       }
+      }
+     },
+     "position": {
+      "x": 6,
+      "y": 6,
+      "width": 6,
+      "height": 6
+     }
+    },
+    {
+     "widget": {
+      "name": "tabela-regiao",
+      "queries": [
+       {
+        "name": "main_query",
+        "query": {
+         "datasetName": "ds_vendas",
+         "fields": [
+          {
+           "name": "regiao",
+           "expression": "`regiao`"
+          },
+          {
+           "name": "sum(quantidade_pedidos)",
+           "expression": "SUM(`quantidade_pedidos`)"
+          },
+          {
+           "name": "sum(valor_vendas)",
+           "expression": "SUM(`valor_vendas`)"
+          },
+          {
+           "name": "measure(ticket_medio_geral)",
+           "expression": "MEASURE(`ticket_medio_geral`)"
+          }
+         ],
+         "disaggregated": false
+        }
+       }
+      ],
+      "spec": {
+       "version": 2,
+       "widgetType": "table",
+       "encodings": {
+        "columns": [
+         {
+          "fieldName": "regiao",
+          "displayName": "Região"
+         },
+         {
+          "fieldName": "sum(quantidade_pedidos)",
+          "displayName": "Pedidos"
+         },
+         {
+          "fieldName": "sum(valor_vendas)",
+          "displayName": "Valor de vendas",
+          "format": {
+           "type": "number-currency",
+           "currencyCode": "BRL",
+           "decimalPlaces": {
+            "type": "exact",
+            "places": 2
+           }
+          }
+         },
+         {
+          "fieldName": "measure(ticket_medio_geral)",
+          "displayName": "Ticket médio",
+          "format": {
+           "type": "number-currency",
+           "currencyCode": "BRL",
+           "decimalPlaces": {
+            "type": "exact",
+            "places": 2
+           }
+          }
+         }
+        ]
+       },
+       "frame": {
+        "showTitle": true,
+        "title": "Resumo por região"
+       }
+      }
+     },
+     "position": {
+      "x": 0,
+      "y": 12,
+      "width": 12,
+      "height": 5
+     }
+    }
+   ]
+  }
+ ],
+ "uiSettings": {
+  "theme": {
+   "canvasBackgroundColor": {
+    "light": "#F4F7FC",
+    "dark": "#071A3D"
+   },
+   "widgetBackgroundColor": {
+    "light": "#FFFFFF",
+    "dark": "#0B2452"
+   },
+   "widgetBorderColor": {
+    "light": "#FFFFFF",
+    "dark": "#0B2452"
+   },
+   "fontColor": {
+    "light": "#071A3D",
+    "dark": "#E8F1FF"
+   },
+   "selectionColor": {
+    "light": "#005ADF",
+    "dark": "#12D4FF"
+   },
+   "visualizationColors": [
+    "#005ADF",
+    "#12D4FF",
+    "#FFB020",
+    "#7A5CFA",
+    "#2EC4A0",
+    "#FF7E5C",
+    "#9AA9C2"
+   ],
+   "widgetHeaderAlignment": "LEFT",
+   "widgetCornerRadius": 12
+  }
+ }
+}

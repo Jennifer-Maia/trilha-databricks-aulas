@@ -48,7 +48,7 @@ window.QUIZ["03"] = {
       ],
     },
     {
-      pergunta: "O que faz `QUALIFY ROW_NUMBER() OVER (PARTITION BY order_id ORDER BY event_ts DESC, event_id DESC) = 1`?",
+      pergunta: "O que faz `QUALIFY ROW_NUMBER() OVER (PARTITION BY order_id ORDER BY event_timestamp DESC, event_id DESC) = 1`?",
       alternativas: [
         { texto: "Apaga da tabela os eventos antigos.",
           porque: "Um `SELECT` não apaga nada da tabela de origem. Ele só escolhe o que entra no resultado." },

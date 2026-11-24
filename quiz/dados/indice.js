@@ -5,4 +5,5 @@ window.QUIZ_INDICE = [
   { id: "03", arquivo: "aula-03.js", titulo: "Aula 3 · Transformação com regra rastreável", modulo: "Módulo 01 · Analytics Engineering", perguntas: 15 },
   { id: "04", arquivo: "aula-04.js", titulo: "Aula 4 · Testes que provam a regra", modulo: "Módulo 01 · Analytics Engineering", perguntas: 16 },
   { id: "05", arquivo: "aula-05.js", titulo: "Aula 5 · Governança que protege de verdade", modulo: "Módulo 01 · Analytics Engineering", perguntas: 13 },
+  { id: "06", arquivo: "aula-06.js", titulo: "Aula 6 · Validar o consumo e publicar", modulo: "Módulo 01 · Analytics Engineering", perguntas: 9 },
 ];

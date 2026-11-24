@@ -596,7 +596,7 @@ WHERE s.status = <span class="s">'entregue'</span>        <span class="box on"><
   <div class="split">
 <pre class="json">QUALIFY ROW_NUMBER() OVER (
   <span class="box on">PARTITION BY order_id</span>
-  <span class="box on">ORDER BY event_ts DESC, event_id DESC</span>
+  <span class="box on">ORDER BY event_timestamp DESC, event_id DESC</span>
 ) = <span class="n">1</span></pre>
     <div class="notes">
       <div class="card"><span class="label">ROW_NUMBER() OVER</span><p>Numera as linhas: 1, 2, 3… sem juntar nada.</p></div>

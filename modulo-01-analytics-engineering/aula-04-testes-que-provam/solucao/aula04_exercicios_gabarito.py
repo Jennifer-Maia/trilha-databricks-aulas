@@ -47,10 +47,10 @@ SABOTAGENS = {
     "sab_eventos_pedido": """
         SELECT * FROM silver.eventos_pedido
         UNION ALL
-        SELECT event_id || '-x', order_id, 'Entregue', status_original, event_ts, canal, _carga_id
+        SELECT event_id || '-x', order_id, 'Entregue', status_original, event_timestamp, canal, _carga_id
         FROM (SELECT * FROM silver.eventos_pedido ORDER BY event_id LIMIT 1)
         UNION ALL
-        SELECT event_id || '-y', order_id, CAST(NULL AS STRING), status_original, event_ts, canal, _carga_id
+        SELECT event_id || '-y', order_id, CAST(NULL AS STRING), status_original, event_timestamp, canal, _carga_id
         FROM (SELECT * FROM silver.eventos_pedido ORDER BY event_id LIMIT 1)""",
     # uma linha do resumo sumiu
     "sab_vendas_por_regiao": """

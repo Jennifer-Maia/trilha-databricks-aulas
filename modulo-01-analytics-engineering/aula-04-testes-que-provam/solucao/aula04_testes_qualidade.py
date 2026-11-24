@@ -132,7 +132,7 @@ TESTES = [
     # (id, regra, tipo, tabela, SQL que conta as linhas ruins)
     ("T01", "RN-07", "regra de negócio", "silver.eventos_pedido",
      "SELECT COUNT(*) FROM silver.eventos_pedido "
-     "WHERE event_ts IS NULL OR order_id NOT IN (SELECT order_id FROM silver.pedidos)"),
+     "WHERE event_timestamp IS NULL OR order_id NOT IN (SELECT order_id FROM silver.pedidos)"),
     ("T02", "RN-01", "domínio", "silver.eventos_pedido",
      "SELECT COUNT(*) FROM silver.eventos_pedido "
      "WHERE status IS NULL OR status NOT IN ('criado', 'pago', 'enviado', 'entregue', 'cancelado')"),

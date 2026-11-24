@@ -16,7 +16,7 @@
 | # | Palavra ambígua | Pergunta para a Marina | Resposta / Premissa |
 |---|---|---|---|
 | 1 | “concluído” | Concluído é pago, enviado ou entregue? | **Premissa:** status atual = `entregue` |
-| 2 | “status atual” | Se o pedido tem vários eventos, qual vale? | **Premissa:** o evento mais recente por `event_ts`; empate → maior `event_id` |
+| 2 | “status atual” | Se o pedido tem vários eventos, qual vale? | **Premissa:** o evento mais recente por `event_timestamp` (na fonte, `event_ts`); empate → maior `event_id` |
 | 3 | “duplicidade” | Duplicado é o mesmo pedido ou o mesmo evento repetido? | **Premissa:** mesmo `event_id` = mesmo evento; contar uma vez |
 | 4 | “vendas” | Valor bruto ou com desconto? | **Premissa:** com desconto (`valor_liquido`), em R$ |
 | 5 | “região” | Região de quê: do cliente ou da entrega? Qual divisão? | **Premissa:** UF do cliente agrupada nas 5 regiões do IBGE (Norte, Nordeste, Centro-Oeste, Sudeste, Sul) |
@@ -57,7 +57,7 @@ Ligações: `pedidos.order_id = eventos_pedido.order_id` e `pedidos.customer_id 
 
 ## 5. Saída esperada
 
-`gold.vendas_por_regiao`: uma linha por região e mês. Colunas: `regiao`, `mes`, `qtd_pedidos`, `valor_vendas` (R$), `ticket_medio`.
+`gold.vendas_por_regiao`: uma linha por região e mês. Colunas: `regiao`, `mes`, `quantidade_pedidos`, `valor_vendas` (R$), `ticket_medio`.
 `gold.pedidos_concluidos`: um pedido por linha, para detalhamento, com os dados do cliente protegidos.
 
 ## 6. Fora do escopo desta versão

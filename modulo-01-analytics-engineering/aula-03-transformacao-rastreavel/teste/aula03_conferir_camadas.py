@@ -37,7 +37,7 @@ testes = [
     ("concluídos (RN-04)", "SELECT COUNT(*) = 1052 FROM gold.pedidos_concluidos"),
     ("valor (RN-05)", "SELECT ROUND(SUM(valor_venda), 2) = 2302177.12 FROM gold.pedidos_concluidos"),
     ("região (RN-06)", "SELECT SUM(CASE WHEN regiao IS NULL THEN 1 ELSE 0 END) = 0 "
-                       "AND SUM(CASE WHEN regiao = 'Não informada' THEN qtd_pedidos ELSE 0 END) = 4 FROM gold.vendas_por_regiao"),
+                       "AND SUM(CASE WHEN regiao = 'Não informada' THEN quantidade_pedidos ELSE 0 END) = 4 FROM gold.vendas_por_regiao"),
     ("reconciliação", "SELECT (SELECT ROUND(SUM(valor_vendas), 2) FROM gold.vendas_por_regiao) "
                       "= (SELECT ROUND(SUM(valor_venda), 2) FROM gold.pedidos_concluidos)"),
 ]

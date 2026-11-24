@@ -1,0 +1,26 @@
+{
+  "titulo": "Aula 6 · O projeto de ponta a ponta",
+  "linhas": [
+    [
+      {"id": "contrato", "texto": "contrato\nde dados\nRN-01 a RN-09", "cor": "amarelo"},
+      {"id": "api", "texto": "API\nHugging Face\n(aula 2)", "cor": "azul"},
+      {"id": "landing", "texto": "landing\nJSON cru\n+ manifesto", "cor": "laranja"},
+      {"id": "camadas", "texto": "bronze → silver\n→ gold\n(aula 3)", "cor": "verde"}
+    ],
+    [
+      {"id": "testes", "texto": "testes T01–T13\n+ constraints\n(aulas 4 e 5)", "cor": "vermelho"},
+      {"id": "gov", "texto": "filtro e máscara\nna gold\n(aula 5)", "cor": "roxo"},
+      {"id": "consumo", "texto": "consumo\nchamado #482\n1.052 pedidos", "cor": "roxo"},
+      {"id": "portf", "texto": "conferência final\n+ portfólio\n(aula 6)", "cor": "verde", "forma": "ellipse"}
+    ]
+  ],
+  "setas": [
+    ["contrato", "api"],
+    ["api", "landing", "paginada"],
+    ["landing", "camadas"],
+    ["camadas", "gov"],
+    ["camadas", "testes", "provam"],
+    ["gov", "consumo"],
+    ["consumo", "portf"]
+  ]
+}

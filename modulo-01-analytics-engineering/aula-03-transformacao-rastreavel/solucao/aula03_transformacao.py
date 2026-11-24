@@ -119,7 +119,7 @@ for tabela in ["clientes", "produtos", "pedidos", "eventos_pedido"]:
 # MAGIC   e.event_id,
 # MAGIC   e.order_id,
 # MAGIC   e.status,
-# MAGIC   e.event_ts,
+# MAGIC   e.event_ts AS event_timestamp,
 # MAGIC   CASE WHEN e.event_ts IS NULL THEN 'sem_data' ELSE 'pedido_inexistente' END AS motivo,
 # MAGIC   'RN-07' AS regra,
 # MAGIC   e._carga_id
@@ -189,7 +189,7 @@ for tabela in ["clientes", "produtos", "pedidos", "eventos_pedido"]:
 # MAGIC       ELSE lower(trim(status))
 # MAGIC     END AS status,
 # MAGIC     status AS status_original,
-# MAGIC     CAST(event_ts AS TIMESTAMP) AS event_ts,
+# MAGIC     CAST(event_ts AS TIMESTAMP) AS event_timestamp,  -- nome claro a partir da silver
 # MAGIC     canal,
 # MAGIC     _carga_id
 # MAGIC   FROM validos
@@ -197,7 +197,7 @@ for tabela in ["clientes", "produtos", "pedidos", "eventos_pedido"]:
 # MAGIC SELECT *
 # MAGIC FROM normalizados
 # MAGIC -- RN-02: mesmo event_id = mesmo evento → fica uma linha só
-# MAGIC QUALIFY ROW_NUMBER() OVER (PARTITION BY event_id ORDER BY event_ts) = 1
+# MAGIC QUALIFY ROW_NUMBER() OVER (PARTITION BY event_id ORDER BY event_timestamp) = 1
 
 # COMMAND ----------
 
@@ -222,11 +222,11 @@ for tabela in ["clientes", "produtos", "pedidos", "eventos_pedido"]:
 # MAGIC SELECT
 # MAGIC   order_id,
 # MAGIC   status,
-# MAGIC   event_ts AS status_desde,
+# MAGIC   event_timestamp AS status_desde,
 # MAGIC   event_id
 # MAGIC FROM silver.eventos_pedido
 # MAGIC -- RN-03: status atual = evento mais recente do pedido (empate: maior event_id)
-# MAGIC QUALIFY ROW_NUMBER() OVER (PARTITION BY order_id ORDER BY event_ts DESC, event_id DESC) = 1
+# MAGIC QUALIFY ROW_NUMBER() OVER (PARTITION BY order_id ORDER BY event_timestamp DESC, event_id DESC) = 1
 
 # COMMAND ----------
 
@@ -317,7 +317,7 @@ for tabela in ["clientes", "produtos", "pedidos", "eventos_pedido"]:
 # MAGIC SELECT
 # MAGIC   regiao,                                       -- RN-06 (calculada em silver.clientes)
 # MAGIC   mes,
-# MAGIC   COUNT(*)                               AS qtd_pedidos,
+# MAGIC   COUNT(*)                               AS quantidade_pedidos,
 # MAGIC   ROUND(SUM(valor_venda), 2)             AS valor_vendas,
 # MAGIC   ROUND(SUM(valor_venda) / COUNT(*), 2)  AS ticket_medio
 # MAGIC FROM gold.pedidos_concluidos
@@ -364,7 +364,7 @@ checkpoint = [
     ("RN-03", "silver.status_atual", "linhas (1 por pedido)", um("SELECT COUNT(*) FROM silver.status_atual"), 1500),
     ("RN-04", "gold.pedidos_concluidos", "pedidos concluídos", um("SELECT COUNT(*) FROM gold.pedidos_concluidos"), 1052),
     ("RN-05", "gold.pedidos_concluidos", "valor das vendas (R$)", float(um("SELECT ROUND(SUM(valor_venda), 2) FROM gold.pedidos_concluidos")), 2302177.12),
-    ("RN-06", "gold.vendas_por_regiao", "pedidos em 'Não informada'", um("SELECT SUM(qtd_pedidos) FROM gold.vendas_por_regiao WHERE regiao = 'Não informada'"), 4),
+    ("RN-06", "gold.vendas_por_regiao", "pedidos em 'Não informada'", um("SELECT SUM(quantidade_pedidos) FROM gold.vendas_por_regiao WHERE regiao = 'Não informada'"), 4),
 ]
 display(spark.createDataFrame(
     [(rn, onde, o_que, float(obtido), float(esperado), "OK" if abs(float(obtido) - esperado) < 0.01 else "CONFERIR")

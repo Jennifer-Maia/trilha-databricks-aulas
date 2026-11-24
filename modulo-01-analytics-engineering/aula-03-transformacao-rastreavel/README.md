@@ -10,6 +10,8 @@
 | Você sai com | `silver.status_atual` com 1 linha por pedido e `gold.vendas_por_regiao` com **1.052 pedidos concluídos** (R$ 2.302.177,12) |
 | Material | [slides](https://jennifer-maia.github.io/trilha-databricks-aulas/modulo-01-analytics-engineering/aula-03-transformacao-rastreavel/slides.html) (abre no navegador) · [anotações passo a passo](anotacoes.md) · [quiz](https://jennifer-maia.github.io/trilha-databricks-aulas/quiz/?aula=03) · [diagramas](diagramas/) |
 
+> **Nomes de coluna atualizados (24/11/2026).** Para a gold não ter nome abreviado e a data do evento ficar mais clara, duas colunas mudaram de nome no material: `qtd_pedidos` → **`quantidade_pedidos`** (`gold.vendas_por_regiao`) e `event_ts` → **`event_timestamp`** (da silver em diante; na fonte e na bronze continua `event_ts`). Os vídeos das aulas 3 a 5 mostram os nomes antigos. Se você rodou a aula 3 antes dessa data, rode de novo o notebook `solucao/aula03_transformacao.py` (e a [aula 4](../aula-04-testes-que-provam/)) antes de seguir.
+
 ## O que você vai aprender
 
 - Por que a bronze **não aplica regra nenhuma**, e quais metadados ela guarda.

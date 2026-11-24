@@ -3,3 +3,6 @@ __pycache__/
 .databricks/
 .DS_Store
 .vscode/
+
+# gerado pelos comandos da aula 6 (cada aluno tem o seu)
+**/meu-portfolio/

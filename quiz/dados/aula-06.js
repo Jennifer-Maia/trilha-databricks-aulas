@@ -1,0 +1,135 @@
+// Quiz da Aula 6 · Validar o consumo e publicar
+// "porque" da alternativa certa: explica a resposta. Das erradas: diz por que está errada SEM entregar a certa.
+// plataforma: true → selo 🎓 (conceito da plataforma Databricks, com link da doc oficial na explicação).
+// prova: "..." → selo 🏅 (pergunta no estilo da certificação indicada).
+window.QUIZ = window.QUIZ || {};
+window.QUIZ["06"] = {
+  id: "06",
+  titulo: "Aula 6 · Validar o consumo e publicar",
+  aula_url: "https://github.com/Jennifer-Maia/trilha-databricks-aulas/tree/main/modulo-01-analytics-engineering/aula-06-validar-e-publicar",
+  perguntas: [
+    {
+      pergunta: "No erro de propósito da aula, a ficha do projeto mostrou **528** pedidos concluídos, sem nenhum erro vermelho. Por quê?",
+      alternativas: [
+        { texto: "Porque a aula 3 perdeu pedidos na transformação.",
+          porque: "Os testes das aulas 3 e 4 continuavam verdes. O número mudou por outro motivo." },
+        { texto: "Porque o seu perfil estava em vendas Sudeste, e o filtro de linha da gold mostrou só o Sudeste.", certa: true,
+          porque: "Com filtro de linha, o número depende de quem consulta. A mesma consulta deu 1.052 no financeiro e 528 no Sudeste. Por isso a ficha confere o perfil antes de contar." },
+        { texto: "Porque a API devolveu só uma parte das páginas.",
+          porque: "A landing estava completa (o teste da aula 2 passou). Pense em quem estava consultando." },
+        { texto: "Porque a máscara de e-mail apaga as linhas mascaradas.",
+          porque: "A máscara muda o valor da coluna, não tira linhas." },
+      ],
+    },
+    {
+      plataforma: true,
+      prova: "Data Analyst Associate",
+      pergunta: "Você publica um dashboard em cima de uma tabela com filtro de linha por região. Ao publicar, escolhe a opção padrão, que embute as suas credenciais (*Share data permissions*). Um vendedor do Sudeste abre o painel. O que ele vê?",
+      alternativas: [
+        { texto: "Só o Sudeste, porque o filtro de linha sempre usa quem abre o painel.",
+          porque: "Com credencial embutida, a consulta não roda como quem abre. Pense em quem é o \"usuário\" da consulta." },
+        { texto: "O que você vê: todas as regiões, porque a consulta roda com as permissões de quem publicou.", certa: true,
+          porque: "Com *Share data permissions*, quem abre usa as permissões de quem publicou ([doc](https://docs.databricks.com/aws/en/dashboards/share)). Por isso a aula publica com *Individual data permissions* (`--embed-credentials=false`): cada pessoa vê com o próprio acesso." },
+        { texto: "Um erro de permissão, porque ele não tem acesso à tabela.",
+          porque: "Com credencial embutida, o acesso dele à tabela nem é usado." },
+        { texto: "Nada: dashboards ignoram tabelas com filtro de linha.",
+          porque: "Dashboards leem essas tabelas normalmente. A questão é com que identidade." },
+      ],
+    },
+    {
+      plataforma: true,
+      pergunta: "No comando 03, o agente (Genie) respondeu sobre todas as regiões no perfil financeiro e só sobre o Sudeste no perfil vendas Sudeste. Por quê?",
+      alternativas: [
+        { texto: "Porque as instruções do agente mandam esconder as outras regiões.",
+          porque: "As instruções não falam de perfil. Quem esconde está na própria tabela." },
+        { texto: "Porque o Genie roda o SQL com o acesso de quem pergunta, e o filtro de linha da aula 5 (RN-08) vale para ele também.", certa: true,
+          porque: "A regra mora na tabela, não no agente. Qualquer consumidor que use a identidade de quem consulta (SQL, painel sem credencial embutida, Genie) recebe o mesmo filtro." },
+        { texto: "Porque o Genie guarda em cache a última resposta de cada perfil.",
+          porque: "O número muda porque a consulta é filtrada de novo a cada pergunta, não por cache." },
+        { texto: "Porque a gold tem uma cópia por região.",
+          porque: "É uma tabela só. O filtro decide as linhas na hora da consulta." },
+      ],
+    },
+    {
+      pergunta: "Por que o comando 01 gera o `CONTEXTO.md` (contexto, regras e parâmetros) antes de qualquer outro comando?",
+      alternativas: [
+        { texto: "Porque o Claude Code não funciona sem esse arquivo.",
+          porque: "Ele funciona sem. A diferença é no que ele faz." },
+        { texto: "Para a IA trabalhar com o contrato e os nomes certos, e saber o que não pode fazer, em vez de chutar.", certa: true,
+          porque: "É o contrato de dados da aula 1, agora para a IA: regras RN-01 a RN-09, catálogo e warehouse certos, e limites claros (nada de `DROP`, número só da ficha). Decidir antes de agir." },
+        { texto: "Para guardar a senha do Databricks.",
+          porque: "Nenhuma senha vai para esse arquivo. O login fica na CLI." },
+        { texto: "Para o painel carregar mais rápido.",
+          porque: "O painel não lê esse arquivo." },
+      ],
+    },
+    {
+      pergunta: "Por que a ficha do projeto calcula os números a partir das tabelas, em vez de você digitar \"1.052\" no README?",
+      alternativas: [
+        { texto: "Porque o README não aceita números.",
+          porque: "Aceita. O motivo é outro." },
+        { texto: "Porque número digitado à mão não acompanha o dado: se algo mudar, o README continua dizendo o que era verdade ontem.", certa: true,
+          porque: "A ficha é refeita a cada rodada, depois de conferir o perfil e comparar com a referência do contrato. O número publicado é o número que a tabela tem." },
+        { texto: "Para o número ficar mais bonito.",
+          porque: "A formatação ajuda, mas não é a razão." },
+        { texto: "Porque o Databricks proíbe copiar resultados.",
+          porque: "Não proíbe. Pense no que acontece com o tempo." },
+      ],
+    },
+    {
+      pergunta: "O agente respondeu \"1.052 pedidos\" (certo), mas justificou citando a RN-07, a regra da quarentena. O que você faz?",
+      alternativas: [
+        { texto: "Nada: o número está certo, então a resposta está certa.",
+          porque: "Um número certo com motivo errado engana na próxima pergunta. Confira a justificativa também." },
+        { texto: "Confere a regra citada no contrato, corrige a explicação e, se repetir, ajusta as instruções do agente.", certa: true,
+          porque: "O agente ajuda, mas quem garante o número é a gold testada e o contrato. Resposta convincente não é resposta provada." },
+        { texto: "Apaga o agente e cria outro.",
+          porque: "Criar de novo, com as mesmas instruções, não muda a causa." },
+        { texto: "Troca a gold para a regra bater com o agente.",
+          porque: "Quem manda é o contrato, não o agente." },
+      ],
+    },
+    {
+      prova: "Data Analyst Associate",
+      pergunta: "Na gold, `vendas_por_regiao` tem uma linha por região e mês, com `quantidade_pedidos`, `valor_vendas` e `ticket_medio`. Como o painel calcula o ticket médio de uma região nos três meses?",
+      alternativas: [
+        { texto: "`AVG(ticket_medio)`.",
+          porque: "Média de médias dá o mesmo peso a um mês com 10 pedidos e a um mês com 200." },
+        { texto: "`SUM(valor_vendas) / SUM(quantidade_pedidos)`.", certa: true,
+          porque: "Soma do valor dividida pela soma dos pedidos pondera cada mês pelo número de pedidos. É a definição do contrato e a medida `ticket_medio_geral` do painel." },
+        { texto: "`MAX(ticket_medio)`.",
+          porque: "Isso é o melhor mês, não o ticket do período." },
+        { texto: "`SUM(ticket_medio)`.",
+          porque: "Somar tickets não tem significado de negócio." },
+      ],
+    },
+    {
+      plataforma: true,
+      prova: "Data Analyst Associate",
+      pergunta: "O agente da Marina responde \"não está no escopo do chamado\" quando perguntam sobre devoluções. De onde vem esse comportamento?",
+      alternativas: [
+        { texto: "Do Genie, que só responde sobre vendas.",
+          porque: "O Genie responde sobre o que as tabelas e as instruções permitem. Ele não sabe sozinho o que é o chamado." },
+        { texto: "Das instruções do espaço do Genie, escritas a partir do contrato (que deixa devoluções fora do escopo), e das tabelas que demos a ele.", certa: true,
+          porque: "As instruções em texto e as tabelas escolhidas são o que guia o agente ([doc](https://docs.databricks.com/aws/en/genie/best-practices)). Por isso o script tira as instruções do contrato." },
+        { texto: "De uma permissão negada na tabela de devoluções.",
+          porque: "Não existe tabela de devoluções no projeto." },
+        { texto: "Do filtro de linha da aula 5.",
+          porque: "O filtro decide quais regiões cada pessoa vê, não quais assuntos." },
+      ],
+    },
+    {
+      pergunta: "Antes de publicar o post do LinkedIn sobre o projeto, o que **não** pode aparecer?",
+      alternativas: [
+        { texto: "O link do seu repositório.",
+          porque: "O link é justamente o que dá credibilidade ao post." },
+        { texto: "A frase \"dados fictícios\".",
+          porque: "Ela deve aparecer: deixa claro de onde vêm os números." },
+        { texto: "Dados, nomes ou prints do seu trabalho ou de uma empresa real.", certa: true,
+          porque: "O projeto é sobre uma loja fictícia de propósito. Dado de trabalho em post público pode expor a empresa e você." },
+        { texto: "Um número que saiu da ficha do projeto.",
+          porque: "Esse é o número certo para usar: saiu da tabela, no perfil certo." },
+      ],
+    },
+  ],
+};

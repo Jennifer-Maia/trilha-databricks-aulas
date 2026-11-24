@@ -150,7 +150,7 @@ conferir("Exercício 2", [
 # MAGIC ## Exercício 3 · RN-02: sem duplicados, pela chave certa
 # MAGIC
 # MAGIC Junte o que você já fez: pegue os eventos **válidos** (os que não foram para a quarentena), com o status normalizado,
-# MAGIC e deixe **uma linha por evento**. Colunas: `event_id`, `order_id`, `status` e `event_ts` (como `TIMESTAMP`).
+# MAGIC e deixe **uma linha por evento**. Colunas: `event_id`, `order_id`, `status` e `event_timestamp` (o `event_ts` da bronze, como `TIMESTAMP`).
 # MAGIC
 # MAGIC **Dica:** `QUALIFY ROW_NUMBER() OVER (PARTITION BY ... ORDER BY ...) = 1` fica com a primeira linha de cada grupo.
 # MAGIC A pergunta é: qual coluna vai no `PARTITION BY`? (Lembre do erro de propósito da aula.)
@@ -169,7 +169,7 @@ conferir("Exercício 3", [
     ("não deduplicou por pedido (isso deixaria só 1.500 linhas)", lambda: um("SELECT COUNT(*) FROM ex3_eventos") != 1500),
     ("cada event_id aparece uma vez", lambda: um("SELECT COUNT(*) - COUNT(DISTINCT event_id) FROM ex3_eventos") == 0),
     ("5.226 eventos válidos e únicos", lambda: um("SELECT COUNT(*) FROM ex3_eventos") == 5226),
-    ("nenhum evento sem data", lambda: um("SELECT COUNT(*) FROM ex3_eventos WHERE event_ts IS NULL") == 0),
+    ("nenhum evento sem data", lambda: um("SELECT COUNT(*) FROM ex3_eventos WHERE event_timestamp IS NULL") == 0),
 ])
 
 # COMMAND ----------
@@ -202,7 +202,7 @@ conferir("Exercício 4", [
 # MAGIC ## Exercício 5 · RN-04, RN-05 e RN-06: vendas por região e mês
 # MAGIC
 # MAGIC O resumo que a Marina pediu. A partir de `ex4_status_atual`, `bronze.pedidos` e `bronze.clientes`, uma linha por região e mês, com:
-# MAGIC `regiao`, `mes` (o primeiro dia do mês da entrega, como `DATE`), `qtd_pedidos` e `valor_vendas`.
+# MAGIC `regiao`, `mes` (o primeiro dia do mês da entrega, como `DATE`), `quantidade_pedidos` e `valor_vendas`.
 # MAGIC
 # MAGIC - RN-04: só pedidos com status atual `entregue`.
 # MAGIC - RN-05: o valor é o `valor_liquido`.
@@ -230,12 +230,12 @@ criar_view("ex5_vendas", sql_ex5)
 conferir("Exercício 5", [
     ("a view existe", lambda: pronta("ex5_vendas")),
     ("17 linhas (região × mês)", lambda: um("SELECT COUNT(*) FROM ex5_vendas") == 17),
-    ("1.052 pedidos no total", lambda: um("SELECT SUM(qtd_pedidos) FROM ex5_vendas") == 1052),
+    ("1.052 pedidos no total", lambda: um("SELECT SUM(quantidade_pedidos) FROM ex5_vendas") == 1052),
     ("R$ 2.302.177,12 em vendas (valor líquido)", lambda: abs(float(um("SELECT SUM(valor_vendas) FROM ex5_vendas")) - 2302177.12) < 0.05),
     ("4 pedidos em 'Não informada' e nenhuma região nula",
-        lambda: um("SELECT SUM(qtd_pedidos) FROM ex5_vendas WHERE regiao = 'Não informada'") == 4
+        lambda: um("SELECT SUM(quantidade_pedidos) FROM ex5_vendas WHERE regiao = 'Não informada'") == 4
                 and um("SELECT COUNT(*) FROM ex5_vendas WHERE regiao IS NULL") == 0),
-    ("Sudeste em setembro: 210 pedidos", lambda: um("SELECT qtd_pedidos FROM ex5_vendas WHERE regiao = 'Sudeste' AND mes = DATE'2026-09-01'") == 210),
+    ("Sudeste em setembro: 210 pedidos", lambda: um("SELECT quantidade_pedidos FROM ex5_vendas WHERE regiao = 'Sudeste' AND mes = DATE'2026-09-01'") == 210),
 ])
 
 # COMMAND ----------
