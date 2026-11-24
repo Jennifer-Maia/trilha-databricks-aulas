@@ -1,0 +1,62 @@
+{
+  "titulo": "Aula 5 · A view é uma cortina, não uma porta",
+  "linhas": [
+    [
+      {
+        "id": "bruno",
+        "texto": "Bruno\nvendas Sudeste",
+        "cor": "amarelo"
+      },
+      {
+        "id": "view",
+        "texto": "view\nsem e-mail\ne telefone",
+        "cor": "roxo"
+      },
+      {
+        "id": "ok",
+        "texto": "e-mail\nescondido",
+        "cor": "verde",
+        "forma": "ellipse"
+      }
+    ],
+    [
+      {
+        "id": "nota",
+        "texto": "quem tem SELECT\nna tabela pula\na cortina",
+        "cor": "cinza",
+        "forma": "ellipse"
+      },
+      {
+        "id": "tab",
+        "texto": "gold.\npedidos_concluidos\n(sem proteção)",
+        "cor": "vermelho"
+      },
+      {
+        "id": "vaza",
+        "texto": "tudo aberto:\ne-mail, telefone,\ntodas as regiões",
+        "cor": "vermelho",
+        "forma": "ellipse"
+      }
+    ]
+  ],
+  "setas": [
+    [
+      "bruno",
+      "view",
+      "pela view"
+    ],
+    [
+      "view",
+      "ok"
+    ],
+    [
+      "bruno",
+      "tab",
+      "direto na tabela"
+    ],
+    [
+      "tab",
+      "vaza"
+    ]
+  ]
+}

@@ -121,4 +121,4 @@ Travou? Primeiro leia as [anotações](anotacoes.md). Depois o [gabarito](soluca
 
 ## Próxima aula
 
-**Aula 5 · Governança que protege de verdade** (em breve): comentários, tags, grants, filtro de linha por região e máscara em e-mail e telefone.
+**[Aula 5 · Governança que protege de verdade](../aula-05-governanca-que-protege/)**: comentários, tags, grants, filtro de linha por região e máscara em e-mail e telefone.

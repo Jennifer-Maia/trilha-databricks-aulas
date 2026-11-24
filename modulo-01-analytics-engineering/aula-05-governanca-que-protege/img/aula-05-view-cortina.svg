@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 430" width="900" height="430" font-family="Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-label="Aula 5 · A view é uma cortina, não uma porta">
+<title>Aula 5 · A view é uma cortina, não uma porta</title>
+<defs><marker id="ponta" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#343a40"/></marker></defs>
+<rect width="900" height="430" fill="#ffffff"/>
+<text font-size="22" fill="#1e1e1e" font-weight="700" text-anchor="start" dominant-baseline="middle"><tspan x="40" y="50.0">Aula 5 · A view é uma cortina, não uma porta</tspan></text>
+<line x1="264" y1="150" x2="334" y2="150" stroke="#343a40" stroke-width="2" marker-end="url(#ponta)"/>
+<line x1="564" y1="150" x2="634" y2="150" stroke="#343a40" stroke-width="2" marker-end="url(#ponta)"/>
+<line x1="150" y1="204" x2="450" y2="284" stroke="#343a40" stroke-width="2" marker-end="url(#ponta)"/>
+<line x1="564" y1="340" x2="634" y2="340" stroke="#343a40" stroke-width="2" marker-end="url(#ponta)"/>
+<rect x="40" y="100" width="220" height="100" rx="14" fill="#fff3bf" stroke="#f08c00" stroke-width="2"/>
+<text font-size="15" fill="#1e1e1e" font-weight="normal" text-anchor="middle" dominant-baseline="middle"><tspan x="150" y="140.2">Bruno</tspan><tspan x="150" y="159.8">vendas Sudeste</tspan></text>
+<rect x="340" y="100" width="220" height="100" rx="14" fill="#e5dbff" stroke="#6741d9" stroke-width="2"/>
+<text font-size="15" fill="#1e1e1e" font-weight="normal" text-anchor="middle" dominant-baseline="middle"><tspan x="450" y="130.5">view</tspan><tspan x="450" y="150.0">sem e-mail</tspan><tspan x="450" y="169.5">e telefone</tspan></text>
+<ellipse cx="750.0" cy="150.0" rx="110.0" ry="50.0" fill="#d3f9d8" stroke="#2f9e44" stroke-width="2"/>
+<text font-size="15" fill="#1e1e1e" font-weight="normal" text-anchor="middle" dominant-baseline="middle"><tspan x="750" y="140.2">e-mail</tspan><tspan x="750" y="159.8">escondido</tspan></text>
+<ellipse cx="150.0" cy="340.0" rx="110.0" ry="50.0" fill="#f1f3f5" stroke="#495057" stroke-width="2"/>
+<text font-size="15" fill="#1e1e1e" font-weight="normal" text-anchor="middle" dominant-baseline="middle"><tspan x="150" y="320.5">quem tem SELECT</tspan><tspan x="150" y="340.0">na tabela pula</tspan><tspan x="150" y="359.5">a cortina</tspan></text>
+<rect x="340" y="290" width="220" height="100" rx="14" fill="#ffe3e3" stroke="#e03131" stroke-width="2"/>
+<text font-size="15" fill="#1e1e1e" font-weight="normal" text-anchor="middle" dominant-baseline="middle"><tspan x="450" y="320.5">gold.</tspan><tspan x="450" y="340.0">pedidos_concluidos</tspan><tspan x="450" y="359.5">(sem proteção)</tspan></text>
+<ellipse cx="750.0" cy="340.0" rx="110.0" ry="50.0" fill="#ffe3e3" stroke="#e03131" stroke-width="2"/>
+<text font-size="15" fill="#1e1e1e" font-weight="normal" text-anchor="middle" dominant-baseline="middle"><tspan x="750" y="320.5">tudo aberto:</tspan><tspan x="750" y="340.0">e-mail, telefone,</tspan><tspan x="750" y="359.5">todas as regiões</tspan></text>
+<rect x="259" y="124" width="80" height="23" rx="4" fill="#ffffff"/>
+<text font-size="13" fill="#495057" font-weight="normal" text-anchor="middle" dominant-baseline="middle"><tspan x="299" y="136.0">pela view</tspan></text>
+<rect x="234" y="232" width="132" height="23" rx="4" fill="#ffffff"/>
+<text font-size="13" fill="#495057" font-weight="normal" text-anchor="middle" dominant-baseline="middle"><tspan x="300" y="244.0">direto na tabela</tspan></text>
+</svg>

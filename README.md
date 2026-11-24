@@ -29,7 +29,7 @@ As questões são autorais, baseadas no guia oficial de cada prova.
 
 | Módulo | O que já saiu |
 |---|---|
-| [01 · Analytics Engineering com Databricks](modulo-01-analytics-engineering/) | [Aula 1 · O pedido virou regra](modulo-01-analytics-engineering/aula-01-o-pedido-virou-regra/) · [Aula 2 · Ingerindo uma API de verdade](modulo-01-analytics-engineering/aula-02-ingerindo-uma-api/) · [Aula 3 · Transformação com regra rastreável](modulo-01-analytics-engineering/aula-03-transformacao-rastreavel/) · [Aula 4 · Testes que provam a regra](modulo-01-analytics-engineering/aula-04-testes-que-provam/) |
+| [01 · Analytics Engineering com Databricks](modulo-01-analytics-engineering/) | [Aula 1 · O pedido virou regra](modulo-01-analytics-engineering/aula-01-o-pedido-virou-regra/) · [Aula 2 · Ingerindo uma API de verdade](modulo-01-analytics-engineering/aula-02-ingerindo-uma-api/) · [Aula 3 · Transformação com regra rastreável](modulo-01-analytics-engineering/aula-03-transformacao-rastreavel/) · [Aula 4 · Testes que provam a regra](modulo-01-analytics-engineering/aula-04-testes-que-provam/) · [Aula 5 · Governança que protege de verdade](modulo-01-analytics-engineering/aula-05-governanca-que-protege/) |
 | [02 · Por que minha tabela ficou lenta e cara?](modulo-02-delta-performance-custo/) | Ementa prevista. As aulas entram em dezembro |
 
 As aulas são publicadas aos poucos, conforme forem gravadas. Dê **Watch** ou **Star** no repositório para acompanhar.

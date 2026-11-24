@@ -1,0 +1,22 @@
+{
+  "titulo": "Aula 5 · A regra mora na tabela e pergunta quem está consultando",
+  "linhas": [
+    [
+      {"id": "sel", "texto": "o mesmo SELECT\n(notebook, SQL,\ndashboard)", "cor": "azul"},
+      {"id": "tab", "texto": "gold.\npedidos_concluidos\nfiltro + máscara", "cor": "roxo"},
+      {"id": "acesso", "texto": "governanca.\nacesso_usuarios\ncurrent_user()", "cor": "roxo"}
+    ],
+    [
+      {"id": "fin", "texto": "financeiro\n1.052 pedidos\ne-mail aberto", "cor": "verde"},
+      {"id": "sud", "texto": "vendas Sudeste\n528 pedidos\n***@...", "cor": "verde"},
+      {"id": "norte", "texto": "vendas Norte\n89 pedidos\n***@...", "cor": "verde"}
+    ]
+  ],
+  "setas": [
+    ["sel", "tab"],
+    ["tab", "acesso", "quem é?"],
+    ["tab", "fin"],
+    ["tab", "sud"],
+    ["tab", "norte"]
+  ]
+}

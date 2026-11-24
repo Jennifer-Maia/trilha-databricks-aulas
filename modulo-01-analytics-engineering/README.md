@@ -40,7 +40,7 @@ As aulas são publicadas aos poucos, conforme forem gravadas. Cada pasta de aula
 | 2 | [Ingerindo uma API de verdade](aula-02-ingerindo-uma-api/) | 53 min | Paginação, retry com espera, limite de chamadas, validação de schema e JSON bruto no Volume | ✅ disponível |
 | 3 | [Transformação com regra rastreável](aula-03-transformacao-rastreavel/) | 52 min | Bronze → silver → gold, com cada regra do contrato apontando para o código | ✅ disponível |
 | 4 | [Testes que provam a regra](aula-04-testes-que-provam/) | 48 min | Constraints Delta e testes de unicidade, domínio, reconciliação e regra de negócio, salvos numa tabela | ✅ disponível |
-| 5 | Governança que protege de verdade | 50 min | Comentários, tags, grants, filtro de linha por região e máscara de e-mail e telefone | em breve |
+| 5 | [Governança que protege de verdade](aula-05-governanca-que-protege/) | 50 min | Comentários, tags, grants, filtro de linha por região e máscara de e-mail e telefone | ✅ disponível |
 | 6 | Validar o consumo e publicar | 25 min | Entrega a gold num painel e num agente (Genie) com as regras do contrato, e monta o portfólio com o Claude Code | em breve |
 
 ## Como esta pasta está organizada
@@ -57,7 +57,8 @@ modulo-01-analytics-engineering/
 ├── aula-01-o-pedido-virou-regra/   ← README + slides + diagramas
 ├── aula-02-ingerindo-uma-api/      ← README + exercicio/ + solucao/ + teste/ + slides + diagramas
 ├── aula-03-transformacao-rastreavel/ ← README + exercicio/ + solucao/ + teste/ + slides + diagramas
-└── aula-04-testes-que-provam/      ← README + exercicio/ + solucao/ + teste/ + slides + diagramas
+├── aula-04-testes-que-provam/      ← README + exercicio/ + solucao/ + teste/ + slides + diagramas
+└── aula-05-governanca-que-protege/ ← README + exercicio/ + solucao/ + teste/ + slides + diagramas
 ```
 
 Em toda aula com código: **`solucao/`** tem o notebook da aula, completo; **`exercicio/`** é a sua prática, com exercícios que conferem o resultado na hora (✅/❌); o gabarito fica em `solucao/`; **`teste/`** prova que o resultado está certo. Toda aula termina com um **[quiz](https://jennifer-maia.github.io/trilha-databricks-aulas/quiz/)**, com nota e a explicação de cada resposta.
